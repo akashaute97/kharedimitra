@@ -1,189 +1,150 @@
-<!DOCTYPE html>
-<html lang="mr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KharediMitra | चांगली वस्तू • योग्य किंमत • सोपी खरेदी</title>
-<meta name="description" content="KharediMitra - ग्रामीण आणि शहरातील ग्राहकांसाठी निवडक ऑनलाइन deals आणि products.">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#222;line-height:1.5}
-a{text-decoration:none;color:inherit}
-.top{background:#173f2b;color:#fff;text-align:center;padding:8px;font-size:14px}
-header{background:#fff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:10}
-.nav{max-width:1150px;margin:auto;display:flex;align-items:center;gap:20px;padding:15px 18px}
-.logo{font-size:25px;font-weight:800;color:#173f2b;white-space:nowrap}
-.logo span{color:#e08a18}
-.search{flex:1;display:flex}
-.search input{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:8px 0 0 8px;font-size:15px}
-.search button{border:0;background:#e08a18;color:#fff;padding:0 18px;border-radius:0 8px 8px 0;cursor:pointer}
-.hero{background:linear-gradient(120deg,#173f2b,#286746);color:#fff}
-.hero-inner{max-width:1150px;margin:auto;padding:48px 18px;display:flex;justify-content:space-between;align-items:center;gap:30px}
-.hero h1{font-size:40px;margin-bottom:10px}
-.hero p{font-size:18px;max-width:620px}
-.hero-btn{display:inline-block;margin-top:22px;background:#e08a18;color:#fff;padding:12px 22px;border-radius:8px;font-weight:700}
-.hero-badge{font-size:75px}
-.container{max-width:1150px;margin:auto;padding:30px 18px}
-.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-.title h2{font-size:24px}
-.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.cat{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:18px 8px;text-align:center;font-weight:700;cursor:pointer}
-.cat .icon{font-size:28px;margin-bottom:5px}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e6e6e6;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.card-img{height:190px;background:#f0f2f3;display:flex;align-items:center;justify-content:center;font-size:65px}
-.card-body{padding:15px}
-.tag{display:inline-block;background:#eaf5ee;color:#17613a;padding:3px 8px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:8px}
-.card h3{font-size:17px;min-height:48px}
-.rating{color:#e08a18;font-size:14px;margin:7px 0}
-.price{font-size:21px;font-weight:800;margin:6px 0}
-.old{font-size:13px;color:#888;text-decoration:line-through;margin-left:5px;font-weight:400}
-.buy{display:block;text-align:center;background:#173f2b;color:#fff;padding:10px;border-radius:7px;font-weight:700;margin-top:10px}
-.buy:hover{background:#0f2d1e}
-.note{background:#fff7e8;border-left:4px solid #e08a18;padding:15px;border-radius:7px;margin-top:25px}
-footer{background:#173f2b;color:#fff;margin-top:30px}
-.footer-inner{max-width:1150px;margin:auto;padding:30px 18px;display:flex;justify-content:space-between;gap:20px}
-footer h3{margin-bottom:8px}
-.disclosure{font-size:13px;color:#d7e3dc;max-width:650px}
-@media(max-width:800px){
- .nav{flex-wrap:wrap}.search{order:3;flex-basis:100%}
- .hero-inner{padding:35px 18px}.hero h1{font-size:31px}.hero-badge{font-size:50px}
- .categories{grid-template-columns:repeat(3,1fr)}
- .products{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:480px){
- .categories{grid-template-columns:repeat(2,1fr)}
- .products{grid-template-columns:1fr}
- .hero-badge{display:none}
- .footer-inner{flex-direction:column}
-}
-</style>
-</head>
-<body>
+<div class="products" id="productGrid">
 
-<div class="top">🔥 आजचे निवडक Deals • योग्य किंमत • सोपी ऑनलाइन खरेदी</div>
+  <!-- FLIPKART PRODUCT -->
+  <article class="card" data-category="Daily Use" data-name="Special Deal Product">
+    <div class="card-img">🛍️</div>
 
-<header>
-  <div class="nav">
-    <div class="logo">KHAREDI<span>MITRA</span></div>
-    <div class="search">
-      <input id="searchBox" type="search" placeholder="Product शोधा...">
-      <button onclick="searchProducts()">🔍</button>
+    <div class="card-body">
+      <span class="tag">SPECIAL DEAL</span>
+
+      <h3>Special Deal Product</h3>
+
+      <div class="rating">⭐ 4.2/5</div>
+
+      <div class="price">₹130</div>
+
+      <a class="buy"
+         href="https://dl.flipkart.com/s/IppeA5NNNN"
+         target="_blank"
+         rel="nofollow sponsored noopener">
+         🛒 Buy Now
+      </a>
     </div>
-  </div>
-</header>
+  </article>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <h1>खरेदी आता झाली सोपी!</h1>
-      <p>चांगली वस्तू • योग्य किंमत • सोपी खरेदी</p>
-      <a class="hero-btn" href="#deals">🔥 Best Deals पहा</a>
-    </div>
-    <div class="hero-badge">🛒</div>
-  </div>
-</section>
 
-<main class="container">
+  <!-- AMAZON - ZEEL RAINCOAT -->
+  <article class="card" data-category="Daily Use" data-name="ZEEL Waterproof Raincoat">
 
-  <div class="title"><h2>📂 Categories</h2></div>
-  <div class="categories">
-    <div class="cat" onclick="filterCategory('शेती')"><div class="icon">🌾</div>शेती</div>
-    <div class="cat" onclick="filterCategory('घरगुती')"><div class="icon">🏠</div>घरगुती</div>
-    <div class="cat" onclick="filterCategory('Tools')"><div class="icon">🔧</div>Tools</div>
-    <div class="cat" onclick="filterCategory('Electronics')"><div class="icon">📱</div>Electronics</div>
-    <div class="cat" onclick="filterCategory('Fashion')"><div class="icon">👕</div>Fashion</div>
-    <div class="cat" onclick="filterCategory('Daily Use')"><div class="icon">🛍️</div>Daily Use</div>
-  </div>
+    <div class="card-img">🌧️</div>
 
-  <section id="deals" style="margin-top:35px">
-    <div class="title"><h2>🔥 आजचे Best Deals</h2></div>
+    <div class="card-body">
 
-    <div class="products" id="productGrid">
+      <span class="tag">AMAZON DEAL</span>
 
-      <!-- PRODUCT 1: येथे तुमचा खरा product photo/name बदलू शकता -->
-      <article class="card" data-category="Daily Use" data-name="Special Deal Product">
-        <div class="card-img">🛍️</div>
-        <div class="card-body">
-          <span class="tag">SPECIAL DEAL</span>
-          <h3>Special Deal Product</h3>
-          <div class="rating">⭐ 4.2/5</div>
-          <div class="price">₹130</div>
-          <a class="buy" href="https://dl.flipkart.com/s/IppeA5NNNN" target="_blank" rel="nofollow sponsored noopener">🛒 Buy Now</a>
-        </div>
-      </article>
+      <h3>ZEEL Sealed Waterproof Raincoat</h3>
 
-      <article class="card" data-category="घरगुती" data-name="Home & Kitchen Product">
-        <div class="card-img">🏠</div>
-        <div class="card-body">
-          <span class="tag">HOME</span>
-          <h3>Home & Kitchen Product</h3>
-          <div class="rating">⭐ 4.3/5</div>
-          <div class="price">₹299</div>
-          <a class="buy" href="#" onclick="alert('हा sample product आहे. तुमचा affiliate link येथे टाका.');return false;">🛒 Buy Now</a>
-        </div>
-      </article>
+      <div class="rating">
+        🌧️ Waterproof Raincoat
+      </div>
 
-      <article class="card" data-category="Tools" data-name="Useful Tool">
-        <div class="card-img">🔧</div>
-        <div class="card-body">
-          <span class="tag">USEFUL</span>
-          <h3>Useful Tool</h3>
-          <div class="rating">⭐ 4.1/5</div>
-          <div class="price">₹399</div>
-          <a class="buy" href="#" onclick="alert('हा sample product आहे. तुमचा affiliate link येथे टाका.');return false;">🛒 Buy Now</a>
-        </div>
-      </article>
+      <div class="price">
+        Amazon वर किंमत पहा
+      </div>
 
-      <article class="card" data-category="Electronics" data-name="Smart Electronics Product">
-        <div class="card-img">📱</div>
-        <div class="card-body">
-          <span class="tag">TRENDING</span>
-          <h3>Smart Electronics Product</h3>
-          <div class="rating">⭐ 4.4/5</div>
-          <div class="price">₹499</div>
-          <a class="buy" href="#" onclick="alert('हा sample product आहे. तुमचा affiliate link येथे टाका.');return false;">🛒 Buy Now</a>
-        </div>
-      </article>
+      <a class="buy"
+         href="https://www.amazon.in/ZEEL-Sealed-Raincoat-Waterproof-Carrying/dp/B08947GQCM?th=1&psc=1&linkCode=ll2&tag=kharedimitra-21&linkId=dd9a6614bc679bf5ce7d4ca595a7e412&ref_=as_li_ss_tl"
+         target="_blank"
+         rel="nofollow sponsored noopener">
+         🛒 Amazon वर खरेदी करा
+      </a>
+
+      <small style="display:block;margin-top:8px;color:#777;">
+        (Paid/Affiliate Link)
+      </small>
 
     </div>
+  </article>
 
-    <div class="note">
-      <strong>ℹ️ Affiliate Disclosure:</strong> या website वरील काही Buy Now links affiliate links असू शकतात. तुम्ही eligible purchase केल्यास आम्हाला commission मिळू शकते. तुमच्या खरेदीच्या किंमतीवर याचा अतिरिक्त खर्च होत नाही.
+
+  <!-- HOME PRODUCT -->
+  <article class="card" data-category="घरगुती" data-name="Home Kitchen Product">
+
+    <div class="card-img">🏠</div>
+
+    <div class="card-body">
+
+      <span class="tag">HOME</span>
+
+      <h3>Home & Kitchen Product</h3>
+
+      <div class="rating">⭐ 4.3/5</div>
+
+      <div class="price">₹299</div>
+
+      <a class="buy"
+         href="#"
+         onclick="alert('हा sample product आहे.');return false;">
+         🛒 Buy Now
+      </a>
+
     </div>
-  </section>
-</main>
+  </article>
 
-<footer>
-  <div class="footer-inner">
-    <div>
-      <h3>KHAREDI MITRA</h3>
-      <p>चांगली वस्तू • योग्य किंमत • सोपी खरेदी</p>
+
+  <!-- TOOLS PRODUCT -->
+  <article class="card" data-category="Tools" data-name="Useful Tool">
+
+    <div class="card-img">🔧</div>
+
+    <div class="card-body">
+
+      <span class="tag">USEFUL</span>
+
+      <h3>Useful Tool</h3>
+
+      <div class="rating">⭐ 4.1/5</div>
+
+      <div class="price">₹399</div>
+
+      <a class="buy"
+         href="#"
+         onclick="alert('हा sample product आहे.');return false;">
+         🛒 Buy Now
+      </a>
+
     </div>
-    <div class="disclosure">
-      <p><strong>महत्त्वाचे:</strong> Product price, availability, discount आणि delivery details बदलू शकतात. खरेदी करण्यापूर्वी संबंधित shopping website वर अंतिम किंमत तपासा.</p>
-      <p style="margin-top:8px">© 2026 KharediMitra. All rights reserved.</p>
+  </article>
+
+
+  <!-- ELECTRONICS PRODUCT -->
+  <article class="card" data-category="Electronics" data-name="Smart Electronics Product">
+
+    <div class="card-img">📱</div>
+
+    <div class="card-body">
+
+      <span class="tag">TRENDING</span>
+
+      <h3>Smart Electronics Product</h3>
+
+      <div class="rating">⭐ 4.4/5</div>
+
+      <div class="price">₹499</div>
+
+      <a class="buy"
+         href="#"
+         onclick="alert('हा sample product आहे.');return false;">
+         🛒 Buy Now
+      </a>
+
     </div>
-  </div>
-</footer>
+  </article>
 
-<script>
-function searchProducts(){
-  const q=document.getElementById('searchBox').value.toLowerCase().trim();
-  document.querySelectorAll('.card').forEach(card=>{
-    const name=(card.dataset.name||'').toLowerCase();
-    card.style.display=(!q || name.includes(q))?'block':'none';
-  });
-}
-document.getElementById('searchBox').addEventListener('input',searchProducts);
+</div>
 
-function filterCategory(cat){
-  document.querySelectorAll('.card').forEach(card=>{
-    card.style.display=(card.dataset.category===cat)?'block':'none';
-  });
-  document.getElementById('deals').scrollIntoView({behavior:'smooth'});
-}
-</script>
 
-</body>
-</html>
+<!-- AFFILIATE DISCLOSURE -->
+<div class="note">
+
+  <strong>ℹ️ Affiliate Disclosure:</strong>
+
+  या website वरील काही links affiliate links आहेत.
+  तुम्ही या links वरून qualifying purchase केल्यास
+  आम्हाला commission मिळू शकते.
+
+  <br><br>
+
+  <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
+
+</div>
