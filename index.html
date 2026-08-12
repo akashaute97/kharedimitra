@@ -6,9 +6,15 @@
 
 <title>KharediMitra | चांगली वस्तू • योग्य किंमत • सोपी खरेदी</title>
 
-<meta name="description" content="KharediMitra - ग्रामीण आणि शहरातील ग्राहकांसाठी निवडक ऑनलाइन deals आणि products.">
+<meta name="description"
+content="KharediMitra - ग्रामीण आणि शहरातील ग्राहकांसाठी निवडक ऑनलाइन deals आणि products.">
 
 <style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -31,7 +37,9 @@ a{
   color:inherit;
 }
 
-/* ================= TOP BAR ================= */
+/* =========================
+   TOP BAR
+========================= */
 
 .top{
   background:#173f2b;
@@ -41,7 +49,9 @@ a{
   font-size:14px;
 }
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
   background:#fff;
@@ -71,7 +81,9 @@ header{
   color:#e08a18;
 }
 
-/* ================= SEARCH ================= */
+/* =========================
+   SEARCH
+========================= */
 
 .search{
   flex:1;
@@ -98,10 +110,16 @@ header{
   padding:0 18px;
   border-radius:0 8px 8px 0;
   cursor:pointer;
-  font-size:17px;
+  font-size:16px;
 }
 
-/* ================= HERO ================= */
+.search button:hover{
+  background:#c8740d;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   background:linear-gradient(120deg,#173f2b,#286746);
@@ -139,14 +157,16 @@ header{
 }
 
 .hero-btn:hover{
-  background:#c8750e;
+  background:#c8740d;
 }
 
 .hero-badge{
   font-size:75px;
 }
 
-/* ================= CONTAINER ================= */
+/* =========================
+   CONTAINER
+========================= */
 
 .container{
   max-width:1150px;
@@ -165,7 +185,9 @@ header{
   font-size:24px;
 }
 
-/* ================= CATEGORIES ================= */
+/* =========================
+   CATEGORIES
+========================= */
 
 .categories{
   display:grid;
@@ -194,7 +216,9 @@ header{
   margin-bottom:5px;
 }
 
-/* ================= PRODUCTS ================= */
+/* =========================
+   PRODUCTS
+========================= */
 
 .products{
   display:grid;
@@ -211,7 +235,9 @@ header{
   min-width:0;
 }
 
-/* ================= PRODUCT IMAGE ================= */
+/* =========================
+   PRODUCT IMAGE AREA
+========================= */
 
 .card-img{
   height:220px;
@@ -223,6 +249,10 @@ header{
   position:relative;
 }
 
+/* =========================
+   SINGLE IMAGE
+========================= */
+
 .card-img > img{
   width:100%;
   height:100%;
@@ -230,7 +260,9 @@ header{
   display:block;
 }
 
-/* ================= MULTIPLE IMAGES ================= */
+/* =========================
+   MULTIPLE IMAGE SLIDER
+========================= */
 
 .product-images{
   position:relative;
@@ -259,7 +291,9 @@ header{
   display:block;
 }
 
-/* ================= SLIDER BUTTONS ================= */
+/* =========================
+   SLIDER BUTTONS
+========================= */
 
 .slider-btn{
   position:absolute;
@@ -269,18 +303,22 @@ header{
   height:34px;
   border:none;
   border-radius:50%;
-  background:rgba(23,63,43,.75);
+  background:rgba(23,63,43,.78);
   color:#fff;
   font-size:23px;
   cursor:pointer;
   z-index:10;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
+  transition:.2s;
 }
 
 .slider-btn:hover{
   background:#173f2b;
+  transform:translateY(-50%) scale(1.05);
 }
 
 .slider-prev{
@@ -291,16 +329,21 @@ header{
   right:8px;
 }
 
-/* ================= DOTS ================= */
+/* =========================
+   SLIDER DOTS
+========================= */
 
 .slider-dots{
   position:absolute;
   bottom:8px;
   left:0;
   right:0;
+
   display:flex;
   justify-content:center;
+  align-items:center;
   gap:7px;
+
   z-index:10;
 }
 
@@ -310,6 +353,7 @@ header{
   border-radius:50%;
   background:rgba(0,0,0,.30);
   cursor:pointer;
+  transition:.2s;
 }
 
 .slider-dot.active{
@@ -317,7 +361,9 @@ header{
   transform:scale(1.3);
 }
 
-/* ================= CARD BODY ================= */
+/* =========================
+   CARD BODY
+========================= */
 
 .card-body{
   padding:15px;
@@ -372,7 +418,9 @@ header{
   background:#0f2d1e;
 }
 
-/* ================= NO RESULTS ================= */
+/* =========================
+   NO RESULTS
+========================= */
 
 .empty{
   grid-column:1/-1;
@@ -385,7 +433,9 @@ header{
   display:none;
 }
 
-/* ================= NOTE ================= */
+/* =========================
+   AFFILIATE NOTE
+========================= */
 
 .note{
   background:#fff7e8;
@@ -395,7 +445,9 @@ header{
   margin-top:25px;
 }
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   background:#173f2b;
@@ -407,6 +459,7 @@ footer{
   max-width:1150px;
   margin:auto;
   padding:30px 18px;
+
   display:flex;
   justify-content:space-between;
   gap:20px;
@@ -422,7 +475,9 @@ footer h3{
   max-width:650px;
 }
 
-/* ================= TABLET ================= */
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:1000px){
 
@@ -433,9 +488,12 @@ footer h3{
   .products{
     grid-template-columns:repeat(3,1fr);
   }
+
 }
 
-/* ================= TABLET ================= */
+/* =========================
+   TABLET SMALL
+========================= */
 
 @media(max-width:800px){
 
@@ -467,9 +525,12 @@ footer h3{
   .products{
     grid-template-columns:repeat(2,1fr);
   }
+
 }
 
-/* ================= MOBILE ================= */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:480px){
 
@@ -480,7 +541,6 @@ footer h3{
 
   .nav{
     padding:12px;
-    gap:10px;
   }
 
   .logo{
@@ -488,8 +548,8 @@ footer h3{
   }
 
   .search input{
-    padding:11px;
     font-size:14px;
+    padding:11px;
   }
 
   .search button{
@@ -505,7 +565,7 @@ footer h3{
   }
 
   .hero p{
-    font-size:15px;
+    font-size:16px;
   }
 
   .hero-badge{
@@ -526,8 +586,8 @@ footer h3{
   }
 
   .cat{
-    padding:14px 5px;
-    font-size:13px;
+    padding:14px 6px;
+    font-size:14px;
   }
 
   .cat .icon{
@@ -540,11 +600,15 @@ footer h3{
   }
 
   .card-img{
-    height:260px;
+    height:250px;
   }
 
-  .card h3{
-    font-size:16px;
+  .card-body{
+    padding:14px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
   }
 
   .slider-btn{
@@ -552,519 +616,673 @@ footer h3{
     height:32px;
   }
 
-  .footer-inner{
-    flex-direction:column;
-  }
 }
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media(max-width:360px){
+
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .card-img{
+    height:230px;
+  }
+
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+button{
+  font-family:inherit;
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ================= TOP BAR ================= -->
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <div class="top">
 🔥 आजचे निवडक Deals • योग्य किंमत • सोपी ऑनलाइन खरेदी
 </div>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-<div class="nav">
+  <div class="nav">
 
-  <div class="logo">
-    KHAREDI<span>MITRA</span>
+    <div class="logo">
+      KHAREDI<span>MITRA</span>
+    </div>
+
+    <div class="search">
+
+      <input
+        id="searchBox"
+        type="search"
+        placeholder="Product शोधा..."
+        autocomplete="off"
+      >
+
+      <button
+        type="button"
+        onclick="searchProducts()"
+        aria-label="Search"
+      >
+        🔍
+      </button>
+
+    </div>
+
   </div>
-
-  <div class="search">
-
-    <input
-      id="searchBox"
-      type="search"
-      placeholder="Product शोधा..."
-      autocomplete="off"
-    >
-
-    <button
-      type="button"
-      onclick="searchProducts()"
-    >
-      🔍
-    </button>
-
-  </div>
-
-</div>
 
 </header>
 
-<!-- ================= HERO ================= -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
-<div class="hero-inner">
+  <div class="hero-inner">
 
-  <div>
+    <div>
 
-    <h1>
-      खरेदी आता झाली सोपी!
-    </h1>
+      <h1>
+        खरेदी आता झाली सोपी!
+      </h1>
 
-    <p>
-      चांगली वस्तू • योग्य किंमत • सोपी खरेदी
-    </p>
+      <p>
+        चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+      </p>
 
-    <a
-      class="hero-btn"
-      href="#deals"
-    >
-      🔥 Best Deals पहा
-    </a>
+      <a
+        class="hero-btn"
+        href="#deals"
+      >
+        🔥 Best Deals पहा
+      </a>
+
+    </div>
+
+    <div class="hero-badge">
+      🛒
+    </div>
 
   </div>
-
-  <div class="hero-badge">
-    🛒
-  </div>
-
-</div>
 
 </section>
 
-<!-- ================= MAIN ================= -->
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <main class="container">
 
-<!-- ================= CATEGORIES ================= -->
 
-<div class="title">
+  <!-- =========================
+       CATEGORIES
+  ========================= -->
 
-  <h2>
-    📂 Categories
-  </h2>
+  <div class="title">
 
-</div>
+    <h2>
+      📂 Categories
+    </h2>
 
-<div class="categories">
-
-  <div
-    class="cat"
-    onclick="showAllProducts()"
-  >
-    <div class="icon">🏠</div>
-    सर्व Products
   </div>
 
-  <div
-    class="cat"
-    onclick="filterCategory('शेती')"
-  >
-    <div class="icon">🌾</div>
-    शेती
-  </div>
 
-  <div
-    class="cat"
-    onclick="filterCategory('घरगुती')"
-  >
-    <div class="icon">🏠</div>
-    घरगुती
-  </div>
+  <div class="categories">
 
-  <div
-    class="cat"
-    onclick="filterCategory('Tools')"
-  >
-    <div class="icon">🔧</div>
-    Tools
-  </div>
 
-  <div
-    class="cat"
-    onclick="filterCategory('Electronics')"
-  >
-    <div class="icon">📱</div>
-    Electronics
-  </div>
+    <!-- ALL -->
 
-  <div
-    class="cat"
-    onclick="filterCategory('Fashion')"
-  >
-    <div class="icon">👕</div>
-    Fashion
-  </div>
-
-  <div
-    class="cat"
-    onclick="filterCategory('Daily Use')"
-  >
-    <div class="icon">🛍️</div>
-    Daily Use
-  </div>
-
-</div>
-
-<!-- ================= DEALS ================= -->
-
-<section
-  id="deals"
-  style="margin-top:35px"
->
-
-<div class="title">
-
-  <h2>
-    🔥 आजचे Best Deals
-  </h2>
-
-</div>
-
-<div
-  class="products"
-  id="productGrid"
->
-
-<!-- =====================================================
-     ONEPLUS N6
-===================================================== -->
-
-<article
-  class="card"
-  data-category="Electronics"
-  data-name="OnePlus N6 4GB 128GB Midnight Green"
->
-
-<div class="card-img">
-
-  <div
-    class="product-images"
-    id="oneplusSlider"
-  >
-
-    <img
-      src="images/oneplus-n6-1.jpg"
-      alt="OnePlus N6 Front"
+    <div
+      class="cat"
+      onclick="showAllProducts()"
     >
 
-    <img
-      src="images/oneplus-n6-2.jpg"
-      alt="OnePlus N6 Battery"
-    >
+      <div class="icon">
+        🏠
+      </div>
 
-    <img
-      src="images/oneplus-n6-3.jpg"
-      alt="OnePlus N6 Display"
-    >
-
-    <button
-      type="button"
-      class="slider-btn slider-prev"
-      onclick="changeOnePlusSlide(-1)"
-      aria-label="Previous image"
-    >
-      ‹
-    </button>
-
-    <button
-      type="button"
-      class="slider-btn slider-next"
-      onclick="changeOnePlusSlide(1)"
-      aria-label="Next image"
-    >
-      ›
-    </button>
-
-    <div class="slider-dots">
-
-      <span
-        class="slider-dot active"
-        onclick="goToOnePlusSlide(0)"
-      ></span>
-
-      <span
-        class="slider-dot"
-        onclick="goToOnePlusSlide(1)"
-      ></span>
-
-      <span
-        class="slider-dot"
-        onclick="goToOnePlusSlide(2)"
-      ></span>
+      सर्व Products
 
     </div>
 
-  </div>
 
-</div>
+    <!-- AGRICULTURE -->
 
-<div class="card-body">
-
-<span class="tag">
-  TRENDING
-</span>
-
-<h3>
-  OnePlus N6 4GB+128GB Midnight Green
-</h3>
-
-<div class="rating">
-  ⭐ 4.5/5
-</div>
-
-<div class="price">
-  ₹22,998
-</div>
-
-<p>
-  8000mAh Battery • 45W Charging •
-  120Hz Display • 50MP Camera
-</p>
-
-<a
-  class="buy"
-  href="https://link.amazon/B0fUerZGS"
-  target="_blank"
-  rel="nofollow sponsored noopener"
->
-  🛒 Amazon वर खरेदी करा
-</a>
-
-</div>
-
-</article>
-
-<!-- =====================================================
-     PALMONAS
-===================================================== -->
-
-<article
-  class="card"
-  data-category="Fashion"
-  data-name="PALMONAS 18k Gold Plated Small Letter Necklace"
->
-
-<div class="card-img">
-
-  <img
-    src="images/palmonas.jpg"
-    alt="PALMONAS 18k Gold Plated Small Letter Necklace"
-    loading="lazy"
-  >
-
-</div>
-
-<div class="card-body">
-
-<span class="tag">
-  FASHION
-</span>
-
-<h3>
-  PALMONAS 18k Gold Plated Small Letter Necklace
-</h3>
-
-<div class="rating">
-  ⭐ 4.3/5
-</div>
-
-<div class="price">
-  ₹979
-</div>
-
-<a
-  class="buy"
-  href="https://link.amazon/B0ffWKiCc"
-  target="_blank"
-  rel="nofollow sponsored noopener"
->
-  🛒 Amazon वर खरेदी करा
-</a>
-
-</div>
-
-</article>
-
-<!-- =====================================================
-     MANGALSUTRA
-===================================================== -->
-
-<article
-  class="card"
-  data-category="Fashion"
-  data-name="Personalized Gold Plated Name Mangalsutra"
->
-
-<div class="card-img">
-
-  <div
-    class="product-images"
-    id="mangalsutraSlider"
-  >
-
-    <img
-      src="images/mangalsutra.jpg"
-      alt="Personalized Gold Plated Name Mangalsutra"
-      loading="lazy"
+    <div
+      class="cat"
+      onclick="filterCategory('शेती')"
     >
 
-    <img
-      src="images/mangalsutra2.jpg"
-      alt="Personalized Gold Plated Name Mangalsutra Photo 2"
-      loading="lazy"
-    >
+      <div class="icon">
+        🌾
+      </div>
 
-    <button
-      type="button"
-      class="slider-btn slider-prev"
-      onclick="changeMangalsutraSlide(-1)"
-      aria-label="Previous image"
-    >
-      ‹
-    </button>
-
-    <button
-      type="button"
-      class="slider-btn slider-next"
-      onclick="changeMangalsutraSlide(1)"
-      aria-label="Next image"
-    >
-      ›
-    </button>
-
-    <div class="slider-dots">
-
-      <span
-        class="slider-dot active"
-        onclick="goToMangalsutraSlide(0)"
-      ></span>
-
-      <span
-        class="slider-dot"
-        onclick="goToMangalsutraSlide(1)"
-      ></span>
+      शेती
 
     </div>
 
+
+    <!-- HOME -->
+
+    <div
+      class="cat"
+      onclick="filterCategory('घरगुती')"
+    >
+
+      <div class="icon">
+        🏠
+      </div>
+
+      घरगुती
+
+    </div>
+
+
+    <!-- TOOLS -->
+
+    <div
+      class="cat"
+      onclick="filterCategory('Tools')"
+    >
+
+      <div class="icon">
+        🔧
+      </div>
+
+      Tools
+
+    </div>
+
+
+    <!-- ELECTRONICS -->
+
+    <div
+      class="cat"
+      onclick="filterCategory('Electronics')"
+    >
+
+      <div class="icon">
+        📱
+      </div>
+
+      Electronics
+
+    </div>
+
+
+    <!-- FASHION -->
+
+    <div
+      class="cat"
+      onclick="filterCategory('Fashion')"
+    >
+
+      <div class="icon">
+        👕
+      </div>
+
+      Fashion
+
+    </div>
+
+
+    <!-- DAILY USE -->
+
+    <div
+      class="cat"
+      onclick="filterCategory('Daily Use')"
+    >
+
+      <div class="icon">
+        🛍️
+      </div>
+
+      Daily Use
+
+    </div>
+
+
   </div>
 
-</div>
 
-<div class="card-body">
+  <!-- =========================
+       DEALS
+  ========================= -->
 
-<span class="tag">
-  TRENDING
-</span>
+  <section
+    id="deals"
+    style="margin-top:35px"
+  >
 
-<h3>
-  Personalized Gold Plated Name Mangalsutra
-</h3>
 
-<div class="rating">
-  ⭐ 4.2/5
-</div>
+    <div class="title">
 
-<div class="price">
-  ₹275
-</div>
+      <h2>
+        🔥 आजचे Best Deals
+      </h2>
 
-<a
-  class="buy"
-  href="https://link.amazon/B0gmD6BP8"
-  target="_blank"
-  rel="nofollow sponsored noopener"
->
-  🛒 Amazon वर खरेदी करा
-</a>
+    </div>
 
-</div>
 
-</article>
+    <div
+      class="products"
+      id="productGrid"
+    >
 
-<!-- =====================================================
-     NO RESULTS
-===================================================== -->
 
-<div
-  class="empty"
-  id="noResults"
->
+      <!-- ==================================================
+           PRODUCT 1 - ONEPLUS
+      ================================================== -->
 
-  😔 Product सापडला नाही.
+      <article
+        class="card"
+        data-category="Electronics"
+        data-name="OnePlus N6 4GB 128GB Midnight Green"
+      >
 
-  <br>
 
-  दुसरे नाव किंवा category try करा.
+        <div class="card-img">
 
-</div>
 
-</div>
+          <div
+            class="product-images"
+            data-slider
+          >
 
-<!-- ================= AFFILIATE ================= -->
 
-<div class="note">
+            <img
+              src="images/oneplus-n6-1.jpg"
+              alt="OnePlus N6 Front"
+            >
 
-<strong>
-  ℹ️ Affiliate Disclosure:
-</strong>
+            <img
+              src="images/oneplus-n6-2.jpg"
+              alt="OnePlus N6 Battery"
+            >
 
-या website वरील काही Buy Now links affiliate links असू शकतात.
-तुम्ही eligible purchase केल्यास आम्हाला commission मिळू शकते.
-तुमच्या खरेदीच्या किंमतीवर याचा अतिरिक्त खर्च होत नाही.
+            <img
+              src="images/oneplus-n6-3.jpg"
+              alt="OnePlus N6 Display"
+            >
 
-</div>
 
-</section>
+            <!-- PREVIOUS -->
+
+            <button
+              type="button"
+              class="slider-btn slider-prev"
+              data-prev
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+
+
+            <!-- NEXT -->
+
+            <button
+              type="button"
+              class="slider-btn slider-next"
+              data-next
+              aria-label="Next image"
+            >
+              ›
+            </button>
+
+
+            <!-- DOTS -->
+
+            <div
+              class="slider-dots"
+              data-dots
+            ></div>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="card-body">
+
+
+          <span class="tag">
+            TRENDING
+          </span>
+
+
+          <h3>
+            OnePlus N6 4GB+128GB Midnight Green
+          </h3>
+
+
+          <div class="rating">
+            ⭐ 4.5/5
+          </div>
+
+
+          <div class="price">
+            ₹22,998
+          </div>
+
+
+          <p>
+            8000mAh Battery • 45W Charging •
+            120Hz Display • 50MP Camera
+          </p>
+
+
+          <a
+            class="buy"
+            href="https://link.amazon/B0fUerZGS"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+          >
+            🛒 Amazon वर खरेदी करा
+          </a>
+
+
+        </div>
+
+
+      </article>
+
+
+      <!-- ==================================================
+           PRODUCT 2 - PALMONAS
+      ================================================== -->
+
+      <article
+        class="card"
+        data-category="Fashion"
+        data-name="PALMONAS 18k Gold Plated Small Letter Necklace"
+      >
+
+
+        <div class="card-img">
+
+          <img
+            src="images/palmonas.jpg"
+            alt="PALMONAS 18k Gold Plated Small Letter Necklace"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="card-body">
+
+
+          <span class="tag">
+            FASHION
+          </span>
+
+
+          <h3>
+            PALMONAS 18k Gold Plated Small Letter Necklace
+          </h3>
+
+
+          <div class="rating">
+            ⭐ 4.3/5
+          </div>
+
+
+          <div class="price">
+            ₹979
+          </div>
+
+
+          <a
+            class="buy"
+            href="https://link.amazon/B0ffWKiCc"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+          >
+            🛒 Amazon वर खरेदी करा
+          </a>
+
+
+        </div>
+
+
+      </article>
+
+
+      <!-- ==================================================
+           PRODUCT 3 - MANGALSUTRA
+           2 PHOTOS + AUTO SLIDER
+      ================================================== -->
+
+      <article
+        class="card"
+        data-category="Fashion"
+        data-name="Personalized Gold Plated Name Mangalsutra"
+      >
+
+
+        <div class="card-img">
+
+
+          <div
+            class="product-images"
+            data-slider
+          >
+
+
+            <img
+              src="images/mangalsutra.jpg"
+              alt="Personalized Gold Plated Name Mangalsutra"
+              loading="lazy"
+            >
+
+
+            <img
+              src="images/mangalsutra2.jpg"
+              alt="Personalized Gold Plated Name Mangalsutra Photo 2"
+              loading="lazy"
+            >
+
+
+            <!-- PREVIOUS -->
+
+            <button
+              type="button"
+              class="slider-btn slider-prev"
+              data-prev
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+
+
+            <!-- NEXT -->
+
+            <button
+              type="button"
+              class="slider-btn slider-next"
+              data-next
+              aria-label="Next image"
+            >
+              ›
+            </button>
+
+
+            <!-- DOTS -->
+
+            <div
+              class="slider-dots"
+              data-dots
+            ></div>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="card-body">
+
+
+          <span class="tag">
+            TRENDING
+          </span>
+
+
+          <h3>
+            Personalized Gold Plated Name Mangalsutra
+          </h3>
+
+
+          <div class="rating">
+            ⭐ 4.2/5
+          </div>
+
+
+          <div class="price">
+            ₹275
+          </div>
+
+
+          <a
+            class="buy"
+            href="https://link.amazon/B0gmD6BP8"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+          >
+            🛒 Amazon वर खरेदी करा
+          </a>
+
+
+        </div>
+
+
+      </article>
+
+
+      <!-- ==================================================
+           NO RESULTS
+      ================================================== -->
+
+      <div
+        class="empty"
+        id="noResults"
+      >
+
+        😔 Product सापडला नाही.
+
+        <br>
+
+        दुसरे नाव किंवा category try करा.
+
+      </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         AFFILIATE DISCLOSURE
+    ========================= -->
+
+    <div class="note">
+
+      <strong>
+        ℹ️ Affiliate Disclosure:
+      </strong>
+
+      या website वरील काही Buy Now links affiliate links असू शकतात.
+      तुम्ही eligible purchase केल्यास आम्हाला commission मिळू शकते.
+      तुमच्या खरेदीच्या किंमतीवर याचा अतिरिक्त खर्च होत नाही.
+
+    </div>
+
+
+  </section>
+
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<div class="footer-inner">
+  <div class="footer-inner">
 
-<div>
 
-<h3>
-  KHAREDI MITRA
-</h3>
+    <div>
 
-<p>
-  चांगली वस्तू • योग्य किंमत • सोपी खरेदी
-</p>
+      <h3>
+        KHAREDI MITRA
+      </h3>
 
-</div>
+      <p>
+        चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+      </p>
 
-<div class="disclosure">
+    </div>
 
-<p>
 
-<strong>
-  महत्त्वाचे:
-</strong>
+    <div class="disclosure">
 
-Product price, availability, discount आणि delivery details
-बदलू शकतात.
+      <p>
 
-खरेदी करण्यापूर्वी संबंधित shopping website वर अंतिम किंमत तपासा.
+        <strong>
+          महत्त्वाचे:
+        </strong>
 
-</p>
+        Product price, availability, discount आणि delivery details
+        बदलू शकतात.
 
-<p style="margin-top:8px">
+        खरेदी करण्यापूर्वी संबंधित shopping website वर अंतिम किंमत तपासा.
 
-© 2026 KharediMitra. All rights reserved.
+      </p>
 
-</p>
 
-</div>
+      <p style="margin-top:8px">
 
-</div>
+        © 2026 KharediMitra. All rights reserved.
+
+      </p>
+
+    </div>
+
+
+  </div>
 
 </footer>
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
 
 <script>
 
@@ -1074,6 +1292,7 @@ Product price, availability, discount आणि delivery details
 
 let activeCategory = '';
 
+
 function applyFilters(){
 
   const searchBox =
@@ -1081,38 +1300,48 @@ function applyFilters(){
 
   const q =
     searchBox.value
-    .toLowerCase()
-    .trim();
+      .toLowerCase()
+      .trim();
+
 
   const cards =
     document.querySelectorAll(
       '#productGrid .card'
     );
 
+
   let visible = 0;
+
 
   cards.forEach(card => {
 
     const name =
       (card.dataset.name || '')
-      .toLowerCase();
+        .toLowerCase();
+
 
     const category =
       card.dataset.category || '';
 
+
     const matchesSearch =
-      !q || name.includes(q);
+      !q ||
+      name.includes(q);
+
 
     const matchesCategory =
       !activeCategory ||
       category === activeCategory;
 
+
     const show =
       matchesSearch &&
       matchesCategory;
 
+
     card.style.display =
       show ? '' : 'none';
+
 
     if(show){
       visible++;
@@ -1120,20 +1349,29 @@ function applyFilters(){
 
   });
 
-  document.getElementById(
-    'noResults'
-  ).style.display =
+
+  const noResults =
+    document.getElementById('noResults');
+
+
+  noResults.style.display =
     visible === 0
       ? 'block'
       : 'none';
 
 }
 
+
+/* SEARCH BUTTON */
+
 function searchProducts(){
 
   applyFilters();
 
 }
+
+
+/* LIVE SEARCH */
 
 document
   .getElementById('searchBox')
@@ -1142,11 +1380,15 @@ document
     applyFilters
   );
 
-function filterCategory(cat){
 
-  activeCategory = cat;
+/* CATEGORY FILTER */
+
+function filterCategory(category){
+
+  activeCategory = category;
 
   applyFilters();
+
 
   document
     .getElementById('deals')
@@ -1155,16 +1397,22 @@ function filterCategory(cat){
     });
 
 }
+
+
+/* SHOW ALL */
 
 function showAllProducts(){
 
   activeCategory = '';
 
+
   document
     .getElementById('searchBox')
     .value = '';
 
+
   applyFilters();
+
 
   document
     .getElementById('deals')
@@ -1174,39 +1422,118 @@ function showAllProducts(){
 
 }
 
+
 /* =====================================================
-   GENERIC SLIDER FUNCTION
+   UNIVERSAL PRODUCT SLIDER
+   प्रत्येक product slider independently चालेल
 ===================================================== */
 
-function createSlider(
-  sliderId,
-  intervalTime
-){
+const sliders =
+  document.querySelectorAll(
+    '[data-slider]'
+  );
 
-  const slider =
-    document.getElementById(sliderId);
 
-  if(!slider){
-    return null;
-  }
+sliders.forEach(function(slider){
 
   const images =
     slider.querySelectorAll('img');
 
-  const dots =
-    slider.querySelectorAll('.slider-dot');
 
-  let current = 0;
-  let timer = null;
+  const prevButton =
+    slider.querySelector('[data-prev]');
+
+
+  const nextButton =
+    slider.querySelector('[data-next]');
+
+
+  const dotsContainer =
+    slider.querySelector('[data-dots]');
+
+
+  let currentSlide = 0;
+
+
+  /* -----------------------------------------
+     CREATE DOTS AUTOMATICALLY
+  ----------------------------------------- */
+
+  images.forEach(function(image,index){
+
+    const dot =
+      document.createElement('span');
+
+
+    dot.className =
+      'slider-dot';
+
+
+    if(index === 0){
+
+      dot.classList.add('active');
+
+    }
+
+
+    dot.addEventListener(
+      'click',
+      function(){
+
+        goToSlide(index);
+
+      }
+    );
+
+
+    dotsContainer.appendChild(dot);
+
+  });
+
+
+  const dots =
+    dotsContainer.querySelectorAll(
+      '.slider-dot'
+    );
+
+
+  /* -----------------------------------------
+     GO TO SLIDE
+  ----------------------------------------- */
+
+  function goToSlide(index){
+
+    currentSlide = index;
+
+
+    slider.scrollTo({
+
+      left:
+        slider.clientWidth *
+        currentSlide,
+
+      behavior:'smooth'
+
+    });
+
+
+    updateDots();
+
+  }
+
+
+  /* -----------------------------------------
+     UPDATE DOTS
+  ----------------------------------------- */
 
   function updateDots(){
 
     dots.forEach(
-      (dot,index) => {
+      function(dot,index){
 
         dot.classList.toggle(
           'active',
-          index === current
+          index === currentSlide
         );
 
       }
@@ -1214,75 +1541,140 @@ function createSlider(
 
   }
 
-  function goTo(index){
 
-    if(images.length === 0){
-      return;
-    }
+  /* -----------------------------------------
+     NEXT SLIDE
+  ----------------------------------------- */
 
-    current =
-      (index + images.length)
-      % images.length;
+  function nextSlide(){
 
-    slider.scrollTo({
+    currentSlide++;
 
-      left:
-        slider.clientWidth *
-        current,
 
-      behavior:'smooth'
+    if(
+      currentSlide >=
+      images.length
+    ){
 
-    });
-
-    updateDots();
-
-  }
-
-  function change(direction){
-
-    goTo(current + direction);
-
-  }
-
-  function startAuto(){
-
-    stopAuto();
-
-    timer =
-      setInterval(
-        function(){
-
-          change(1);
-
-        },
-        intervalTime
-      );
-
-  }
-
-  function stopAuto(){
-
-    if(timer){
-
-      clearInterval(timer);
-
-      timer = null;
+      currentSlide = 0;
 
     }
 
+
+    goToSlide(currentSlide);
+
   }
+
+
+  /* -----------------------------------------
+     PREVIOUS SLIDE
+  ----------------------------------------- */
+
+  function previousSlide(){
+
+    currentSlide--;
+
+
+    if(currentSlide < 0){
+
+      currentSlide =
+        images.length - 1;
+
+    }
+
+
+    goToSlide(currentSlide);
+
+  }
+
+
+  /* -----------------------------------------
+     BUTTONS
+  ----------------------------------------- */
+
+  if(prevButton){
+
+    prevButton.addEventListener(
+      'click',
+      function(e){
+
+        e.stopPropagation();
+
+        previousSlide();
+
+      }
+    );
+
+  }
+
+
+  if(nextButton){
+
+    nextButton.addEventListener(
+      'click',
+      function(e){
+
+        e.stopPropagation();
+
+        nextSlide();
+
+      }
+    );
+
+  }
+
+
+  /* -----------------------------------------
+     AUTO SLIDE
+     EVERY 3 SECONDS
+  ----------------------------------------- */
+
+  let autoSlide =
+    setInterval(
+      nextSlide,
+      3000
+    );
+
+
+  /* -----------------------------------------
+     PAUSE ON MOUSE
+  ----------------------------------------- */
 
   slider.addEventListener(
     'mouseenter',
-    stopAuto
+    function(){
+
+      clearInterval(autoSlide);
+
+    }
   );
+
+
+  /* -----------------------------------------
+     RESUME ON MOUSE LEAVE
+  ----------------------------------------- */
 
   slider.addEventListener(
     'mouseleave',
-    startAuto
+    function(){
+
+      autoSlide =
+        setInterval(
+          nextSlide,
+          3000
+        );
+
+    }
   );
 
+
+  /* =================================================
+     MOBILE SWIPE
+  ================================================= */
+
   let touchStartX = 0;
+  let touchEndX = 0;
+
 
   slider.addEventListener(
     'touchstart',
@@ -1291,113 +1683,90 @@ function createSlider(
       touchStartX =
         e.changedTouches[0].screenX;
 
-      stopAuto();
+      clearInterval(autoSlide);
 
     },
-    {passive:true}
+    {
+      passive:true
+    }
   );
+
 
   slider.addEventListener(
     'touchend',
     function(e){
 
-      const touchEndX =
+      touchEndX =
         e.changedTouches[0].screenX;
 
-      const difference =
+
+      const swipeDistance =
         touchEndX - touchStartX;
 
-      if(Math.abs(difference) > 50){
 
-        if(difference < 0){
+      if(
+        swipeDistance < -50
+      ){
 
-          change(1);
-
-        }else{
-
-          change(-1);
-
-        }
+        nextSlide();
 
       }
 
-      startAuto();
+
+      if(
+        swipeDistance > 50
+      ){
+
+        previousSlide();
+
+      }
+
+
+      autoSlide =
+        setInterval(
+          nextSlide,
+          3000
+        );
 
     },
-    {passive:true}
+    {
+      passive:true
+    }
   );
 
-  startAuto();
 
-  return {
+  /* -----------------------------------------
+     UPDATE CURRENT DOT AFTER MANUAL SCROLL
+  ----------------------------------------- */
 
-    goTo:go,
+  slider.addEventListener(
+    'scroll',
+    function(){
 
-    change:change
+      const index =
+        Math.round(
+          slider.scrollLeft /
+          slider.clientWidth
+        );
 
-  };
 
-}
+      if(
+        index >= 0 &&
+        index < images.length
+      ){
 
-/* =====================================================
-   ONEPLUS SLIDER
-===================================================== */
+        currentSlide = index;
 
-const onePlus =
-  createSlider(
-    'oneplusSlider',
-    3000
+        updateDots();
+
+      }
+
+    }
   );
 
-function changeOnePlusSlide(direction){
 
-  if(onePlus){
+});
 
-    onePlus.change(direction);
-
-  }
-
-}
-
-function goToOnePlusSlide(index){
-
-  if(onePlus){
-
-    onePlus.goTo(index);
-
-  }
-
-}
-
-/* =====================================================
-   MANGALSUTRA SLIDER
-===================================================== */
-
-const mangalsutra =
-  createSlider(
-    'mangalsutraSlider',
-    3500
-  );
-
-function changeMangalsutraSlide(direction){
-
-  if(mangalsutra){
-
-    mangalsutra.change(direction);
-
-  }
-
-}
-
-function goToMangalsutraSlide(index){
-
-  if(mangalsutra){
-
-    mangalsutra.goTo(index);
-
-  }
-
-}
 
 /* =====================================================
    INITIAL FILTER
@@ -1406,6 +1775,7 @@ function goToMangalsutraSlide(index){
 applyFilters();
 
 </script>
+
 
 </body>
 </html>
