@@ -362,6 +362,40 @@ body{padding-bottom:65px}
 </div>
 </article>
 
+
+<article class="card" data-category="शेती" data-name="Balwaan Krishi 20L Rechargeable Battery Sprayer Red 12V 12Ah BS-22D" data-price="3697" data-rating="4.5" data-id="balwaan-bs22d">
+<div class="card-img">
+<span class="product-badge">शेती • NEW</span>
+<button class="wishlist-btn" type="button" data-id="balwaan-bs22d" onclick="toggleWishlist(this)" aria-label="Wishlist">♡</button>
+
+<div class="product-images" id="slider-balwaan-bs22d">
+<img src="images/balwaan-bs22d-1.jpg" alt="Balwaan Krishi 20L Rechargeable Battery Sprayer BS-22D" loading="lazy">
+<img src="images/balwaan-bs22d-2.jpg" alt="Balwaan Krishi BS-22D What is in the Box" loading="lazy">
+
+<button type="button" class="slider-btn slider-prev" onclick="moveSlider('slider-balwaan-bs22d',-1)">‹</button>
+<button type="button" class="slider-btn slider-next" onclick="moveSlider('slider-balwaan-bs22d',1)">›</button>
+
+<div class="slider-dots">
+<button class="slider-dot active" onclick="goSlide('slider-balwaan-bs22d',0)" aria-label="Slide 1"></button>
+<button class="slider-dot" onclick="goSlide('slider-balwaan-bs22d',1)" aria-label="Slide 2"></button>
+</div>
+</div>
+</div>
+
+<div class="card-body">
+<span class="tag">शेती</span>
+<h3>Balwaan Krishi 20L Rechargeable Battery Sprayer (Red) | 12V 12Ah | BS-22D</h3>
+<div class="rating">⭐ 4.5/5</div>
+<div class="price">₹3,697</div>
+<p>20L Tank • 12V 12Ah Battery • Rechargeable • BS-22D • 6 Months Warranty</p>
+
+<div class="card-actions">
+<button class="quick-btn" type="button" onclick="quickView(this)">👀 Quick View</button>
+<a class="buy" href="https://link.amazon/A07Ci590y" target="_blank" rel="nofollow sponsored noopener" onclick="saveRecentlyViewed(this)">🛒 खरेदी करा</a>
+</div>
+</div>
+</article>
+
 <div class="empty" id="noResults">
 <div class="empty-icon">😔</div>
 <h3>Product सापडला नाही</h3>
@@ -773,9 +807,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startAutoSlider('slider-oneplus');
     startAutoSlider('slider-mangalsutra');
+    startAutoSlider('slider-balwaan-bs22d');
 
     enableSwipe('slider-oneplus');
     enableSwipe('slider-mangalsutra');
+    enableSwipe('slider-balwaan-bs22d');
 });
 </script>
 
