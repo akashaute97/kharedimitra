@@ -206,6 +206,7 @@ header{
   overflow:hidden;
 }
 
+/* SINGLE PRODUCT IMAGE */
 .card-img > img{
   width:100%;
   height:100%;
@@ -215,12 +216,14 @@ header{
 
 /* MULTIPLE PHOTOS */
 .product-images{
+  position:relative;
   width:100%;
   height:100%;
   display:flex;
   overflow-x:auto;
   scroll-snap-type:x mandatory;
   scrollbar-width:none;
+  scroll-behavior:smooth;
 }
 
 .product-images::-webkit-scrollbar{
@@ -228,6 +231,7 @@ header{
 }
 
 .product-images img{
+  flex:0 0 100%;
   min-width:100%;
   width:100%;
   height:100%;
@@ -235,6 +239,62 @@ header{
   scroll-snap-align:start;
   background:#fff;
   display:block;
+}
+
+/* SLIDER BUTTONS */
+.slider-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:34px;
+  height:34px;
+  border:none;
+  border-radius:50%;
+  background:rgba(23,63,43,.75);
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.slider-btn:hover{
+  background:#173f2b;
+}
+
+.slider-prev{
+  left:8px;
+}
+
+.slider-next{
+  right:8px;
+}
+
+/* SLIDER DOTS */
+.slider-dots{
+  position:absolute;
+  bottom:8px;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  z-index:5;
+}
+
+.slider-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:rgba(0,0,0,.25);
+  cursor:pointer;
+}
+
+.slider-dot.active{
+  background:#e08a18;
+  transform:scale(1.3);
 }
 
 /* CARD BODY */
@@ -527,25 +587,62 @@ footer h3{
 
         <div class="card-img">
 
-          <div class="product-images">
+          <div class="product-images" id="oneplusSlider">
 
             <img
               src="images/oneplus-n6-1.jpg"
               alt="OnePlus N6 Front"
-              loading="lazy"
             >
 
             <img
               src="images/oneplus-n6-2.jpg"
               alt="OnePlus N6 Battery"
-              loading="lazy"
             >
 
             <img
               src="images/oneplus-n6-3.jpg"
               alt="OnePlus N6 Display"
-              loading="lazy"
             >
+
+            <!-- PREVIOUS BUTTON -->
+            <button
+              type="button"
+              class="slider-btn slider-prev"
+              onclick="changeSlide(-1)"
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+
+            <!-- NEXT BUTTON -->
+            <button
+              type="button"
+              class="slider-btn slider-next"
+              onclick="changeSlide(1)"
+              aria-label="Next image"
+            >
+              ›
+            </button>
+
+            <!-- DOTS -->
+            <div class="slider-dots">
+
+              <span
+                class="slider-dot active"
+                onclick="goToSlide(0)"
+              ></span>
+
+              <span
+                class="slider-dot"
+                onclick="goToSlide(1)"
+              ></span>
+
+              <span
+                class="slider-dot"
+                onclick="goToSlide(2)"
+              ></span>
+
+            </div>
 
           </div>
 
@@ -603,7 +700,6 @@ footer h3{
           <img
             src="images/palmonas.jpg"
             alt="PALMONAS 18k Gold Plated Small Letter Necklace"
-            loading="lazy"
           >
 
         </div>
@@ -655,7 +751,6 @@ footer h3{
           <img
             src="images/mangalsutra.jpg"
             alt="Personalized Gold Plated Name Mangalsutra"
-            loading="lazy"
           >
 
         </div>
@@ -778,6 +873,7 @@ footer h3{
 
 let activeCategory = '';
 
+/* SEARCH + CATEGORY FILTER */
 
 function applyFilters(){
 
@@ -795,7 +891,6 @@ function applyFilters(){
 
   let visible = 0;
 
-
   cards.forEach(card => {
 
     const name =
@@ -805,7 +900,6 @@ function applyFilters(){
     const category =
       card.dataset.category || '';
 
-
     const matchesSearch =
       !q || name.includes(q);
 
@@ -813,22 +907,18 @@ function applyFilters(){
       !activeCategory ||
       category === activeCategory;
 
-
     const show =
       matchesSearch &&
       matchesCategory;
 
-
     card.style.display =
       show ? '' : 'none';
-
 
     if(show){
       visible++;
     }
 
   });
-
 
   document.getElementById('noResults').style.display =
     visible === 0
@@ -837,13 +927,9 @@ function applyFilters(){
 
 }
 
-
 function searchProducts(){
-
   applyFilters();
-
 }
-
 
 document
   .getElementById('searchBox')
@@ -851,7 +937,6 @@ document
     'input',
     applyFilters
   );
-
 
 function filterCategory(cat){
 
@@ -866,7 +951,6 @@ function filterCategory(cat){
     });
 
 }
-
 
 function showAllProducts(){
 
@@ -885,6 +969,164 @@ function showAllProducts(){
     });
 
 }
+
+
+/* =========================================
+   ONEPLUS AUTO IMAGE SLIDER
+   ========================================= */
+
+const oneplusSlider =
+  document.getElementById('oneplusSlider');
+
+const oneplusImages =
+  oneplusSlider.querySelectorAll('img');
+
+const oneplusDots =
+  oneplusSlider.querySelectorAll('.slider-dot');
+
+let currentSlide = 0;
+
+
+/* GO TO SPECIFIC IMAGE */
+
+function goToSlide(index){
+
+  currentSlide = index;
+
+  oneplusSlider.scrollTo({
+
+    left:
+      oneplusSlider.clientWidth *
+      currentSlide,
+
+    behavior:'smooth'
+
+  });
+
+  updateDots();
+
+}
+
+
+/* NEXT / PREVIOUS */
+
+function changeSlide(direction){
+
+  currentSlide += direction;
+
+  if(currentSlide >= oneplusImages.length){
+
+    currentSlide = 0;
+
+  }
+
+  if(currentSlide < 0){
+
+    currentSlide =
+      oneplusImages.length - 1;
+
+  }
+
+  goToSlide(currentSlide);
+
+}
+
+
+/* UPDATE DOTS */
+
+function updateDots(){
+
+  oneplusDots.forEach((dot,index)=>{
+
+    dot.classList.toggle(
+      'active',
+      index === currentSlide
+    );
+
+  });
+
+}
+
+
+/* =========================================
+   AUTO SLIDE - EVERY 3 SECONDS
+   ========================================= */
+
+let autoSlide =
+  setInterval(function(){
+
+    changeSlide(1);
+
+  },3000);
+
+
+/* PAUSE WHEN MOUSE IS ON IMAGE */
+
+oneplusSlider.addEventListener(
+  'mouseenter',
+  function(){
+
+    clearInterval(autoSlide);
+
+  }
+);
+
+
+/* START AGAIN WHEN MOUSE LEAVES */
+
+oneplusSlider.addEventListener(
+  'mouseleave',
+  function(){
+
+    autoSlide =
+      setInterval(function(){
+
+        changeSlide(1);
+
+      },3000);
+
+  }
+);
+
+
+/* MOBILE SWIPE SUPPORT */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+oneplusSlider.addEventListener(
+  'touchstart',
+  function(e){
+
+    touchStartX =
+      e.changedTouches[0].screenX;
+
+  },
+  {passive:true}
+);
+
+oneplusSlider.addEventListener(
+  'touchend',
+  function(e){
+
+    touchEndX =
+      e.changedTouches[0].screenX;
+
+    if(touchEndX < touchStartX - 50){
+
+      changeSlide(1);
+
+    }
+
+    if(touchEndX > touchStartX + 50){
+
+      changeSlide(-1);
+
+    }
+
+  },
+  {passive:true}
+);
 
 </script>
 
