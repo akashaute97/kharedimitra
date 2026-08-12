@@ -12,7 +12,7 @@ content="KharediMitra - ग्रामीण आणि शहरातील �
 <style>
 
 /* =========================
-   BASIC RESET
+   RESET
 ========================= */
 
 *{
@@ -37,6 +37,12 @@ a{
   color:inherit;
 }
 
+button,
+input{
+  font-family:inherit;
+}
+
+
 /* =========================
    TOP BAR
 ========================= */
@@ -48,6 +54,7 @@ a{
   padding:8px;
   font-size:14px;
 }
+
 
 /* =========================
    HEADER
@@ -80,6 +87,7 @@ header{
 .logo span{
   color:#e08a18;
 }
+
 
 /* =========================
    SEARCH
@@ -114,8 +122,9 @@ header{
 }
 
 .search button:hover{
-  background:#c8740d;
+  background:#c87510;
 }
+
 
 /* =========================
    HERO
@@ -157,15 +166,16 @@ header{
 }
 
 .hero-btn:hover{
-  background:#c8740d;
+  background:#c87510;
 }
 
 .hero-badge{
   font-size:75px;
 }
 
+
 /* =========================
-   CONTAINER
+   MAIN CONTAINER
 ========================= */
 
 .container{
@@ -185,13 +195,14 @@ header{
   font-size:24px;
 }
 
+
 /* =========================
    CATEGORIES
 ========================= */
 
 .categories{
   display:grid;
-  grid-template-columns:repeat(7,1fr);
+  grid-template-columns:repeat(6,1fr);
   gap:12px;
 }
 
@@ -204,6 +215,7 @@ header{
   font-weight:700;
   cursor:pointer;
   transition:.2s;
+  user-select:none;
 }
 
 .cat:hover{
@@ -211,13 +223,18 @@ header{
   box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
+.cat:active{
+  transform:scale(.97);
+}
+
 .cat .icon{
   font-size:28px;
   margin-bottom:5px;
 }
 
+
 /* =========================
-   PRODUCTS
+   PRODUCTS GRID
 ========================= */
 
 .products{
@@ -233,7 +250,14 @@ header{
   border:1px solid #e6e6e6;
   box-shadow:0 2px 8px rgba(0,0,0,.04);
   min-width:0;
+  transition:.2s;
 }
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px rgba(0,0,0,.09);
+}
+
 
 /* =========================
    PRODUCT IMAGE AREA
@@ -249,6 +273,7 @@ header{
   position:relative;
 }
 
+
 /* =========================
    SINGLE IMAGE
 ========================= */
@@ -260,6 +285,7 @@ header{
   display:block;
 }
 
+
 /* =========================
    MULTIPLE IMAGE SLIDER
 ========================= */
@@ -270,6 +296,7 @@ header{
   height:100%;
   display:flex;
   overflow-x:auto;
+  overflow-y:hidden;
   scroll-snap-type:x mandatory;
   scrollbar-width:none;
   scroll-behavior:smooth;
@@ -291,6 +318,7 @@ header{
   display:block;
 }
 
+
 /* =========================
    SLIDER BUTTONS
 ========================= */
@@ -299,20 +327,19 @@ header{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  width:34px;
-  height:34px;
+  width:36px;
+  height:36px;
   border:none;
   border-radius:50%;
   background:rgba(23,63,43,.78);
   color:#fff;
-  font-size:23px;
+  font-size:25px;
+  line-height:1;
   cursor:pointer;
   z-index:10;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   transition:.2s;
 }
 
@@ -329,6 +356,7 @@ header{
   right:8px;
 }
 
+
 /* =========================
    SLIDER DOTS
 ========================= */
@@ -338,12 +366,10 @@ header{
   bottom:8px;
   left:0;
   right:0;
-
   display:flex;
   justify-content:center;
   align-items:center;
   gap:7px;
-
   z-index:10;
 }
 
@@ -351,7 +377,8 @@ header{
   width:8px;
   height:8px;
   border-radius:50%;
-  background:rgba(0,0,0,.30);
+  background:rgba(0,0,0,.25);
+  border:1px solid rgba(255,255,255,.7);
   cursor:pointer;
   transition:.2s;
 }
@@ -360,6 +387,7 @@ header{
   background:#e08a18;
   transform:scale(1.3);
 }
+
 
 /* =========================
    CARD BODY
@@ -412,11 +440,13 @@ header{
   border-radius:7px;
   font-weight:700;
   margin-top:10px;
+  transition:.2s;
 }
 
 .buy:hover{
   background:#0f2d1e;
 }
+
 
 /* =========================
    NO RESULTS
@@ -433,6 +463,7 @@ header{
   display:none;
 }
 
+
 /* =========================
    AFFILIATE NOTE
 ========================= */
@@ -444,6 +475,7 @@ header{
   border-radius:7px;
   margin-top:25px;
 }
+
 
 /* =========================
    FOOTER
@@ -459,7 +491,6 @@ footer{
   max-width:1150px;
   margin:auto;
   padding:30px 18px;
-
   display:flex;
   justify-content:space-between;
   gap:20px;
@@ -475,24 +506,9 @@ footer h3{
   max-width:650px;
 }
 
+
 /* =========================
    TABLET
-========================= */
-
-@media(max-width:1000px){
-
-  .categories{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .products{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-}
-
-/* =========================
-   TABLET SMALL
 ========================= */
 
 @media(max-width:800px){
@@ -528,6 +544,7 @@ footer h3{
 
 }
 
+
 /* =========================
    MOBILE
 ========================= */
@@ -541,6 +558,7 @@ footer h3{
 
   .nav{
     padding:12px;
+    gap:10px;
   }
 
   .logo{
@@ -549,11 +567,11 @@ footer h3{
 
   .search input{
     font-size:14px;
-    padding:11px;
+    padding:11px 12px;
   }
 
   .search button{
-    padding:0 15px;
+    padding:0 14px;
   }
 
   .hero-inner{
@@ -561,7 +579,7 @@ footer h3{
   }
 
   .hero h1{
-    font-size:27px;
+    font-size:28px;
   }
 
   .hero p{
@@ -582,11 +600,11 @@ footer h3{
 
   .categories{
     grid-template-columns:repeat(2,1fr);
-    gap:9px;
+    gap:10px;
   }
 
   .cat{
-    padding:14px 6px;
+    padding:15px 5px;
     font-size:14px;
   }
 
@@ -600,32 +618,41 @@ footer h3{
   }
 
   .card-img{
-    height:250px;
+    height:260px;
   }
 
-  .card-body{
-    padding:14px;
+  .card h3{
+    font-size:16px;
+  }
+
+  .slider-btn{
+    width:34px;
+    height:34px;
   }
 
   .footer-inner{
     flex-direction:column;
   }
 
-  .slider-btn{
-    width:32px;
-    height:32px;
-  }
-
 }
+
 
 /* =========================
    VERY SMALL MOBILE
 ========================= */
 
-@media(max-width:360px){
+@media(max-width:350px){
+
+  .logo{
+    font-size:19px;
+  }
 
   .categories{
-    grid-template-columns:repeat(2,1fr);
+    gap:7px;
+  }
+
+  .cat{
+    font-size:13px;
   }
 
   .card-img{
@@ -634,19 +661,12 @@ footer h3{
 
 }
 
-/* =========================
-   ACCESSIBILITY
-========================= */
-
-button{
-  font-family:inherit;
-}
-
 </style>
 </head>
 
 
 <body>
+
 
 <!-- =========================
      TOP BAR
@@ -836,7 +856,7 @@ button{
 
     <div
       class="cat"
-      onclick="filterCategory('Fashion')"
+      onclick="window.location.href='fashion.html'"
     >
 
       <div class="icon">
@@ -876,7 +896,6 @@ button{
     style="margin-top:35px"
   >
 
-
     <div class="title">
 
       <h2>
@@ -892,9 +911,9 @@ button{
     >
 
 
-      <!-- ==================================================
+      <!-- =====================================================
            PRODUCT 1 - ONEPLUS
-      ================================================== -->
+      ====================================================== -->
 
       <article
         class="card"
@@ -902,13 +921,12 @@ button{
         data-name="OnePlus N6 4GB 128GB Midnight Green"
       >
 
-
         <div class="card-img">
 
 
           <div
             class="product-images"
-            data-slider
+            id="oneplusSlider"
           >
 
 
@@ -917,10 +935,12 @@ button{
               alt="OnePlus N6 Front"
             >
 
+
             <img
               src="images/oneplus-n6-2.jpg"
               alt="OnePlus N6 Battery"
             >
+
 
             <img
               src="images/oneplus-n6-3.jpg"
@@ -933,7 +953,7 @@ button{
             <button
               type="button"
               class="slider-btn slider-prev"
-              data-prev
+              onclick="changeSlide('oneplus',-1)"
               aria-label="Previous image"
             >
               ‹
@@ -945,7 +965,7 @@ button{
             <button
               type="button"
               class="slider-btn slider-next"
-              data-next
+              onclick="changeSlide('oneplus',1)"
               aria-label="Next image"
             >
               ›
@@ -954,14 +974,27 @@ button{
 
             <!-- DOTS -->
 
-            <div
-              class="slider-dots"
-              data-dots
-            ></div>
+            <div class="slider-dots">
+
+              <span
+                class="slider-dot active"
+                onclick="goToSlide('oneplus',0)"
+              ></span>
+
+              <span
+                class="slider-dot"
+                onclick="goToSlide('oneplus',1)"
+              ></span>
+
+              <span
+                class="slider-dot"
+                onclick="goToSlide('oneplus',2)"
+              ></span>
+
+            </div>
 
 
           </div>
-
 
         </div>
 
@@ -1007,20 +1040,18 @@ button{
 
         </div>
 
-
       </article>
 
 
-      <!-- ==================================================
+      <!-- =====================================================
            PRODUCT 2 - PALMONAS
-      ================================================== -->
+      ====================================================== -->
 
       <article
         class="card"
         data-category="Fashion"
         data-name="PALMONAS 18k Gold Plated Small Letter Necklace"
       >
-
 
         <div class="card-img">
 
@@ -1068,14 +1099,12 @@ button{
 
         </div>
 
-
       </article>
 
 
-      <!-- ==================================================
+      <!-- =====================================================
            PRODUCT 3 - MANGALSUTRA
-           2 PHOTOS + AUTO SLIDER
-      ================================================== -->
+      ====================================================== -->
 
       <article
         class="card"
@@ -1089,7 +1118,7 @@ button{
 
           <div
             class="product-images"
-            data-slider
+            id="mangalsutraSlider"
           >
 
 
@@ -1112,8 +1141,8 @@ button{
             <button
               type="button"
               class="slider-btn slider-prev"
-              data-prev
-              aria-label="Previous image"
+              onclick="changeSlide('mangalsutra',-1)"
+              aria-label="Previous Mangalsutra image"
             >
               ‹
             </button>
@@ -1124,8 +1153,8 @@ button{
             <button
               type="button"
               class="slider-btn slider-next"
-              data-next
-              aria-label="Next image"
+              onclick="changeSlide('mangalsutra',1)"
+              aria-label="Next Mangalsutra image"
             >
               ›
             </button>
@@ -1133,14 +1162,22 @@ button{
 
             <!-- DOTS -->
 
-            <div
-              class="slider-dots"
-              data-dots
-            ></div>
+            <div class="slider-dots">
+
+              <span
+                class="slider-dot active"
+                onclick="goToSlide('mangalsutra',0)"
+              ></span>
+
+              <span
+                class="slider-dot"
+                onclick="goToSlide('mangalsutra',1)"
+              ></span>
+
+            </div>
 
 
           </div>
-
 
         </div>
 
@@ -1168,6 +1205,12 @@ button{
           </div>
 
 
+          <p>
+            Stylish Design • Gold Plated •
+            Personalized Name
+          </p>
+
+
           <a
             class="buy"
             href="https://link.amazon/B0gmD6BP8"
@@ -1180,13 +1223,12 @@ button{
 
         </div>
 
-
       </article>
 
 
-      <!-- ==================================================
+      <!-- =====================================================
            NO RESULTS
-      ================================================== -->
+      ====================================================== -->
 
       <div
         class="empty"
@@ -1223,7 +1265,6 @@ button{
 
 
   </section>
-
 
 </main>
 
@@ -1280,15 +1321,16 @@ button{
 </footer>
 
 
-<!-- ==================================================
+<!-- =========================================================
      JAVASCRIPT
-================================================== -->
+========================================================= -->
 
 <script>
 
-/* =====================================================
+
+/* =========================================================
    SEARCH + CATEGORY FILTER
-===================================================== */
+========================================================= */
 
 let activeCategory = '';
 
@@ -1383,9 +1425,9 @@ document
 
 /* CATEGORY FILTER */
 
-function filterCategory(category){
+function filterCategory(cat){
 
-  activeCategory = category;
+  activeCategory = cat;
 
   applyFilters();
 
@@ -1399,7 +1441,7 @@ function filterCategory(category){
 }
 
 
-/* SHOW ALL */
+/* SHOW ALL PRODUCTS */
 
 function showAllProducts(){
 
@@ -1423,267 +1465,287 @@ function showAllProducts(){
 }
 
 
-/* =====================================================
-   UNIVERSAL PRODUCT SLIDER
-   प्रत्येक product slider independently चालेल
-===================================================== */
+/* =========================================================
+   SLIDER SYSTEM
+========================================================= */
 
-const sliders =
-  document.querySelectorAll(
-    '[data-slider]'
-  );
+const sliders = {
+
+  oneplus: {
+    element: document.getElementById('oneplusSlider'),
+    current: 0,
+    timer: null
+  },
+
+  mangalsutra: {
+    element: document.getElementById('mangalsutraSlider'),
+    current: 0,
+    timer: null
+  }
+
+};
 
 
-sliders.forEach(function(slider){
+/* =========================================================
+   GO TO SLIDE
+========================================================= */
+
+function goToSlide(sliderName,index){
+
+  const slider =
+    sliders[sliderName];
+
+
+  if(!slider || !slider.element){
+    return;
+  }
+
 
   const images =
-    slider.querySelectorAll('img');
+    slider.element.querySelectorAll('img');
 
 
-  const prevButton =
-    slider.querySelector('[data-prev]');
+  if(images.length === 0){
+    return;
+  }
 
 
-  const nextButton =
-    slider.querySelector('[data-next]');
+  if(index < 0){
+    index = images.length - 1;
+  }
 
 
-  const dotsContainer =
-    slider.querySelector('[data-dots]');
+  if(index >= images.length){
+    index = 0;
+  }
 
 
-  let currentSlide = 0;
+  slider.current = index;
 
 
-  /* -----------------------------------------
-     CREATE DOTS AUTOMATICALLY
-  ----------------------------------------- */
+  slider.element.scrollTo({
 
-  images.forEach(function(image,index){
+    left:
+      slider.element.clientWidth *
+      slider.current,
 
-    const dot =
-      document.createElement('span');
-
-
-    dot.className =
-      'slider-dot';
-
-
-    if(index === 0){
-
-      dot.classList.add('active');
-
-    }
-
-
-    dot.addEventListener(
-      'click',
-      function(){
-
-        goToSlide(index);
-
-      }
-    );
-
-
-    dotsContainer.appendChild(dot);
+    behavior:'smooth'
 
   });
 
 
-  const dots =
-    dotsContainer.querySelectorAll(
-      '.slider-dot'
-    );
+  updateSliderDots(sliderName);
+
+}
 
 
-  /* -----------------------------------------
-     GO TO SLIDE
-  ----------------------------------------- */
+/* =========================================================
+   NEXT / PREVIOUS
+========================================================= */
 
-  function goToSlide(index){
+function changeSlide(sliderName,direction){
 
-    currentSlide = index;
-
-
-    slider.scrollTo({
-
-      left:
-        slider.clientWidth *
-        currentSlide,
-
-      behavior:'smooth'
-
-    });
+  const slider =
+    sliders[sliderName];
 
 
-    updateDots();
-
+  if(!slider){
+    return;
   }
 
 
-  /* -----------------------------------------
-     UPDATE DOTS
-  ----------------------------------------- */
+  const images =
+    slider.element.querySelectorAll('img');
 
-  function updateDots(){
 
-    dots.forEach(
-      function(dot,index){
+  let nextIndex =
+    slider.current + direction;
 
-        dot.classList.toggle(
-          'active',
-          index === currentSlide
+
+  if(nextIndex >= images.length){
+    nextIndex = 0;
+  }
+
+
+  if(nextIndex < 0){
+    nextIndex = images.length - 1;
+  }
+
+
+  goToSlide(
+    sliderName,
+    nextIndex
+  );
+
+}
+
+
+/* =========================================================
+   UPDATE DOTS
+========================================================= */
+
+function updateSliderDots(sliderName){
+
+  const slider =
+    sliders[sliderName];
+
+
+  if(!slider){
+    return;
+  }
+
+
+  const dots =
+    slider.element
+      .querySelectorAll('.slider-dot');
+
+
+  dots.forEach(
+    (dot,index) => {
+
+      dot.classList.toggle(
+        'active',
+        index === slider.current
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   AUTO SLIDER
+========================================================= */
+
+function startAutoSlider(sliderName){
+
+  const slider =
+    sliders[sliderName];
+
+
+  if(!slider){
+    return;
+  }
+
+
+  clearInterval(slider.timer);
+
+
+  slider.timer =
+    setInterval(
+      function(){
+
+        changeSlide(
+          sliderName,
+          1
         );
 
-      }
-    );
-
-  }
-
-
-  /* -----------------------------------------
-     NEXT SLIDE
-  ----------------------------------------- */
-
-  function nextSlide(){
-
-    currentSlide++;
-
-
-    if(
-      currentSlide >=
-      images.length
-    ){
-
-      currentSlide = 0;
-
-    }
-
-
-    goToSlide(currentSlide);
-
-  }
-
-
-  /* -----------------------------------------
-     PREVIOUS SLIDE
-  ----------------------------------------- */
-
-  function previousSlide(){
-
-    currentSlide--;
-
-
-    if(currentSlide < 0){
-
-      currentSlide =
-        images.length - 1;
-
-    }
-
-
-    goToSlide(currentSlide);
-
-  }
-
-
-  /* -----------------------------------------
-     BUTTONS
-  ----------------------------------------- */
-
-  if(prevButton){
-
-    prevButton.addEventListener(
-      'click',
-      function(e){
-
-        e.stopPropagation();
-
-        previousSlide();
-
-      }
-    );
-
-  }
-
-
-  if(nextButton){
-
-    nextButton.addEventListener(
-      'click',
-      function(e){
-
-        e.stopPropagation();
-
-        nextSlide();
-
-      }
-    );
-
-  }
-
-
-  /* -----------------------------------------
-     AUTO SLIDE
-     EVERY 3 SECONDS
-  ----------------------------------------- */
-
-  let autoSlide =
-    setInterval(
-      nextSlide,
+      },
       3000
     );
 
+}
 
-  /* -----------------------------------------
-     PAUSE ON MOUSE
-  ----------------------------------------- */
 
-  slider.addEventListener(
-    'mouseenter',
-    function(){
+/* =========================================================
+   STOP AUTO SLIDER
+========================================================= */
 
-      clearInterval(autoSlide);
+function stopAutoSlider(sliderName){
 
-    }
+  const slider =
+    sliders[sliderName];
+
+
+  if(!slider){
+    return;
+  }
+
+
+  clearInterval(
+    slider.timer
   );
 
+}
 
-  /* -----------------------------------------
-     RESUME ON MOUSE LEAVE
-  ----------------------------------------- */
 
-  slider.addEventListener(
-    'mouseleave',
-    function(){
+/* =========================================================
+   MOUSE HOVER PAUSE
+========================================================= */
 
-      autoSlide =
-        setInterval(
-          nextSlide,
-          3000
+Object.keys(sliders).forEach(
+  function(sliderName){
+
+    const element =
+      sliders[sliderName].element;
+
+
+    if(!element){
+      return;
+    }
+
+
+    element.addEventListener(
+      'mouseenter',
+      function(){
+
+        stopAutoSlider(
+          sliderName
         );
 
-    }
-  );
+      }
+    );
 
 
-  /* =================================================
-     MOBILE SWIPE
-  ================================================= */
+    element.addEventListener(
+      'mouseleave',
+      function(){
+
+        startAutoSlider(
+          sliderName
+        );
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
+   MOBILE SWIPE
+========================================================= */
+
+function addSwipeSupport(sliderName){
+
+  const slider =
+    sliders[sliderName];
+
+
+  if(!slider){
+    return;
+  }
+
+
+  const element =
+    slider.element;
+
 
   let touchStartX = 0;
   let touchEndX = 0;
 
 
-  slider.addEventListener(
+  element.addEventListener(
     'touchstart',
     function(e){
 
       touchStartX =
         e.changedTouches[0].screenX;
 
-      clearInterval(autoSlide);
+      stopAutoSlider(
+        sliderName
+      );
 
     },
     {
@@ -1692,7 +1754,7 @@ sliders.forEach(function(slider){
   );
 
 
-  slider.addEventListener(
+  element.addEventListener(
     'touchend',
     function(e){
 
@@ -1700,33 +1762,33 @@ sliders.forEach(function(slider){
         e.changedTouches[0].screenX;
 
 
-      const swipeDistance =
+      const difference =
         touchEndX - touchStartX;
 
 
-      if(
-        swipeDistance < -50
-      ){
+      if(difference < -50){
 
-        nextSlide();
-
-      }
-
-
-      if(
-        swipeDistance > 50
-      ){
-
-        previousSlide();
-
-      }
-
-
-      autoSlide =
-        setInterval(
-          nextSlide,
-          3000
+        changeSlide(
+          sliderName,
+          1
         );
+
+      }
+
+
+      else if(difference > 50){
+
+        changeSlide(
+          sliderName,
+          -1
+        );
+
+      }
+
+
+      startAutoSlider(
+        sliderName
+      );
 
     },
     {
@@ -1734,45 +1796,64 @@ sliders.forEach(function(slider){
     }
   );
 
-
-  /* -----------------------------------------
-     UPDATE CURRENT DOT AFTER MANUAL SCROLL
-  ----------------------------------------- */
-
-  slider.addEventListener(
-    'scroll',
-    function(){
-
-      const index =
-        Math.round(
-          slider.scrollLeft /
-          slider.clientWidth
-        );
+}
 
 
-      if(
-        index >= 0 &&
-        index < images.length
-      ){
+/* ADD SWIPE TO BOTH */
 
-        currentSlide = index;
+addSwipeSupport('oneplus');
 
-        updateDots();
+addSwipeSupport('mangalsutra');
+
+
+/* =========================================================
+   START AUTO SLIDERS
+========================================================= */
+
+startAutoSlider('oneplus');
+
+startAutoSlider('mangalsutra');
+
+
+/* =========================================================
+   UPDATE SLIDER POSITION AFTER RESIZE
+========================================================= */
+
+window.addEventListener(
+  'resize',
+  function(){
+
+    Object.keys(sliders).forEach(
+      function(sliderName){
+
+        const slider =
+          sliders[sliderName];
+
+
+        if(
+          slider &&
+          slider.element
+        ){
+
+          slider.element.scrollLeft =
+            slider.element.clientWidth *
+            slider.current;
+
+        }
 
       }
+    );
 
-    }
-  );
-
-
-});
+  }
+);
 
 
-/* =====================================================
+/* =========================================================
    INITIAL FILTER
-===================================================== */
+========================================================= */
 
 applyFilters();
+
 
 </script>
 
