@@ -1,714 +1,1375 @@
 <!DOCTYPE html>
 <html lang="mr">
-
 <head>
 
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    KharediMitra | चांगली वस्तू • योग्य किंमत • सोपी खरेदी
-  </title>
-
-  <meta
-    name="description"
-    content="KharediMitra - ग्रामीण आणि शहरातील ग्राहकांसाठी निवडक ऑनलाइन deals आणि products."
-  >
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f6f7f9;
-      color: #222;
-      line-height: 1.5;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-
-    /* =========================
-       TOP BAR
-    ========================= */
-
-    .top {
-      background: #173f2b;
-      color: #fff;
-      text-align: center;
-      padding: 8px;
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e5e5e5;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav {
-      max-width: 1150px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 15px 18px;
-    }
-
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      color: #173f2b;
-      white-space: nowrap;
-    }
-
-    .logo span {
-      color: #e08a18;
-    }
-
-
-    /* =========================
-       SEARCH
-    ========================= */
-
-    .search {
-      flex: 1;
-      display: flex;
-    }
-
-    .search input {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px 0 0 8px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    .search input:focus {
-      border-color: #e08a18;
-    }
-
-    .search button {
-      border: 0;
-      background: #e08a18;
-      color: #fff;
-      padding: 0 18px;
-      border-radius: 0 8px 8px 0;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background: linear-gradient(
-        120deg,
-        #173f2b,
-        #286746
-      );
-
-      color: #fff;
-    }
-
-    .hero-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 48px 18px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      gap: 30px;
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 620px;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      margin-top: 22px;
-      background: #e08a18;
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: 700;
-    }
-
-    .hero-btn:hover {
-      background: #c9740c;
-    }
-
-    .hero-badge {
-      font-size: 75px;
-    }
-
-
-    /* =========================
-       CONTAINER
-    ========================= */
-
-    .container {
-      max-width: 1150px;
-      margin: auto;
-      padding: 30px 18px;
-    }
-
-    .title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-
-    .title h2 {
-      font-size: 24px;
-    }
-
-
-    /* =========================
-       CATEGORIES
-    ========================= */
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 12px;
-    }
-
-    .cat {
-      background: #fff;
-      border: 1px solid #e8e8e8;
-      border-radius: 10px;
-      padding: 18px 8px;
-      text-align: center;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KharediMitra | चांगली वस्तू • योग्य किंमत • सोपी खरेदी</title>
+
+<meta name="description"
+content="KharediMitra - ग्रामीण आणि शहरातील ग्राहकांसाठी निवडक ऑनलाइन deals आणि products.">
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f6f7f9;
+  color:#222;
+  line-height:1.5;
+  padding-bottom:0;
+}
+
+body.no-scroll{
+  overflow:hidden;
+}
 
-    .cat:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
-    .cat .icon {
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
+button,
+input{
+  font-family:inherit;
+}
 
+button{
+  cursor:pointer;
+}
 
-    /* =========================
-       PRODUCTS
-    ========================= */
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
+/* =========================================================
+   TOP BAR
+========================================================= */
 
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #e6e6e6;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-      min-width: 0;
-    }
+.top{
+  background:#173f2b;
+  color:#fff;
+  text-align:center;
+  padding:8px 12px;
+  font-size:14px;
+}
 
 
-    /* =========================
-       PRODUCT IMAGE
-    ========================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
-    .card-img {
-      height: 220px;
-      background: #f0f2f3;
+header{
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 18px;
 
-      overflow: hidden;
-      position: relative;
-    }
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
 
+.logo{
+  font-size:25px;
+  font-weight:900;
+  color:#173f2b;
+  white-space:nowrap;
+}
 
-    /* SINGLE IMAGE */
+.logo span{
+  color:#e08a18;
+}
 
-    .card-img > img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
 
+/* SEARCH */
 
-    /* =========================
-       MULTIPLE PHOTOS SLIDER
-    ========================= */
+.search{
+  flex:1;
+  display:flex;
+  min-width:180px;
+}
 
-    .product-images {
-      position: relative;
+.search input{
+  width:100%;
+  padding:12px 15px;
 
-      width: 100%;
-      height: 100%;
+  border:1px solid #ddd;
+  border-right:none;
 
-      display: flex;
+  border-radius:9px 0 0 9px;
 
-      overflow-x: auto;
+  font-size:15px;
+  outline:none;
+}
 
-      scroll-snap-type: x mandatory;
+.search input:focus{
+  border-color:#e08a18;
+}
 
-      scrollbar-width: none;
+.search button{
+  border:0;
+  background:#e08a18;
+  color:#fff;
 
-      scroll-behavior: smooth;
+  padding:0 18px;
 
-      touch-action: pan-y;
-    }
+  border-radius:0 9px 9px 0;
 
-    .product-images::-webkit-scrollbar {
-      display: none;
-    }
+  font-size:17px;
+}
 
-    .product-images img {
-      flex: 0 0 100%;
 
-      min-width: 100%;
-      width: 100%;
-      height: 100%;
+/* HEADER ICONS */
 
-      object-fit: contain;
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 
-      scroll-snap-align: start;
+.header-icon{
+  position:relative;
 
-      background: #fff;
+  width:42px;
+  height:42px;
 
-      display: block;
+  border:1px solid #e5e5e5;
+  background:#fff;
 
-      user-select: none;
-      -webkit-user-drag: none;
-    }
+  border-radius:10px;
 
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    /* =========================
-       SLIDER BUTTONS
-    ========================= */
+  font-size:20px;
+}
 
-    .slider-btn {
-      position: absolute;
+.header-icon:hover{
+  background:#f5f8f6;
+}
 
-      top: 50%;
+.count{
+  position:absolute;
 
-      transform: translateY(-50%);
+  top:-5px;
+  right:-5px;
 
-      width: 34px;
-      height: 34px;
+  min-width:18px;
+  height:18px;
 
-      border: none;
+  padding:0 4px;
 
-      border-radius: 50%;
+  background:#e08a18;
+  color:#fff;
 
-      background: rgba(23, 63, 43, 0.75);
+  border-radius:20px;
 
-      color: #fff;
+  font-size:11px;
 
-      font-size: 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-      cursor: pointer;
+  font-weight:bold;
+}
 
-      z-index: 5;
 
-      display: flex;
+/* =========================================================
+   HERO
+========================================================= */
 
-      align-items: center;
-      justify-content: center;
-    }
+.hero{
+  background:
+  linear-gradient(120deg,#173f2b,#286746);
 
-    .slider-btn:hover {
-      background: #173f2b;
-    }
+  color:#fff;
+}
 
-    .slider-prev {
-      left: 8px;
-    }
+.hero-inner{
+  max-width:1200px;
+  margin:auto;
 
-    .slider-next {
-      right: 8px;
-    }
+  padding:55px 18px;
 
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-    /* =========================
-       SLIDER DOTS
-    ========================= */
+  gap:30px;
+}
 
-    .slider-dots {
-      position: absolute;
+.hero-content{
+  max-width:720px;
+}
 
-      bottom: 8px;
+.hero h1{
+  font-size:42px;
+  line-height:1.2;
 
-      left: 0;
-      right: 0;
+  margin-bottom:12px;
+}
 
-      display: flex;
+.hero p{
+  font-size:18px;
+  color:#eaf4ed;
+}
 
-      justify-content: center;
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
 
-      gap: 6px;
+.hero-btn{
+  display:inline-block;
 
-      z-index: 5;
-    }
+  background:#e08a18;
+  color:#fff;
 
-    .slider-dot {
-      width: 8px;
-      height: 8px;
+  padding:12px 22px;
 
-      border-radius: 50%;
+  border-radius:9px;
 
-      background: rgba(0, 0, 0, 0.25);
+  font-weight:800;
+}
 
-      cursor: pointer;
+.hero-btn.secondary{
+  background:#fff;
+  color:#173f2b;
+}
 
-      transition: 0.2s;
-    }
+.hero-badge{
+  font-size:95px;
+}
 
-    .slider-dot.active {
-      background: #e08a18;
 
-      transform: scale(1.3);
-    }
+/* =========================================================
+   CONTAINER
+========================================================= */
 
+.container{
+  max-width:1200px;
+  margin:auto;
 
-    /* =========================
-       CARD BODY
-    ========================= */
+  padding:32px 18px;
+}
 
-    .card-body {
-      padding: 15px;
-    }
+.title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 
-    .tag {
-      display: inline-block;
+  margin-bottom:18px;
+}
 
-      background: #eaf5ee;
+.title h2{
+  font-size:25px;
+}
 
-      color: #17613a;
+.title small{
+  color:#777;
+}
 
-      padding: 3px 8px;
 
-      border-radius: 20px;
+/* =========================================================
+   CATEGORIES
+========================================================= */
 
-      font-size: 12px;
+.categories{
+  display:grid;
 
-      font-weight: 700;
+  grid-template-columns:
+  repeat(7,1fr);
 
-      margin-bottom: 8px;
-    }
+  gap:12px;
+}
 
-    .card h3 {
-      font-size: 17px;
+.cat{
+  background:#fff;
 
-      min-height: 48px;
-    }
+  border:1px solid #e7e7e7;
 
-    .card p {
-      font-size: 13px;
+  border-radius:12px;
 
-      color: #555;
+  padding:17px 8px;
 
-      margin-top: 7px;
-    }
+  text-align:center;
 
-    .rating {
-      color: #e08a18;
+  font-weight:700;
 
-      font-size: 14px;
+  cursor:pointer;
 
-      margin: 7px 0;
-    }
+  transition:.2s;
 
-    .price {
-      font-size: 21px;
+  user-select:none;
+}
 
-      font-weight: 800;
+.cat:hover{
+  transform:translateY(-3px);
 
-      margin: 6px 0;
-    }
+  box-shadow:
+  0 6px 18px rgba(0,0,0,.08);
+}
 
+.cat.active{
+  border-color:#173f2b;
 
-    /* =========================
-       BUY BUTTON
-    ========================= */
+  background:#eaf5ee;
 
-    .buy {
-      display: block;
+  color:#173f2b;
+}
 
-      text-align: center;
+.cat .icon{
+  font-size:29px;
+  margin-bottom:5px;
+}
 
-      background: #173f2b;
 
-      color: #fff;
+/* =========================================================
+   FILTER BAR
+========================================================= */
 
-      padding: 10px;
+.filter-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 
-      border-radius: 7px;
+  gap:12px;
 
-      font-weight: 700;
+  margin-bottom:18px;
+}
 
-      margin-top: 10px;
-    }
+.result-count{
+  color:#666;
+  font-size:14px;
+}
 
-    .buy:hover {
-      background: #0f2d1e;
-    }
+.sort-select{
+  padding:9px 12px;
 
+  border:1px solid #ddd;
 
-    /* =========================
-       NO RESULTS
-    ========================= */
+  background:#fff;
 
-    .empty {
-      grid-column: 1 / -1;
+  border-radius:8px;
 
-      background: #fff;
+  outline:none;
+}
 
-      border: 1px solid #e6e6e6;
 
-      border-radius: 12px;
+/* =========================================================
+   PRODUCTS
+========================================================= */
 
-      padding: 30px;
+.products{
+  display:grid;
 
-      text-align: center;
+  grid-template-columns:
+  repeat(4,1fr);
 
-      color: #666;
+  gap:18px;
+}
 
-      display: none;
-    }
+.card{
+  background:#fff;
 
+  border-radius:14px;
 
-    /* =========================
-       NOTE
-    ========================= */
+  overflow:hidden;
 
-    .note {
-      background: #fff7e8;
+  border:1px solid #e5e5e5;
 
-      border-left: 4px solid #e08a18;
+  box-shadow:
+  0 3px 10px rgba(0,0,0,.04);
 
-      padding: 15px;
+  min-width:0;
 
-      border-radius: 7px;
+  transition:.2s;
 
-      margin-top: 25px;
-    }
+  position:relative;
+}
 
+.card:hover{
+  transform:translateY(-3px);
 
-    /* =========================
-       FOOTER
-    ========================= */
+  box-shadow:
+  0 8px 25px rgba(0,0,0,.09);
+}
 
-    footer {
-      background: #173f2b;
 
-      color: #fff;
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
 
-      margin-top: 30px;
-    }
+.card-img{
+  height:250px;
 
-    .footer-inner {
-      max-width: 1150px;
+  background:#f0f2f3;
 
-      margin: auto;
+  position:relative;
 
-      padding: 30px 18px;
+  overflow:hidden;
+}
 
-      display: flex;
+.card-img > img{
+  width:100%;
+  height:100%;
 
-      justify-content: space-between;
+  object-fit:contain;
 
-      gap: 20px;
-    }
+  display:block;
 
-    footer h3 {
-      margin-bottom: 8px;
-    }
+  background:#fff;
+}
 
-    .disclosure {
-      font-size: 13px;
 
-      color: #d7e3dc;
+/* =========================================================
+   PRODUCT SLIDER
+========================================================= */
 
-      max-width: 650px;
-    }
+.product-images{
+  position:relative;
 
+  width:100%;
+  height:100%;
 
-    /* =========================
-       TABLET
-    ========================= */
+  display:flex;
 
-    @media (max-width: 1000px) {
+  overflow-x:auto;
 
-      .categories {
-        grid-template-columns: repeat(4, 1fr);
-      }
+  scroll-snap-type:x mandatory;
 
-      .products {
-        grid-template-columns: repeat(3, 1fr);
-      }
+  scrollbar-width:none;
 
-    }
+  scroll-behavior:smooth;
 
+  touch-action:pan-y;
+}
 
-    @media (max-width: 800px) {
+.product-images::-webkit-scrollbar{
+  display:none;
+}
 
-      .nav {
-        flex-wrap: wrap;
-      }
+.product-images img{
+  flex:0 0 100%;
 
-      .search {
-        order: 3;
+  min-width:100%;
 
-        flex-basis: 100%;
-      }
+  width:100%;
+  height:100%;
 
-      .hero-inner {
-        padding: 35px 18px;
-      }
+  object-fit:contain;
 
-      .hero h1 {
-        font-size: 31px;
-      }
+  scroll-snap-align:start;
 
-      .hero-badge {
-        font-size: 50px;
-      }
+  background:#fff;
 
-      .categories {
-        grid-template-columns: repeat(3, 1fr);
-      }
+  display:block;
+}
 
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
 
-    }
+/* =========================================================
+   PRODUCT BADGE
+========================================================= */
 
+.product-badge{
+  position:absolute;
 
-    /* =========================
-       MOBILE
-    ========================= */
+  top:10px;
+  left:10px;
 
-    @media (max-width: 480px) {
+  z-index:10;
 
-      .top {
-        font-size: 12px;
-      }
+  background:#e08a18;
 
-      .nav {
-        padding: 12px;
-      }
+  color:#fff;
 
-      .logo {
-        font-size: 21px;
-      }
+  padding:5px 9px;
 
-      .search input {
-        font-size: 14px;
-      }
+  border-radius:20px;
 
-      .search button {
-        padding: 0 14px;
-      }
+  font-size:11px;
 
-      .hero-inner {
-        padding: 30px 15px;
-      }
+  font-weight:800;
+}
 
-      .hero h1 {
-        font-size: 27px;
-      }
 
-      .hero p {
-        font-size: 15px;
-      }
+/* =========================================================
+   WISHLIST
+========================================================= */
 
-      .hero-badge {
-        display: none;
-      }
+.wishlist-btn{
+  position:absolute;
 
-      .container {
-        padding: 25px 12px;
-      }
+  top:10px;
+  right:10px;
 
-      .title h2 {
-        font-size: 20px;
-      }
+  z-index:20;
 
-      .categories {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-      }
+  width:38px;
+  height:38px;
 
-      .cat {
-        padding: 14px 5px;
-        font-size: 13px;
-      }
+  border:none;
 
-      .cat .icon {
-        font-size: 24px;
-      }
+  border-radius:50%;
 
-      .products {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
+  background:#fff;
 
-      .card-img {
-        height: 260px;
-      }
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
 
-      .card h3 {
-        min-height: auto;
-      }
+  font-size:20px;
+}
 
-      .footer-inner {
-        flex-direction: column;
-      }
+.wishlist-btn.active{
+  color:#e08a18;
+}
 
-    }
 
-  </style>
+/* =========================================================
+   SLIDER BUTTONS
+========================================================= */
+
+.slider-btn{
+  position:absolute;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:34px;
+  height:34px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:rgba(23,63,43,.75);
+
+  color:#fff;
+
+  font-size:22px;
+
+  z-index:15;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+}
+
+.slider-btn:hover{
+  background:#173f2b;
+}
+
+.slider-prev{
+  left:8px;
+}
+
+.slider-next{
+  right:8px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.slider-dots{
+  position:absolute;
+
+  bottom:9px;
+
+  left:0;
+  right:0;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:6px;
+
+  z-index:15;
+}
+
+.slider-dot{
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  border:none;
+
+  padding:0;
+
+  background:rgba(0,0,0,.25);
+}
+
+.slider-dot.active{
+  background:#e08a18;
+
+  transform:scale(1.35);
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.card-body{
+  padding:15px;
+}
+
+.tag{
+  display:inline-block;
+
+  background:#eaf5ee;
+
+  color:#17613a;
+
+  padding:3px 8px;
+
+  border-radius:20px;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  margin-bottom:8px;
+}
+
+.card h3{
+  font-size:17px;
+
+  min-height:50px;
+
+  line-height:1.4;
+}
+
+.card p{
+  font-size:13px;
+
+  color:#666;
+
+  margin-top:7px;
+}
+
+.rating{
+  color:#e08a18;
+
+  font-size:14px;
+
+  margin:7px 0;
+}
+
+.price{
+  font-size:22px;
+
+  font-weight:900;
+
+  margin:6px 0;
+}
+
+.old-price{
+  font-size:13px;
+
+  color:#999;
+
+  text-decoration:line-through;
+
+  margin-left:5px;
+}
+
+
+/* CARD BUTTONS */
+
+.card-actions{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:8px;
+
+  margin-top:10px;
+}
+
+.buy{
+  display:block;
+
+  text-align:center;
+
+  background:#173f2b;
+
+  color:#fff;
+
+  padding:10px;
+
+  border-radius:8px;
+
+  font-weight:800;
+
+  font-size:13px;
+}
+
+.buy:hover{
+  background:#0f2d1e;
+}
+
+.quick-btn{
+  border:1px solid #173f2b;
+
+  background:#fff;
+
+  color:#173f2b;
+
+  border-radius:8px;
+
+  font-weight:800;
+}
+
+
+/* =========================================================
+   EMPTY RESULT
+========================================================= */
+
+.empty{
+  grid-column:1/-1;
+
+  background:#fff;
+
+  border:1px solid #e5e5e5;
+
+  border-radius:14px;
+
+  padding:45px 20px;
+
+  text-align:center;
+
+  color:#666;
+
+  display:none;
+}
+
+.empty-icon{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+
+/* =========================================================
+   RECENTLY VIEWED
+========================================================= */
+
+.recent-section{
+  margin-top:40px;
+}
+
+.recent-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:15px;
+}
+
+.recent-card{
+  background:#fff;
+
+  border:1px solid #e5e5e5;
+
+  border-radius:12px;
+
+  padding:10px;
+
+  display:flex;
+
+  gap:10px;
+
+  align-items:center;
+}
+
+.recent-card img{
+  width:70px;
+  height:70px;
+
+  object-fit:contain;
+
+  border-radius:8px;
+
+  background:#f5f5f5;
+}
+
+.recent-card h4{
+  font-size:13px;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.note{
+  background:#fff7e8;
+
+  border-left:4px solid #e08a18;
+
+  padding:15px;
+
+  border-radius:8px;
+
+  margin-top:28px;
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#173f2b;
+
+  color:#fff;
+
+  margin-top:40px;
+}
+
+.footer-inner{
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:35px 18px;
+
+  display:grid;
+
+  grid-template-columns:
+  1fr 1fr 1fr;
+
+  gap:30px;
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+.footer-links{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:7px;
+
+  color:#d7e3dc;
+
+  font-size:14px;
+}
+
+.disclosure{
+  font-size:13px;
+
+  color:#d7e3dc;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp{
+  position:fixed;
+
+  right:18px;
+  bottom:18px;
+
+  width:52px;
+  height:52px;
+
+  border-radius:50%;
+
+  background:#25D366;
+
+  color:#fff;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:27px;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.2);
+
+  z-index:500;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-top{
+  position:fixed;
+
+  right:18px;
+  bottom:80px;
+
+  width:42px;
+  height:42px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#173f2b;
+
+  color:#fff;
+
+  font-size:20px;
+
+  display:none;
+
+  z-index:500;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal{
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.65);
+
+  display:none;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:15px;
+
+  z-index:1000;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:100%;
+
+  max-width:700px;
+
+  max-height:90vh;
+
+  overflow:auto;
+
+  background:#fff;
+
+  border-radius:15px;
+
+  padding:20px;
+
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+
+  top:10px;
+  right:10px;
+
+  width:38px;
+  height:38px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#f2f2f2;
+
+  font-size:22px;
+
+  z-index:10;
+}
+
+.modal-content{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+
+  padding-top:10px;
+}
+
+.modal-image{
+  height:330px;
+
+  background:#f5f5f5;
+
+  border-radius:10px;
+
+  overflow:hidden;
+}
+
+.modal-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+}
+
+.modal-info{
+  padding:10px 0;
+}
+
+.modal-info h2{
+  font-size:23px;
+
+  margin-bottom:10px;
+}
+
+.modal-price{
+  font-size:27px;
+
+  font-weight:900;
+
+  margin:12px 0;
+}
+
+
+/* =========================================================
+   MOBILE BOTTOM NAV
+========================================================= */
+
+.mobile-bottom{
+  display:none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+  .categories{
+    grid-template-columns:
+    repeat(4,1fr);
+  }
+
+  .products{
+    grid-template-columns:
+    repeat(3,1fr);
+  }
+
+  .recent-grid{
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+  body{
+    padding-bottom:65px;
+  }
+
+  .top{
+    font-size:12px;
+  }
+
+  .nav{
+    flex-wrap:wrap;
+
+    padding:10px 12px;
+
+    gap:10px;
+  }
+
+  .logo{
+    font-size:21px;
+  }
+
+  .header-actions{
+    margin-left:auto;
+  }
+
+  .search{
+    order:3;
+
+    flex-basis:100%;
+  }
+
+  .hero-inner{
+    padding:38px 18px;
+
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-badge{
+    display:none;
+  }
+
+  .container{
+    padding:25px 12px;
+  }
+
+  .title h2{
+    font-size:21px;
+  }
+
+  .categories{
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:9px;
+  }
+
+  .cat{
+    padding:14px 6px;
+
+    font-size:13px;
+  }
+
+  .cat .icon{
+    font-size:25px;
+  }
+
+  .filter-bar{
+    align-items:flex-start;
+
+    flex-direction:column;
+  }
+
+  .sort-select{
+    width:100%;
+  }
+
+  .products{
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:10px;
+  }
+
+  .card-img{
+    height:210px;
+  }
+
+  .card-body{
+    padding:11px;
+  }
+
+  .card h3{
+    font-size:14px;
+
+    min-height:60px;
+  }
+
+  .card p{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:18px;
+  }
+
+  .card-actions{
+    grid-template-columns:1fr;
+
+    gap:6px;
+  }
+
+  .quick-btn,
+  .buy{
+    padding:9px 5px;
+
+    font-size:12px;
+  }
+
+  .slider-btn{
+    width:30px;
+    height:30px;
+
+    font-size:19px;
+  }
+
+  .wishlist-btn{
+    width:34px;
+    height:34px;
+
+    font-size:18px;
+  }
+
+  .recent-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+
+    padding-bottom:85px;
+  }
+
+  .whatsapp{
+    right:15px;
+    bottom:78px;
+  }
+
+  .back-top{
+    right:15px;
+    bottom:135px;
+  }
+
+  .mobile-bottom{
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:62px;
+
+    background:#fff;
+
+    border-top:1px solid #ddd;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    z-index:600;
+
+    box-shadow:
+    0 -3px 12px rgba(0,0,0,.08);
+  }
+
+  .mobile-bottom button{
+    border:none;
+
+    background:#fff;
+
+    color:#555;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+  }
+
+  .mobile-bottom span{
+    font-size:20px;
+
+    line-height:20px;
+  }
+
+  .modal-content{
+    grid-template-columns:1fr;
+  }
+
+  .modal-image{
+    height:250px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .card-img{
+    height:245px;
+  }
+
+  .card h3{
+    min-height:auto;
+
+    font-size:16px;
+  }
+
+  .card-actions{
+    grid-template-columns:
+    1fr 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto !important;
+    transition:none !important;
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -716,72 +1377,104 @@
 <body>
 
 
-  <!-- =========================
-       TOP BAR
-  ========================= -->
+<!-- =======================================================
+     TOP BAR
+======================================================= -->
 
-  <div class="top">
-
-    🔥 आजचे निवडक Deals • योग्य किंमत • सोपी ऑनलाइन खरेदी
-
-  </div>
+<div class="top">
+🔥 आजचे निवडक Deals • योग्य किंमत • सोपी ऑनलाइन खरेदी
+</div>
 
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
-  <header>
+<header>
 
-    <div class="nav">
+  <div class="nav">
 
-      <div class="logo">
-
-        KHAREDI<span>MITRA</span>
-
-      </div>
+    <a href="#" class="logo">
+      KHAREDI<span>MITRA</span>
+    </a>
 
 
-      <div class="search">
+    <div class="search">
 
-        <input
-          id="searchBox"
-          type="search"
-          placeholder="Product शोधा..."
-          autocomplete="off"
-        >
+      <input
+        id="searchBox"
+        type="search"
+        placeholder="Product शोधा..."
+        autocomplete="off"
+      >
 
-        <button
-          type="button"
-          onclick="searchProducts()"
-        >
-          🔍
-        </button>
-
-      </div>
+      <button
+        type="button"
+        onclick="searchProducts()"
+        aria-label="Search"
+      >
+        🔍
+      </button>
 
     </div>
 
-  </header>
+
+    <div class="header-actions">
+
+      <button
+        class="header-icon"
+        type="button"
+        onclick="showWishlist()"
+        aria-label="Wishlist"
+      >
+
+        ❤️
+
+        <span
+          class="count"
+          id="wishlistCount"
+        >
+          0
+        </span>
+
+      </button>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+      <button
+        class="header-icon"
+        type="button"
+        onclick="scrollToDeals()"
+        aria-label="Products"
+      >
+        🛒
+      </button>
 
-  <section class="hero">
+    </div>
 
-    <div class="hero-inner">
+  </div>
 
-      <div>
+</header>
 
-        <h1>
-          खरेदी आता झाली सोपी!
-        </h1>
 
-        <p>
-          चांगली वस्तू • योग्य किंमत • सोपी खरेदी
-        </p>
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="hero-content">
+
+      <h1>
+        खरेदी आता झाली सोपी!
+      </h1>
+
+      <p>
+        चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+      </p>
+
+      <div class="hero-buttons">
 
         <a
           class="hero-btn"
@@ -790,1248 +1483,1924 @@
           🔥 Best Deals पहा
         </a>
 
-      </div>
+        <a
+          class="hero-btn secondary"
+          href="#categories"
+        >
+          📂 Categories
+        </a>
 
-
-      <div class="hero-badge">
-        🛒
       </div>
 
     </div>
 
-  </section>
+
+    <div class="hero-badge">
+      🛒
+    </div>
+
+  </div>
+
+</section>
 
 
-  <!-- =========================
-       MAIN
-  ========================= -->
+<!-- =======================================================
+     MAIN
+======================================================= -->
 
-  <main class="container">
+<main class="container">
 
 
-    <!-- =========================
-         CATEGORIES
-    ========================= -->
+<!-- =======================================================
+     CATEGORIES
+======================================================= -->
+
+<section id="categories">
+
+  <div class="title">
+
+    <h2>
+      📂 Categories
+    </h2>
+
+  </div>
+
+
+  <div class="categories">
+
+
+    <div
+      class="cat active"
+      data-category=""
+      onclick="filterCategory('')"
+    >
+
+      <div class="icon">
+        🏠
+      </div>
+
+      सर्व Products
+
+    </div>
+
+
+    <div
+      class="cat"
+      data-category="शेती"
+      onclick="filterCategory('शेती')"
+    >
+
+      <div class="icon">
+        🌾
+      </div>
+
+      शेती
+
+    </div>
+
+
+    <div
+      class="cat"
+      data-category="घरगुती"
+      onclick="filterCategory('घरगुती')"
+    >
+
+      <div class="icon">
+        🏠
+      </div>
+
+      घरगुती
+
+    </div>
+
+
+    <div
+      class="cat"
+      data-category="Tools"
+      onclick="filterCategory('Tools')"
+    >
+
+      <div class="icon">
+        🔧
+      </div>
+
+      Tools
+
+    </div>
+
+
+    <div
+      class="cat"
+      data-category="Electronics"
+      onclick="filterCategory('Electronics')"
+    >
+
+      <div class="icon">
+        📱
+      </div>
+
+      Electronics
+
+    </div>
+
+
+    <div
+      class="cat"
+      data-category="Fashion"
+      onclick="filterCategory('Fashion')"
+    >
+
+      <div class="icon">
+        👗
+      </div>
+
+      Fashion
+
+    </div>
+
+
+    <div
+      class="cat"
+      data-category="Daily Use"
+      onclick="filterCategory('Daily Use')"
+    >
+
+      <div class="icon">
+        🛍️
+      </div>
+
+      Daily Use
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     DEALS
+======================================================= -->
+
+<section
+  id="deals"
+  style="margin-top:40px"
+>
+
+
+  <div class="title">
+
+    <h2>
+      🔥 आजचे Best Deals
+    </h2>
+
+    <small id="resultCount">
+      0 Products
+    </small>
+
+  </div>
+
+
+  <div class="filter-bar">
+
+    <div class="result-count">
+      तुमच्यासाठी निवडक Products
+    </div>
+
+
+    <select
+      id="sortSelect"
+      class="sort-select"
+      onchange="sortProducts()"
+    >
+
+      <option value="default">
+        Sort: Recommended
+      </option>
+
+      <option value="low">
+        Price: Low → High
+      </option>
+
+      <option value="high">
+        Price: High → Low
+      </option>
+
+      <option value="rating">
+        Rating: High → Low
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div
+    class="products"
+    id="productGrid"
+  >
+
+
+    <!-- ===================================================
+         ONEPLUS
+    ==================================================== -->
+
+    <article
+      class="card"
+      data-category="Electronics"
+      data-name="OnePlus N6 4GB 128GB Midnight Green"
+      data-price="22998"
+      data-rating="4.5"
+      data-id="oneplus-n6"
+    >
+
+      <div class="card-img">
+
+        <span class="product-badge">
+          TRENDING
+        </span>
+
+
+        <button
+          class="wishlist-btn"
+          type="button"
+          data-id="oneplus-n6"
+          onclick="toggleWishlist(this)"
+          aria-label="Wishlist"
+        >
+          ♡
+        </button>
+
+
+        <div
+          class="product-images"
+          id="slider-oneplus"
+        >
+
+          <img
+            src="images/oneplus-n6-1.jpg"
+            alt="OnePlus N6 Front"
+          >
+
+          <img
+            src="images/oneplus-n6-2.jpg"
+            alt="OnePlus N6 Battery"
+          >
+
+          <img
+            src="images/oneplus-n6-3.jpg"
+            alt="OnePlus N6 Display"
+          >
+
+
+          <button
+            type="button"
+            class="slider-btn slider-prev"
+            onclick="moveSlider('slider-oneplus',-1)"
+          >
+            ‹
+          </button>
+
+
+          <button
+            type="button"
+            class="slider-btn slider-next"
+            onclick="moveSlider('slider-oneplus',1)"
+          >
+            ›
+          </button>
+
+
+          <div class="slider-dots">
+
+            <button
+              class="slider-dot active"
+              onclick="goSlide('slider-oneplus',0)"
+            ></button>
+
+            <button
+              class="slider-dot"
+              onclick="goSlide('slider-oneplus',1)"
+            ></button>
+
+            <button
+              class="slider-dot"
+              onclick="goSlide('slider-oneplus',2)"
+            ></button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="card-body">
+
+        <span class="tag">
+          ELECTRONICS
+        </span>
+
+        <h3>
+          OnePlus N6 4GB+128GB Midnight Green
+        </h3>
+
+        <div class="rating">
+          ⭐ 4.5/5
+        </div>
+
+        <div class="price">
+          ₹22,998
+        </div>
+
+        <p>
+          8000mAh Battery • 45W Charging •
+          120Hz Display • 50MP Camera
+        </p>
+
+
+        <div class="card-actions">
+
+          <button
+            class="quick-btn"
+            type="button"
+            onclick="quickView(this)"
+          >
+            👀 Quick View
+          </button>
+
+
+          <a
+            class="buy"
+            href="https://link.amazon/B0fUerZGS"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            onclick="saveRecentlyViewed(this)"
+          >
+            🛒 खरेदी करा
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         PALMONAS
+    ==================================================== -->
+
+    <article
+      class="card"
+      data-category="Fashion"
+      data-name="PALMONAS 18k Gold Plated Small Letter Necklace"
+      data-price="979"
+      data-rating="4.3"
+      data-id="palmonas"
+    >
+
+      <div class="card-img">
+
+        <span class="product-badge">
+          FASHION
+        </span>
+
+
+        <button
+          class="wishlist-btn"
+          type="button"
+          data-id="palmonas"
+          onclick="toggleWishlist(this)"
+        >
+          ♡
+        </button>
+
+
+        <img
+          src="images/palmonas.jpg"
+          alt="PALMONAS 18k Gold Plated Small Letter Necklace"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="card-body">
+
+        <span class="tag">
+          FASHION
+        </span>
+
+        <h3>
+          PALMONAS 18k Gold Plated Small Letter Necklace
+        </h3>
+
+        <div class="rating">
+          ⭐ 4.3/5
+        </div>
+
+        <div class="price">
+          ₹979
+        </div>
+
+
+        <p>
+          Stylish • Elegant • Daily Wear
+        </p>
+
+
+        <div class="card-actions">
+
+          <button
+            class="quick-btn"
+            type="button"
+            onclick="quickView(this)"
+          >
+            👀 Quick View
+          </button>
+
+
+          <a
+            class="buy"
+            href="https://link.amazon/B0ffWKiCc"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            onclick="saveRecentlyViewed(this)"
+          >
+            🛒 खरेदी करा
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         MANGALSUTRA
+    ==================================================== -->
+
+    <article
+      class="card"
+      data-category="Fashion"
+      data-name="Personalized Gold Plated Name Mangalsutra"
+      data-price="275"
+      data-rating="4.2"
+      data-id="mangalsutra"
+    >
+
+      <div class="card-img">
+
+        <span class="product-badge">
+          TRENDING
+        </span>
+
+
+        <button
+          class="wishlist-btn"
+          type="button"
+          data-id="mangalsutra"
+          onclick="toggleWishlist(this)"
+        >
+          ♡
+        </button>
+
+
+        <div
+          class="product-images"
+          id="slider-mangalsutra"
+        >
+
+          <img
+            src="images/mangalsutra.jpg"
+            alt="Personalized Gold Plated Name Mangalsutra"
+            loading="lazy"
+          >
+
+          <img
+            src="images/mangalsutra2.jpg"
+            alt="Personalized Gold Plated Name Mangalsutra Photo 2"
+            loading="lazy"
+          >
+
+
+          <button
+            type="button"
+            class="slider-btn slider-prev"
+            onclick="moveSlider('slider-mangalsutra',-1)"
+          >
+            ‹
+          </button>
+
+
+          <button
+            type="button"
+            class="slider-btn slider-next"
+            onclick="moveSlider('slider-mangalsutra',1)"
+          >
+            ›
+          </button>
+
+
+          <div class="slider-dots">
+
+            <button
+              class="slider-dot active"
+              onclick="goSlide('slider-mangalsutra',0)"
+            ></button>
+
+            <button
+              class="slider-dot"
+              onclick="goSlide('slider-mangalsutra',1)"
+            ></button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="card-body">
+
+        <span class="tag">
+          TRENDING
+        </span>
+
+        <h3>
+          Personalized Gold Plated Name Mangalsutra
+        </h3>
+
+        <div class="rating">
+          ⭐ 4.2/5
+        </div>
+
+        <div class="price">
+          ₹275
+        </div>
+
+        <p>
+          Stylish Design • Personalized Name •
+          Gift Option
+        </p>
+
+
+        <div class="card-actions">
+
+          <button
+            class="quick-btn"
+            type="button"
+            onclick="quickView(this)"
+          >
+            👀 Quick View
+          </button>
+
+
+          <a
+            class="buy"
+            href="https://link.amazon/B0gmD6BP8"
+            target="_blank"
+            rel="nofollow sponsored noopener"
+            onclick="saveRecentlyViewed(this)"
+          >
+            🛒 खरेदी करा
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ===================================================
+         NO RESULTS
+    ==================================================== -->
+
+    <div
+      class="empty"
+      id="noResults"
+    >
+
+      <div class="empty-icon">
+        😔
+      </div>
+
+      <h3>
+        Product सापडला नाही
+      </h3>
+
+      <p>
+        दुसरे नाव किंवा category try करा.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- =====================================================
+       RECENTLY VIEWED
+  ====================================================== -->
+
+  <section
+    class="recent-section"
+    id="recentSection"
+    style="display:none"
+  >
 
     <div class="title">
 
       <h2>
-        📂 Categories
+        👀 Recently Viewed
       </h2>
 
     </div>
 
+    <div
+      class="recent-grid"
+      id="recentGrid"
+    ></div>
 
-    <div class="categories">
-
-
-      <!-- ALL PRODUCTS -->
-
-      <div
-        class="cat"
-        onclick="showAllProducts()"
-      >
-
-        <div class="icon">
-          🏠
-        </div>
-
-        सर्व Products
-
-      </div>
+  </section>
 
 
-      <!-- FARMING -->
+  <!-- =====================================================
+       AFFILIATE
+  ====================================================== -->
 
-      <div
-        class="cat"
-        onclick="filterCategory('शेती')"
-      >
+  <div class="note">
 
-        <div class="icon">
-          🌾
-        </div>
+    <strong>
+      ℹ️ Affiliate Disclosure:
+    </strong>
 
-        शेती
+    या website वरील काही Buy Now links affiliate links असू शकतात.
+    तुम्ही eligible purchase केल्यास आम्हाला commission मिळू शकते.
+    तुमच्या खरेदीच्या किंमतीवर याचा अतिरिक्त खर्च होत नाही.
 
-      </div>
-
-
-      <!-- HOME -->
-
-      <div
-        class="cat"
-        onclick="filterCategory('घरगुती')"
-      >
-
-        <div class="icon">
-          🏠
-        </div>
-
-        घरगुती
-
-      </div>
+  </div>
 
 
-      <!-- TOOLS -->
+</section>
 
-      <div
-        class="cat"
-        onclick="filterCategory('Tools')"
-      >
-
-        <div class="icon">
-          🔧
-        </div>
-
-        Tools
-
-      </div>
+</main>
 
 
-      <!-- ELECTRONICS -->
+<!-- =======================================================
+     FOOTER
+======================================================= -->
 
-      <div
-        class="cat"
-        onclick="filterCategory('Electronics')"
-      >
+<footer>
 
-        <div class="icon">
-          📱
-        </div>
-
-        Electronics
-
-      </div>
+  <div class="footer-inner">
 
 
-      <!-- FASHION -->
+    <div>
 
-      <div
-        class="cat"
-        onclick="filterCategory('Fashion')"
-      >
+      <h3>
+        KHAREDI MITRA
+      </h3>
 
-        <div class="icon">
-          👕
-        </div>
-
-        Fashion
-
-      </div>
-
-
-      <!-- DAILY USE -->
-
-      <div
-        class="cat"
-        onclick="filterCategory('Daily Use')"
-      >
-
-        <div class="icon">
-          🛍️
-        </div>
-
-        Daily Use
-
-      </div>
-
+      <p>
+        चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+      </p>
 
     </div>
 
 
-    <!-- =========================
-         DEALS
-    ========================= -->
+    <div>
 
-    <section
-      id="deals"
-      style="margin-top:35px"
+      <h3>
+        Quick Links
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="#categories">
+          Categories
+        </a>
+
+        <a href="#deals">
+          Best Deals
+        </a>
+
+        <a href="#">
+          Home
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="disclosure">
+
+      <h3>
+        महत्त्वाचे
+      </h3>
+
+      <p>
+
+        Product price, availability, discount
+        आणि delivery details बदलू शकतात.
+
+        खरेदी करण्यापूर्वी संबंधित shopping
+        website वर अंतिम किंमत तपासा.
+
+      </p>
+
+      <p style="margin-top:10px">
+
+        © 2026 KharediMitra.
+        All rights reserved.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+<!-- =======================================================
+     QUICK VIEW MODAL
+======================================================= -->
+
+<div
+  class="modal"
+  id="quickModal"
+  onclick="closeModalOutside(event)"
+>
+
+  <div class="modal-box">
+
+    <button
+      class="modal-close"
+      type="button"
+      onclick="closeQuickView()"
     >
+      ×
+    </button>
 
 
-      <div class="title">
+    <div class="modal-content">
 
-        <h2>
-          🔥 आजचे Best Deals
+      <div class="modal-image">
+
+        <img
+          id="modalImage"
+          src=""
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="modal-info">
+
+        <h2 id="modalTitle">
+          Product
         </h2>
 
-      </div>
-
-
-      <div
-        class="products"
-        id="productGrid"
-      >
-
-
-        <!-- =================================
-             ONEPLUS N6
-        ================================= -->
-
-        <article
-          class="card"
-          data-category="Electronics"
-          data-name="OnePlus N6 4GB 128GB Midnight Green"
-        >
-
-
-          <div class="card-img">
-
-
-            <div
-              class="product-images"
-              id="oneplusSlider"
-            >
-
-
-              <img
-                src="images/oneplus-n6-1.jpg"
-                alt="OnePlus N6 Front"
-              >
-
-
-              <img
-                src="images/oneplus-n6-2.jpg"
-                alt="OnePlus N6 Battery"
-              >
-
-
-              <img
-                src="images/oneplus-n6-3.jpg"
-                alt="OnePlus N6 Display"
-              >
-
-
-              <!-- PREVIOUS -->
-
-              <button
-                type="button"
-                class="slider-btn slider-prev"
-                onclick="changeSlide(-1)"
-                aria-label="Previous image"
-              >
-                ‹
-              </button>
-
-
-              <!-- NEXT -->
-
-              <button
-                type="button"
-                class="slider-btn slider-next"
-                onclick="changeSlide(1)"
-                aria-label="Next image"
-              >
-                ›
-              </button>
-
-
-              <!-- DOTS -->
-
-              <div class="slider-dots">
-
-
-                <span
-                  class="slider-dot active"
-                  onclick="goToSlide(0)"
-                ></span>
-
-
-                <span
-                  class="slider-dot"
-                  onclick="goToSlide(1)"
-                ></span>
-
-
-                <span
-                  class="slider-dot"
-                  onclick="goToSlide(2)"
-                ></span>
-
-
-              </div>
-
-
-            </div>
-
-          </div>
-
-
-          <div class="card-body">
-
-
-            <span class="tag">
-              TRENDING
-            </span>
-
-
-            <h3>
-              OnePlus N6 4GB+128GB Midnight Green
-            </h3>
-
-
-            <div class="rating">
-              ⭐ 4.5/5
-            </div>
-
-
-            <div class="price">
-              ₹22,998
-            </div>
-
-
-            <p>
-              8000mAh Battery • 45W Charging •
-              120Hz Display • 50MP Camera
-            </p>
-
-
-            <a
-              class="buy"
-              href="https://link.amazon/B0fUerZGS"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-            >
-              🛒 Amazon वर खरेदी करा
-            </a>
-
-
-          </div>
-
-
-        </article>
-
-
-        <!-- =================================
-             PALMONAS
-        ================================= -->
-
-        <article
-          class="card"
-          data-category="Fashion"
-          data-name="PALMONAS 18k Gold Plated Small Letter Necklace"
-        >
-
-
-          <div class="card-img">
-
-
-            <img
-              src="images/palmonas.jpg"
-              alt="PALMONAS 18k Gold Plated Small Letter Necklace"
-              loading="lazy"
-            >
-
-
-          </div>
-
-
-          <div class="card-body">
-
-
-            <span class="tag">
-              FASHION
-            </span>
-
-
-            <h3>
-              PALMONAS 18k Gold Plated Small Letter Necklace
-            </h3>
-
-
-            <div class="rating">
-              ⭐ 4.3/5
-            </div>
-
-
-            <div class="price">
-              ₹979
-            </div>
-
-
-            <a
-              class="buy"
-              href="https://link.amazon/B0ffWKiCc"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-            >
-              🛒 Amazon वर खरेदी करा
-            </a>
-
-
-          </div>
-
-
-        </article>
-
-
-        <!-- =================================
-             MANGALSUTRA
-             2 PHOTOS
-        ================================= -->
-
-        <article
-          class="card"
-          data-category="Fashion"
-          data-name="Personalized Gold Plated Name Mangalsutra"
-        >
-
-
-          <div class="card-img">
-
-
-            <div
-              class="product-images"
-              id="mangalsutraSlider"
-            >
-
-
-              <img
-                src="images/mangalsutra.jpg"
-                alt="Personalized Gold Plated Name Mangalsutra"
-                loading="lazy"
-              >
-
-
-              <img
-                src="images/mangalsutra2.jpg"
-                alt="Personalized Gold Plated Name Mangalsutra Photo 2"
-                loading="lazy"
-              >
-
-
-              <!-- PREVIOUS -->
-
-              <button
-                type="button"
-                class="slider-btn slider-prev"
-                onclick="changeMangalsutraSlide(-1)"
-                aria-label="Previous image"
-              >
-                ‹
-              </button>
-
-
-              <!-- NEXT -->
-
-              <button
-                type="button"
-                class="slider-btn slider-next"
-                onclick="changeMangalsutraSlide(1)"
-                aria-label="Next image"
-              >
-                ›
-              </button>
-
-
-              <!-- DOTS -->
-
-              <div class="slider-dots">
-
-
-                <span
-                  class="slider-dot active"
-                  onclick="goToMangalsutraSlide(0)"
-                ></span>
-
-
-                <span
-                  class="slider-dot"
-                  onclick="goToMangalsutraSlide(1)"
-                ></span>
-
-
-              </div>
-
-
-            </div>
-
-          </div>
-
-
-          <div class="card-body">
-
-
-            <span class="tag">
-              TRENDING
-            </span>
-
-
-            <h3>
-              Personalized Gold Plated Name Mangalsutra
-            </h3>
-
-
-            <div class="rating">
-              ⭐ 4.2/5
-            </div>
-
-
-            <div class="price">
-              ₹275
-            </div>
-
-
-            <p>
-              Personalized Name • Gold Plated • Stylish Design
-            </p>
-
-
-            <a
-              class="buy"
-              href="https://link.amazon/B0gmD6BP8"
-              target="_blank"
-              rel="nofollow sponsored noopener"
-            >
-              🛒 Amazon वर खरेदी करा
-            </a>
-
-
-          </div>
-
-
-        </article>
-
-
-        <!-- =================================
-             NO RESULTS
-        ================================= -->
-
         <div
-          class="empty"
-          id="noResults"
+          class="rating"
+          id="modalRating"
         >
-
-          😔 Product सापडला नाही.
-
-          <br>
-
-          दुसरे नाव किंवा category try करा.
-
         </div>
 
+        <div
+          class="modal-price"
+          id="modalPrice"
+        >
+        </div>
 
-      </div>
-
-
-      <!-- =========================
-           AFFILIATE DISCLOSURE
-      ========================= -->
-
-      <div class="note">
-
-        <strong>
-          ℹ️ Affiliate Disclosure:
-        </strong>
-
-        या website वरील काही Buy Now links affiliate links असू शकतात.
-        तुम्ही eligible purchase केल्यास आम्हाला commission मिळू शकते.
-        तुमच्या खरेदीच्या किंमतीवर याचा अतिरिक्त खर्च होत नाही.
-
-      </div>
-
-
-    </section>
-
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-
-    <div class="footer-inner">
-
-
-      <div>
-
-        <h3>
-          KHAREDI MITRA
-        </h3>
-
-        <p>
-          चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+        <p
+          id="modalDescription"
+        >
         </p>
 
-      </div>
+        <br>
 
-
-      <div class="disclosure">
-
-        <p>
-
-          <strong>
-            महत्त्वाचे:
-          </strong>
-
-          Product price, availability, discount आणि delivery details
-          बदलू शकतात.
-
-          खरेदी करण्यापूर्वी संबंधित shopping website वर अंतिम किंमत तपासा.
-
-        </p>
-
-
-        <p style="margin-top:8px">
-
-          © 2026 KharediMitra. All rights reserved.
-
-        </p>
+        <a
+          id="modalBuy"
+          class="buy"
+          href="#"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+        >
+          🛒 Amazon वर खरेदी करा
+        </a>
 
       </div>
-
 
     </div>
 
+  </div>
 
-  </footer>
-
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
-
-  <script>
+</div>
 
 
-    /* =========================================
-       SEARCH + CATEGORY FILTER
-    ========================================= */
+<!-- =======================================================
+     WHATSAPP
+======================================================= -->
 
-    let activeCategory = '';
-
-
-    function applyFilters() {
-
-
-      const searchBox =
-        document.getElementById('searchBox');
-
-
-      const q =
-        searchBox.value
-        .toLowerCase()
-        .trim();
+<a
+  class="whatsapp"
+  href="https://wa.me/"
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+>
+  💬
+</a>
 
 
-      const cards =
-        document.querySelectorAll(
-          '#productGrid .card'
-        );
+<!-- =======================================================
+     BACK TO TOP
+======================================================= -->
+
+<button
+  class="back-top"
+  id="backTop"
+  type="button"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})"
+>
+  ↑
+</button>
 
 
-      let visible = 0;
+<!-- =======================================================
+     MOBILE BOTTOM NAV
+======================================================= -->
+
+<nav class="mobile-bottom">
+
+  <button
+    type="button"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  >
+
+    <span>
+      🏠
+    </span>
+
+    Home
+
+  </button>
 
 
-      cards.forEach(function(card) {
+  <button
+    type="button"
+    onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})"
+  >
+
+    <span>
+      📂
+    </span>
+
+    Categories
+
+  </button>
 
 
-        const name =
-          (card.dataset.name || '')
-          .toLowerCase();
+  <button
+    type="button"
+    onclick="showWishlist()"
+  >
+
+    <span>
+      ❤️
+    </span>
+
+    Wishlist
+
+  </button>
 
 
-        const category =
-          card.dataset.category || '';
+  <button
+    type="button"
+    onclick="document.getElementById('searchBox').focus()"
+  >
+
+    <span>
+      🔍
+    </span>
+
+    Search
+
+  </button>
+
+</nav>
 
 
-        const matchesSearch =
-          !q ||
-          name.includes(q);
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+/* =========================================================
+   GLOBAL VARIABLES
+========================================================= */
+
+let activeCategory = '';
+
+let wishlist =
+  JSON.parse(
+    localStorage.getItem('kharediWishlist') || '[]'
+  );
+
+let recentlyViewed =
+  JSON.parse(
+    localStorage.getItem('kharediRecent') || '[]'
+  );
 
 
-        const matchesCategory =
-          !activeCategory ||
-          category === activeCategory;
+/* =========================================================
+   GET PRODUCTS
+========================================================= */
+
+function getCards(){
+
+  return Array.from(
+    document.querySelectorAll(
+      '#productGrid .card'
+    )
+  );
+
+}
 
 
-        const show =
-          matchesSearch &&
-          matchesCategory;
+/* =========================================================
+   SEARCH + CATEGORY
+========================================================= */
+
+function applyFilters(){
+
+  const searchBox =
+    document.getElementById('searchBox');
+
+  const q =
+    searchBox.value
+      .toLowerCase()
+      .trim();
 
 
-        card.style.display =
-          show ? '' : 'none';
+  const cards =
+    getCards();
 
 
-        if (show) {
-
-          visible++;
-
-        }
+  let visible = 0;
 
 
-      });
+  cards.forEach(card => {
+
+    const name =
+      (card.dataset.name || '')
+      .toLowerCase();
 
 
-      const noResults =
-        document.getElementById('noResults');
+    const category =
+      card.dataset.category || '';
 
 
-      noResults.style.display =
-        visible === 0
-          ? 'block'
-          : 'none';
+    const matchesSearch =
+      !q ||
+      name.includes(q);
 
 
+    const matchesCategory =
+      !activeCategory ||
+      category === activeCategory;
+
+
+    const show =
+      matchesSearch &&
+      matchesCategory;
+
+
+    card.style.display =
+      show ? '' : 'none';
+
+
+    if(show){
+      visible++;
+    }
+
+  });
+
+
+  document.getElementById('resultCount').textContent =
+    visible + ' Products';
+
+
+  document.getElementById('noResults').style.display =
+    visible === 0
+      ? 'block'
+      : 'none';
+
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+function searchProducts(){
+
+  applyFilters();
+
+  document
+    .getElementById('deals')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+}
+
+
+/* =========================================================
+   LIVE SEARCH
+========================================================= */
+
+document
+  .getElementById('searchBox')
+  .addEventListener(
+    'input',
+    applyFilters
+  );
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+function filterCategory(category){
+
+  activeCategory =
+    category;
+
+
+  document
+    .querySelectorAll('.cat')
+    .forEach(cat => {
+
+      cat.classList.toggle(
+        'active',
+        cat.dataset.category === category
+      );
+
+    });
+
+
+  applyFilters();
+
+
+  document
+    .getElementById('deals')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+}
+
+
+/* =========================================================
+   SORT PRODUCTS
+========================================================= */
+
+function sortProducts(){
+
+  const value =
+    document.getElementById('sortSelect').value;
+
+
+  const grid =
+    document.getElementById('productGrid');
+
+
+  const cards =
+    getCards();
+
+
+  cards.sort((a,b)=>{
+
+    const priceA =
+      Number(a.dataset.price || 0);
+
+    const priceB =
+      Number(b.dataset.price || 0);
+
+    const ratingA =
+      Number(a.dataset.rating || 0);
+
+    const ratingB =
+      Number(b.dataset.rating || 0);
+
+
+    if(value === 'low'){
+      return priceA - priceB;
     }
 
 
-    /* =========================================
-       SEARCH BUTTON
-    ========================================= */
-
-    function searchProducts() {
-
-      applyFilters();
-
-      document
-        .getElementById('deals')
-        .scrollIntoView({
-          behavior: 'smooth'
-        });
-
+    if(value === 'high'){
+      return priceB - priceA;
     }
 
 
-    /* =========================================
-       LIVE SEARCH
-    ========================================= */
+    if(value === 'rating'){
+      return ratingB - ratingA;
+    }
 
-    document
-      .getElementById('searchBox')
-      .addEventListener(
-        'input',
-        applyFilters
+
+    return 0;
+
+  });
+
+
+  cards.forEach(card => {
+
+    grid.appendChild(card);
+
+  });
+
+
+  grid.appendChild(
+    document.getElementById('noResults')
+  );
+
+}
+
+
+/* =========================================================
+   SCROLL TO DEALS
+========================================================= */
+
+function scrollToDeals(){
+
+  document
+    .getElementById('deals')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+function toggleWishlist(button){
+
+  const id =
+    button.dataset.id;
+
+
+  if(wishlist.includes(id)){
+
+    wishlist =
+      wishlist.filter(
+        item => item !== id
+      );
+
+  }
+  else{
+
+    wishlist.push(id);
+
+  }
+
+
+  localStorage.setItem(
+    'kharediWishlist',
+    JSON.stringify(wishlist)
+  );
+
+
+  updateWishlistButtons();
+
+  updateWishlistCount();
+
+}
+
+
+/* =========================================================
+   UPDATE WISHLIST BUTTONS
+========================================================= */
+
+function updateWishlistButtons(){
+
+  document
+    .querySelectorAll('.wishlist-btn')
+    .forEach(button => {
+
+      const id =
+        button.dataset.id;
+
+
+      if(wishlist.includes(id)){
+
+        button.textContent = '♥';
+
+        button.classList.add('active');
+
+      }
+      else{
+
+        button.textContent = '♡';
+
+        button.classList.remove('active');
+
+      }
+
+    });
+
+}
+
+
+/* =========================================================
+   WISHLIST COUNT
+========================================================= */
+
+function updateWishlistCount(){
+
+  document.getElementById(
+    'wishlistCount'
+  ).textContent =
+    wishlist.length;
+
+}
+
+
+/* =========================================================
+   SHOW WISHLIST
+========================================================= */
+
+function showWishlist(){
+
+  if(wishlist.length === 0){
+
+    alert(
+      '❤️ तुमच्या Wishlist मध्ये अजून कोणताही Product नाही.'
+    );
+
+    return;
+
+  }
+
+
+  const cards =
+    getCards();
+
+
+  cards.forEach(card => {
+
+    card.style.display =
+      wishlist.includes(
+        card.dataset.id
+      )
+      ? ''
+      : 'none';
+
+  });
+
+
+  activeCategory = '';
+
+
+  document
+    .querySelectorAll('.cat')
+    .forEach(cat => {
+
+      cat.classList.remove('active');
+
+    });
+
+
+  document
+    .getElementById('deals')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
+
+
+  document.getElementById(
+    'resultCount'
+  ).textContent =
+    wishlist.length +
+    ' Wishlist Products';
+
+}
+
+
+/* =========================================================
+   SLIDER STATE
+========================================================= */
+
+const sliderState = {};
+
+
+/* =========================================================
+   GET SLIDER
+========================================================= */
+
+function getSliderState(id){
+
+  if(!sliderState[id]){
+
+    const slider =
+      document.getElementById(id);
+
+    sliderState[id] = {
+      index:0,
+      timer:null
+    };
+
+  }
+
+  return sliderState[id];
+
+}
+
+
+/* =========================================================
+   UPDATE SLIDER DOTS
+========================================================= */
+
+function updateSliderDots(id){
+
+  const slider =
+    document.getElementById(id);
+
+
+  const state =
+    getSliderState(id);
+
+
+  slider
+    .querySelectorAll('.slider-dot')
+    .forEach((dot,index)=>{
+
+      dot.classList.toggle(
+        'active',
+        index === state.index
+      );
+
+    });
+
+}
+
+
+/* =========================================================
+   GO TO SLIDE
+========================================================= */
+
+function goSlide(id,index){
+
+  const slider =
+    document.getElementById(id);
+
+
+  const images =
+    slider.querySelectorAll('img');
+
+
+  if(!images.length){
+    return;
+  }
+
+
+  const state =
+    getSliderState(id);
+
+
+  if(index >= images.length){
+    index = 0;
+  }
+
+
+  if(index < 0){
+    index = images.length - 1;
+  }
+
+
+  state.index = index;
+
+
+  slider.scrollTo({
+
+    left:
+      slider.clientWidth * index,
+
+    behavior:'smooth'
+
+  });
+
+
+  updateSliderDots(id);
+
+}
+
+
+/* =========================================================
+   MOVE SLIDER
+========================================================= */
+
+function moveSlider(id,direction){
+
+  const state =
+    getSliderState(id);
+
+
+  goSlide(
+    id,
+    state.index + direction
+  );
+
+}
+
+
+/* =========================================================
+   AUTO SLIDER
+========================================================= */
+
+function startAutoSlider(id){
+
+  const slider =
+    document.getElementById(id);
+
+
+  if(!slider){
+    return;
+  }
+
+
+  const images =
+    slider.querySelectorAll('img');
+
+
+  if(images.length <= 1){
+    return;
+  }
+
+
+  const state =
+    getSliderState(id);
+
+
+  clearInterval(state.timer);
+
+
+  state.timer =
+    setInterval(
+      function(){
+
+        moveSlider(id,1);
+
+      },
+      3500
+    );
+
+
+  slider.addEventListener(
+    'mouseenter',
+    function(){
+
+      clearInterval(state.timer);
+
+    }
+  );
+
+
+  slider.addEventListener(
+    'mouseleave',
+    function(){
+
+      startAutoSlider(id);
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   TOUCH SWIPE
+========================================================= */
+
+function enableSwipe(id){
+
+  const slider =
+    document.getElementById(id);
+
+
+  if(!slider){
+    return;
+  }
+
+
+  let startX = 0;
+
+
+  slider.addEventListener(
+    'touchstart',
+    function(event){
+
+      startX =
+        event.changedTouches[0].screenX;
+
+    },
+    {passive:true}
+  );
+
+
+  slider.addEventListener(
+    'touchend',
+    function(event){
+
+      const endX =
+        event.changedTouches[0].screenX;
+
+
+      if(endX < startX - 50){
+
+        moveSlider(id,1);
+
+      }
+
+
+      if(endX > startX + 50){
+
+        moveSlider(id,-1);
+
+      }
+
+    },
+    {passive:true}
+  );
+
+}
+
+
+/* =========================================================
+   RECENTLY VIEWED
+========================================================= */
+
+function saveRecentlyViewed(element){
+
+  const card =
+    element.closest('.card');
+
+
+  if(!card){
+    return;
+  }
+
+
+  const id =
+    card.dataset.id;
+
+
+  recentlyViewed =
+    recentlyViewed.filter(
+      item => item !== id
+    );
+
+
+  recentlyViewed.unshift(id);
+
+
+  recentlyViewed =
+    recentlyViewed.slice(0,4);
+
+
+  localStorage.setItem(
+    'kharediRecent',
+    JSON.stringify(recentlyViewed)
+  );
+
+
+  renderRecentlyViewed();
+
+}
+
+
+/* =========================================================
+   RENDER RECENT
+========================================================= */
+
+function renderRecentlyViewed(){
+
+  const section =
+    document.getElementById(
+      'recentSection'
+    );
+
+
+  const grid =
+    document.getElementById(
+      'recentGrid'
+    );
+
+
+  if(!recentlyViewed.length){
+
+    section.style.display = 'none';
+
+    return;
+
+  }
+
+
+  grid.innerHTML = '';
+
+
+  recentlyViewed.forEach(id => {
+
+    const card =
+      document.querySelector(
+        '.card[data-id="' + id + '"]'
       );
 
 
-    /* =========================================
-       CATEGORY FILTER
-    ========================================= */
-
-    function filterCategory(cat) {
-
-
-      activeCategory = cat;
-
-
-      applyFilters();
-
-
-      document
-        .getElementById('deals')
-        .scrollIntoView({
-          behavior: 'smooth'
-        });
-
-
+    if(!card){
+      return;
     }
 
 
-    /* =========================================
-       SHOW ALL PRODUCTS
-    ========================================= */
-
-    function showAllProducts() {
+    const image =
+      card.querySelector('img');
 
 
-      activeCategory = '';
+    const title =
+      card.dataset.name;
 
 
-      document
-        .getElementById('searchBox')
-        .value = '';
+    const item =
+      document.createElement('div');
 
 
-      applyFilters();
+    item.className =
+      'recent-card';
 
 
-      document
-        .getElementById('deals')
-        .scrollIntoView({
-          behavior: 'smooth'
-        });
+    item.innerHTML = `
 
+      <img
+        src="${image.src}"
+        alt="${title}"
+      >
+
+      <h4>
+        ${title}
+      </h4>
+
+    `;
+
+
+    grid.appendChild(item);
+
+  });
+
+
+  section.style.display =
+    grid.children.length
+      ? 'block'
+      : 'none';
+
+}
+
+
+/* =========================================================
+   QUICK VIEW
+========================================================= */
+
+function quickView(button){
+
+  const card =
+    button.closest('.card');
+
+
+  if(!card){
+    return;
+  }
+
+
+  const image =
+    card.querySelector('img');
+
+
+  const title =
+    card.dataset.name;
+
+
+  const price =
+    card.querySelector('.price')
+      ?.textContent
+      .trim() || '';
+
+
+  const rating =
+    card.querySelector('.rating')
+      ?.textContent
+      .trim() || '';
+
+
+  const description =
+    card.querySelector('p')
+      ?.textContent
+      .trim() || '';
+
+
+  const buy =
+    card.querySelector('.buy');
+
+
+  document.getElementById(
+    'modalImage'
+  ).src =
+    image.src;
+
+
+  document.getElementById(
+    'modalImage'
+  ).alt =
+    title;
+
+
+  document.getElementById(
+    'modalTitle'
+  ).textContent =
+    title;
+
+
+  document.getElementById(
+    'modalRating'
+  ).textContent =
+    rating;
+
+
+  document.getElementById(
+    'modalPrice'
+  ).textContent =
+    price;
+
+
+  document.getElementById(
+    'modalDescription'
+  ).textContent =
+    description;
+
+
+  document.getElementById(
+    'modalBuy'
+  ).href =
+    buy.href;
+
+
+  document.getElementById(
+    'quickModal'
+  ).classList.add('show');
+
+
+  document.body.classList.add(
+    'no-scroll'
+  );
+
+
+  saveRecentlyViewed(
+    buy
+  );
+
+}
+
+
+/* =========================================================
+   CLOSE QUICK VIEW
+========================================================= */
+
+function closeQuickView(){
+
+  document
+    .getElementById('quickModal')
+    .classList.remove('show');
+
+
+  document.body.classList.remove(
+    'no-scroll'
+  );
+
+}
+
+
+/* =========================================================
+   CLOSE MODAL OUTSIDE
+========================================================= */
+
+function closeModalOutside(event){
+
+  if(
+    event.target.id ===
+    'quickModal'
+  ){
+
+    closeQuickView();
+
+  }
+
+}
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener(
+  'keydown',
+  function(event){
+
+    if(event.key === 'Escape'){
+
+      closeQuickView();
 
     }
 
+  }
+);
 
-    /* =========================================
-       ONEPLUS IMAGE SLIDER
-    ========================================= */
 
-    const oneplusSlider =
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+window.addEventListener(
+  'scroll',
+  function(){
+
+    const button =
       document.getElementById(
-        'oneplusSlider'
+        'backTop'
       );
 
 
-    const oneplusImages =
-      oneplusSlider.querySelectorAll(
-        'img'
-      );
+    button.style.display =
+      window.scrollY > 400
+        ? 'flex'
+        : 'none';
 
+  }
+);
 
-    const oneplusDots =
-      oneplusSlider.querySelectorAll(
-        '.slider-dot'
-      );
 
+/* =========================================================
+   INITIALIZE
+========================================================= */
 
-    let currentSlide = 0;
+document.addEventListener(
+  'DOMContentLoaded',
+  function(){
 
+    updateWishlistButtons();
 
-    /* =========================================
-       ONEPLUS GO TO SLIDE
-    ========================================= */
+    updateWishlistCount();
 
-    function goToSlide(index) {
-
-
-      currentSlide = index;
-
-
-      oneplusSlider.scrollTo({
-
-        left:
-          oneplusSlider.clientWidth *
-          currentSlide,
-
-        behavior: 'smooth'
-
-      });
-
-
-      updateDots();
-
-    }
-
-
-    /* =========================================
-       ONEPLUS NEXT / PREVIOUS
-    ========================================= */
-
-    function changeSlide(direction) {
-
-
-      currentSlide += direction;
-
-
-      if (
-        currentSlide >=
-        oneplusImages.length
-      ) {
-
-        currentSlide = 0;
-
-      }
-
-
-      if (currentSlide < 0) {
-
-        currentSlide =
-          oneplusImages.length - 1;
-
-      }
-
-
-      goToSlide(currentSlide);
-
-    }
-
-
-    /* =========================================
-       ONEPLUS UPDATE DOTS
-    ========================================= */
-
-    function updateDots() {
-
-
-      oneplusDots.forEach(
-        function(dot, index) {
-
-
-          dot.classList.toggle(
-            'active',
-            index === currentSlide
-          );
-
-
-        }
-      );
-
-    }
-
-
-    /* =========================================
-       ONEPLUS AUTO SLIDE
-       EVERY 3 SECONDS
-    ========================================= */
-
-    let autoSlide =
-      setInterval(
-        function() {
-
-          changeSlide(1);
-
-        },
-        3000
-      );
-
-
-    /* =========================================
-       ONEPLUS PAUSE ON MOUSE
-    ========================================= */
-
-    oneplusSlider.addEventListener(
-      'mouseenter',
-      function() {
-
-        clearInterval(autoSlide);
-
-      }
-    );
-
-
-    /* =========================================
-       ONEPLUS START AGAIN
-    ========================================= */
-
-    oneplusSlider.addEventListener(
-      'mouseleave',
-      function() {
-
-        clearInterval(autoSlide);
-
-
-        autoSlide =
-          setInterval(
-            function() {
-
-              changeSlide(1);
-
-            },
-            3000
-          );
-
-      }
-    );
-
-
-    /* =========================================
-       ONEPLUS MOBILE SWIPE
-    ========================================= */
-
-    let touchStartX = 0;
-
-    let touchEndX = 0;
-
-
-    oneplusSlider.addEventListener(
-      'touchstart',
-      function(e) {
-
-
-        touchStartX =
-          e.changedTouches[0].screenX;
-
-
-      },
-      {
-        passive: true
-      }
-    );
-
-
-    oneplusSlider.addEventListener(
-      'touchend',
-      function(e) {
-
-
-        touchEndX =
-          e.changedTouches[0].screenX;
-
-
-        if (
-          touchEndX <
-          touchStartX - 50
-        ) {
-
-          changeSlide(1);
-
-        }
-
-
-        if (
-          touchEndX >
-          touchStartX + 50
-        ) {
-
-          changeSlide(-1);
-
-        }
-
-
-      },
-      {
-        passive: true
-      }
-    );
-
-
-    /* =========================================
-       MANGALSUTRA IMAGE SLIDER
-    ========================================= */
-
-    const mangalsutraSlider =
-      document.getElementById(
-        'mangalsutraSlider'
-      );
-
-
-    const mangalsutraImages =
-      mangalsutraSlider.querySelectorAll(
-        'img'
-      );
-
-
-    const mangalsutraDots =
-      mangalsutraSlider.querySelectorAll(
-        '.slider-dot'
-      );
-
-
-    let mangalsutraCurrentSlide = 0;
-
-
-    /* =========================================
-       MANGALSUTRA GO TO SLIDE
-    ========================================= */
-
-    function goToMangalsutraSlide(index) {
-
-
-      mangalsutraCurrentSlide =
-        index;
-
-
-      mangalsutraSlider.scrollTo({
-
-        left:
-          mangalsutraSlider.clientWidth *
-          mangalsutraCurrentSlide,
-
-        behavior: 'smooth'
-
-      });
-
-
-      updateMangalsutraDots();
-
-    }
-
-
-    /* =========================================
-       MANGALSUTRA NEXT / PREVIOUS
-    ========================================= */
-
-    function changeMangalsutraSlide(
-      direction
-    ) {
-
-
-      mangalsutraCurrentSlide +=
-        direction;
-
-
-      if (
-        mangalsutraCurrentSlide >=
-        mangalsutraImages.length
-      ) {
-
-        mangalsutraCurrentSlide = 0;
-
-      }
-
-
-      if (
-        mangalsutraCurrentSlide < 0
-      ) {
-
-        mangalsutraCurrentSlide =
-          mangalsutraImages.length - 1;
-
-      }
-
-
-      goToMangalsutraSlide(
-        mangalsutraCurrentSlide
-      );
-
-    }
-
-
-    /* =========================================
-       MANGALSUTRA UPDATE DOTS
-    ========================================= */
-
-    function updateMangalsutraDots() {
-
-
-      mangalsutraDots.forEach(
-        function(dot, index) {
-
-
-          dot.classList.toggle(
-            'active',
-            index ===
-            mangalsutraCurrentSlide
-          );
-
-
-        }
-      );
-
-    }
-
-
-    /* =========================================
-       MANGALSUTRA AUTO SLIDE
-       EVERY 3 SECONDS
-    ========================================= */
-
-    let mangalsutraAutoSlide =
-      setInterval(
-        function() {
-
-          changeMangalsutraSlide(1);
-
-        },
-        3000
-      );
-
-
-    /* =========================================
-       MANGALSUTRA PAUSE ON MOUSE
-    ========================================= */
-
-    mangalsutraSlider.addEventListener(
-      'mouseenter',
-      function() {
-
-        clearInterval(
-          mangalsutraAutoSlide
-        );
-
-      }
-    );
-
-
-    /* =========================================
-       MANGALSUTRA START AGAIN
-    ========================================= */
-
-    mangalsutraSlider.addEventListener(
-      'mouseleave',
-      function() {
-
-
-        clearInterval(
-          mangalsutraAutoSlide
-        );
-
-
-        mangalsutraAutoSlide =
-          setInterval(
-            function() {
-
-              changeMangalsutraSlide(1);
-
-            },
-            3000
-          );
-
-      }
-    );
-
-
-    /* =========================================
-       MANGALSUTRA MOBILE SWIPE
-    ========================================= */
-
-    let mangalsutraTouchStartX = 0;
-
-    let mangalsutraTouchEndX = 0;
-
-
-    mangalsutraSlider.addEventListener(
-      'touchstart',
-      function(e) {
-
-
-        mangalsutraTouchStartX =
-          e.changedTouches[0].screenX;
-
-
-      },
-      {
-        passive: true
-      }
-    );
-
-
-    mangalsutraSlider.addEventListener(
-      'touchend',
-      function(e) {
-
-
-        mangalsutraTouchEndX =
-          e.changedTouches[0].screenX;
-
-
-        if (
-          mangalsutraTouchEndX <
-          mangalsutraTouchStartX - 50
-        ) {
-
-          changeMangalsutraSlide(1);
-
-        }
-
-
-        if (
-          mangalsutraTouchEndX >
-          mangalsutraTouchStartX + 50
-        ) {
-
-          changeMangalsutraSlide(-1);
-
-        }
-
-
-      },
-      {
-        passive: true
-      }
-    );
-
-
-    /* =========================================
-       INITIAL FILTER
-    ========================================= */
+    renderRecentlyViewed();
 
     applyFilters();
 
 
-  </script>
+    startAutoSlider(
+      'slider-oneplus'
+    );
+
+
+    startAutoSlider(
+      'slider-mangalsutra'
+    );
+
+
+    enableSwipe(
+      'slider-oneplus'
+    );
+
+
+    enableSwipe(
+      'slider-mangalsutra'
+    );
+
+  }
+);
+
+</script>
 
 
 </body>
-
 </html>
