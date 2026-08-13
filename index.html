@@ -6,845 +6,2698 @@
 
 <title>KharediMitra | चांगली वस्तू • योग्य किंमत • सोपी खरेदी</title>
 
-<meta name="description" content="KharediMitra - ग्रामीण आणि शहरातील ग्राहकांसाठी निवडक ऑनलाइन deals आणि products.">
+<meta name="description" content="KharediMitra वर शेती, घरगुती, Electronics, Fashion आणि Daily Use products, reviews, buying guides आणि online deals शोधा.">
+<meta name="robots" content="index, follow">
 
 <link rel="icon" type="image/png" sizes="512x512" href="images/kharedimitra-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/kharedimitra-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/kharedimitra-icon.png">
+<link rel="apple-touch-icon" href="images/kharedimitra-icon.png">
+
 <meta name="theme-color" content="#173f2b">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;color:#222;line-height:1.5}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f6f7f9;
+    color:#222;
+    line-height:1.5
+}
+
 body.no-scroll{overflow:hidden}
+
 a{text-decoration:none;color:inherit}
+
 button,input,select{font-family:inherit}
+
 button{cursor:pointer}
 
-.top{background:#173f2b;color:#fff;text-align:center;padding:8px 12px;font-size:14px}
+.top{
+    background:#173f2b;
+    color:#fff;
+    text-align:center;
+    padding:8px 12px;
+    font-size:14px
+}
 
-header{background:#fff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:100}
-.nav{max-width:1200px;margin:auto;padding:14px 18px;display:flex;align-items:center;gap:18px}
-.logo{font-size:25px;font-weight:900;color:#173f2b;white-space:nowrap;display:flex;align-items:center;gap:7px}
+header{
+    background:#fff;
+    border-bottom:1px solid #e5e5e5;
+    position:sticky;
+    top:0;
+    z-index:100
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    gap:18px
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#173f2b;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:7px
+}
+
 .logo > span:last-child > span{color:#e08a18}
-.logo-mark{width:34px;height:34px;border-radius:9px;background:#173f2b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;line-height:1}
 
-.category-strip-wrap{background:#fff;border-bottom:1px solid #e5e5e5;overflow:hidden}
-.category-strip{max-width:1200px;margin:auto;padding:10px 18px;display:flex;align-items:center;gap:10px;overflow-x:auto;scrollbar-width:none}
-.category-strip::-webkit-scrollbar{display:none}
-.category-strip .cat{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 15px;border:1px solid #e1e5e2;border-radius:22px;background:#fff;font-size:14px;line-height:1.2;white-space:nowrap}
-.category-strip .cat:hover{transform:none;box-shadow:none}
-.category-strip .cat.active{border-color:#173f2b;background:#eaf5ee;color:#173f2b}
-.category-strip .cat .icon{font-size:20px;margin:0}
+.logo-mark{
+    width:34px;
+    height:34px;
+    border-radius:9px;
+    background:#173f2b;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:900
+}
 
-.search{flex:1;display:flex;min-width:180px}
-.search input{width:100%;padding:12px 15px;border:1px solid #ddd;border-right:none;border-radius:9px 0 0 9px;font-size:15px;outline:none}
+/* SEARCH */
+
+.search{
+    flex:1;
+    display:flex;
+    min-width:180px
+}
+
+.search input{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-right:none;
+    border-radius:9px 0 0 9px;
+    font-size:15px;
+    outline:none
+}
+
 .search input:focus{border-color:#e08a18}
-.search button{border:0;background:#e08a18;color:#fff;padding:0 18px;border-radius:0 9px 9px 0;font-size:17px}
 
-.header-actions{display:flex;align-items:center;gap:8px}
-.header-icon{position:relative;width:42px;height:42px;border:1px solid #e5e5e5;background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.header-icon:hover{background:#f5f8f6}
-.count{position:absolute;top:-5px;right:-5px;min-width:18px;height:18px;padding:0 4px;background:#e08a18;color:#fff;border-radius:20px;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.search button{
+    border:0;
+    background:#e08a18;
+    color:#fff;
+    padding:0 18px;
+    border-radius:0 9px 9px 0;
+    font-size:17px
+}
 
-.hero{background:linear-gradient(120deg,#173f2b,#286746);color:#fff}
-.hero-inner{max-width:1200px;margin:auto;padding:55px 18px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+/* HEADER ACTIONS */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:8px
+}
+
+.header-icon{
+    position:relative;
+    width:42px;
+    height:42px;
+    border:1px solid #e5e5e5;
+    background:#fff;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px
+}
+
+.count{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    min-width:18px;
+    height:18px;
+    padding:0 4px;
+    background:#e08a18;
+    color:#fff;
+    border-radius:20px;
+    font-size:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold
+}
+
+/* HORIZONTAL CATEGORIES */
+
+.category-strip-wrap{
+    background:#fff;
+    border-bottom:1px solid #e5e5e5;
+    overflow:hidden
+}
+
+.category-strip{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    overflow-x:auto;
+    scrollbar-width:none
+}
+
+.category-strip::-webkit-scrollbar{display:none}
+
+.category-strip .cat{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    padding:9px 15px;
+    border:1px solid #e1e5e2;
+    border-radius:22px;
+    background:#fff;
+    font-size:14px;
+    white-space:nowrap
+}
+
+.category-strip .cat.active{
+    border-color:#173f2b;
+    background:#eaf5ee;
+    color:#173f2b
+}
+
+.category-strip .icon{font-size:19px}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(120deg,#173f2b,#286746);
+    color:#fff
+}
+
+.hero-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:55px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px
+}
+
 .hero-content{max-width:720px}
-.hero h1{font-size:42px;line-height:1.2;margin-bottom:12px}
-.hero p{font-size:18px;color:#eaf4ed}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.hero-btn{display:inline-block;background:#e08a18;color:#fff;padding:12px 22px;border-radius:9px;font-weight:800}
-.hero-btn.secondary{background:#fff;color:#173f2b}
+
+.hero h1{
+    font-size:42px;
+    line-height:1.2;
+    margin-bottom:12px
+}
+
+.hero p{
+    font-size:18px;
+    color:#eaf4ed
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:24px
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#e08a18;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:9px;
+    font-weight:800
+}
+
+.hero-btn.secondary{
+    background:#fff;
+    color:#173f2b
+}
+
 .hero-badge{font-size:95px}
 
-.container{max-width:1200px;margin:auto;padding:32px 18px}
-.title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:32px 18px
+}
+
+.title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px
+}
+
 .title h2{font-size:25px}
+
 .title small{color:#777}
 
-.categories{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
-.cat{background:#fff;border:1px solid #e7e7e7;border-radius:12px;padding:17px 8px;text-align:center;font-weight:700;cursor:pointer;transition:.2s;user-select:none}
-.cat:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.cat.active{border-color:#173f2b;background:#eaf5ee;color:#173f2b}
-.cat .icon{font-size:29px;margin-bottom:5px}
+/* PRODUCTS */
 
-.filter-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-.result-count{color:#666;font-size:14px}
-.sort-select{padding:9px 12px;border:1px solid #ddd;background:#fff;border-radius:8px;outline:none}
+.filter-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:18px
+}
 
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e5e5e5;box-shadow:0 3px 10px rgba(0,0,0,.04);min-width:0;transition:.2s;position:relative}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.09)}
+.result-count{
+    color:#666;
+    font-size:14px
+}
 
-.card-img{height:250px;background:#f0f2f3;position:relative;overflow:hidden}
-.card-img>img{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
+.sort-select{
+    padding:9px 12px;
+    border:1px solid #ddd;
+    background:#fff;
+    border-radius:8px;
+    outline:none
+}
 
-.product-images{position:relative;width:100%;height:100%;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;touch-action:pan-y}
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px
+}
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #e5e5e5;
+    box-shadow:0 3px 10px rgba(0,0,0,.04);
+    min-width:0;
+    transition:.2s;
+    position:relative
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(0,0,0,.09)
+}
+
+.card-img{
+    height:250px;
+    background:#f0f2f3;
+    position:relative;
+    overflow:hidden
+}
+
+.card-img>img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    background:#fff
+}
+
+.product-images{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    scroll-behavior:smooth;
+    touch-action:pan-y
+}
+
 .product-images::-webkit-scrollbar{display:none}
-.product-images img{flex:0 0 100%;min-width:100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:start;background:#fff;display:block}
 
-.product-badge{position:absolute;top:10px;left:10px;z-index:10;background:#e08a18;color:#fff;padding:5px 9px;border-radius:20px;font-size:11px;font-weight:800}
-.wishlist-btn{position:absolute;top:10px;right:10px;z-index:20;width:38px;height:38px;border:none;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);font-size:20px}
+.product-images img{
+    flex:0 0 100%;
+    min-width:100%;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    scroll-snap-align:start;
+    background:#fff;
+    display:block
+}
+
+.product-badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:10;
+    background:#e08a18;
+    color:#fff;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800
+}
+
+.wishlist-btn{
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index:20;
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+    font-size:20px
+}
+
 .wishlist-btn.active{color:#e08a18}
 
-.slider-btn{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border:none;border-radius:50%;background:rgba(23,63,43,.75);color:#fff;font-size:22px;z-index:15;display:flex;align-items:center;justify-content:center}
-.slider-btn:hover{background:#173f2b}
-.slider-prev{left:8px}.slider-next{right:8px}
-.slider-dots{position:absolute;bottom:9px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:15}
-.slider-dot{width:7px;height:7px;border-radius:50%;border:none;padding:0;background:rgba(0,0,0,.25)}
-.slider-dot.active{background:#e08a18;transform:scale(1.35)}
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:34px;
+    height:34px;
+    border:none;
+    border-radius:50%;
+    background:rgba(23,63,43,.75);
+    color:#fff;
+    font-size:22px;
+    z-index:15;
+    display:flex;
+    align-items:center;
+    justify-content:center
+}
+
+.slider-prev{left:8px}
+
+.slider-next{right:8px}
+
+.slider-dots{
+    position:absolute;
+    bottom:9px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    z-index:15
+}
+
+.slider-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    border:none;
+    padding:0;
+    background:rgba(0,0,0,.25)
+}
+
+.slider-dot.active{
+    background:#e08a18;
+    transform:scale(1.35)
+}
 
 .card-body{padding:15px}
-.tag{display:inline-block;background:#eaf5ee;color:#17613a;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:800;margin-bottom:8px}
-.card h3{font-size:17px;min-height:50px;line-height:1.4}
-.card p{font-size:13px;color:#666;margin-top:7px}
-.rating{color:#e08a18;font-size:14px;margin:7px 0}
-.price{font-size:22px;font-weight:900;margin:6px 0}
-.old-price{font-size:13px;color:#999;text-decoration:line-through;margin-left:5px}
 
-.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-.buy{display:block;text-align:center;background:#173f2b;color:#fff;padding:10px;border-radius:8px;font-weight:800;font-size:13px}
-.buy:hover{background:#0f2d1e}
-.quick-btn{border:1px solid #173f2b;background:#fff;color:#173f2b;border-radius:8px;font-weight:800}
+.tag{
+    display:inline-block;
+    background:#eaf5ee;
+    color:#17613a;
+    padding:3px 8px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:8px
+}
 
-.empty{grid-column:1/-1;background:#fff;border:1px solid #e5e5e5;border-radius:14px;padding:45px 20px;text-align:center;color:#666;display:none}
-.empty-icon{font-size:45px;margin-bottom:10px}
+.card h3{
+    font-size:17px;
+    min-height:50px;
+    line-height:1.4
+}
 
-.recent-section{margin-top:40px}
-.recent-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.recent-card{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:10px;display:flex;gap:10px;align-items:center}
-.recent-card img{width:70px;height:70px;object-fit:contain;border-radius:8px;background:#f5f5f5}
-.recent-card h4{font-size:13px}
+.card p{
+    font-size:13px;
+    color:#666;
+    margin-top:7px
+}
 
-.note{background:#fff7e8;border-left:4px solid #e08a18;padding:15px;border-radius:8px;margin-top:28px;font-size:13px}
+.rating{
+    color:#e08a18;
+    font-size:14px;
+    margin:7px 0
+}
 
-footer{background:#173f2b;color:#fff;margin-top:40px}
-.footer-inner{max-width:1200px;margin:auto;padding:35px 18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+.price{
+    font-size:22px;
+    font-weight:900;
+    margin:6px 0
+}
+
+.card-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:10px
+}
+
+.buy{
+    display:block;
+    text-align:center;
+    background:#173f2b;
+    color:#fff;
+    padding:10px;
+    border-radius:8px;
+    font-weight:800;
+    font-size:13px
+}
+
+.quick-btn{
+    border:1px solid #173f2b;
+    background:#fff;
+    color:#173f2b;
+    border-radius:8px;
+    font-weight:800
+}
+
+/* CONTENT SECTIONS */
+
+.info-section{
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:14px;
+    padding:25px;
+    margin-top:35px
+}
+
+.info-section h2{
+    color:#173f2b;
+    margin-bottom:12px
+}
+
+.info-section p{
+    color:#555;
+    margin-bottom:10px
+}
+
+.guides{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px
+}
+
+.guide-card{
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:18px;
+    transition:.2s
+}
+
+.guide-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 7px 20px rgba(0,0,0,.08)
+}
+
+.guide-card h3{
+    color:#173f2b;
+    font-size:17px;
+    margin-bottom:8px
+}
+
+.guide-card p{
+    color:#666;
+    font-size:14px
+}
+
+.read-more{
+    display:inline-block;
+    margin-top:10px;
+    color:#e08a18;
+    font-weight:700
+}
+
+/* NOTE */
+
+.note{
+    background:#fff7e8;
+    border-left:4px solid #e08a18;
+    padding:15px;
+    border-radius:8px;
+    margin-top:28px;
+    font-size:13px
+}
+
+/* FOOTER */
+
+footer{
+    background:#173f2b;
+    color:#fff;
+    margin-top:40px
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:35px 18px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:30px
+}
+
 footer h3{margin-bottom:10px}
-.footer-links{display:flex;flex-direction:column;gap:7px;color:#d7e3dc;font-size:14px}
-.disclosure{font-size:13px;color:#d7e3dc}
 
-.whatsapp{position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 15px rgba(0,0,0,.2);z-index:500}
-.back-top{position:fixed;right:18px;bottom:80px;width:42px;height:42px;border:none;border-radius:50%;background:#173f2b;color:#fff;font-size:20px;display:none;align-items:center;justify-content:center;z-index:500}
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    color:#d7e3dc;
+    font-size:14px
+}
 
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;padding:15px;z-index:1000}
+.disclosure{
+    font-size:13px;
+    color:#d7e3dc
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    z-index:500
+}
+
+.whatsapp svg{
+    width:29px;
+    height:29px
+}
+
+/* BACK TOP */
+
+.back-top{
+    position:fixed;
+    right:18px;
+    bottom:80px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#173f2b;
+    color:#fff;
+    font-size:20px;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:500
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+    z-index:1000
+}
+
 .modal.show{display:flex}
-.modal-box{width:100%;max-width:700px;max-height:90vh;overflow:auto;background:#fff;border-radius:15px;padding:20px;position:relative}
-.modal-close{position:absolute;top:10px;right:10px;width:38px;height:38px;border:none;border-radius:50%;background:#f2f2f2;font-size:22px;z-index:10}
-.modal-content{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding-top:10px}
-.modal-image{height:330px;background:#f5f5f5;border-radius:10px;overflow:hidden}
-.modal-image img{width:100%;height:100%;object-fit:contain}
+
+.modal-box{
+    width:100%;
+    max-width:700px;
+    max-height:90vh;
+    overflow:auto;
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    position:relative
+}
+
+.modal-close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#f2f2f2;
+    font-size:22px
+}
+
+.modal-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding-top:10px
+}
+
+.modal-image{
+    height:330px;
+    background:#f5f5f5;
+    border-radius:10px;
+    overflow:hidden
+}
+
+.modal-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain
+}
+
 .modal-info{padding:10px 0}
-.modal-info h2{font-size:23px;margin-bottom:10px}
-.modal-price{font-size:27px;font-weight:900;margin:12px 0}
+
+.modal-info h2{
+    font-size:23px;
+    margin-bottom:10px
+}
+
+.modal-price{
+    font-size:27px;
+    font-weight:900;
+    margin:12px 0
+}
+
+/* MOBILE */
 
 .mobile-bottom{display:none}
 
 @media(max-width:1000px){
-.categories{grid-template-columns:repeat(4,1fr)}
-.products{grid-template-columns:repeat(3,1fr)}
-.recent-grid{grid-template-columns:repeat(2,1fr)}
+
+    .products{
+        grid-template-columns:repeat(3,1fr)
+    }
+
+    .guides{
+        grid-template-columns:repeat(2,1fr)
+    }
 }
 
 @media(max-width:700px){
-body{padding-bottom:65px}
-.top{font-size:12px}
-.nav{flex-wrap:wrap;padding:10px 12px;gap:10px}
-.logo{font-size:21px}.logo-mark{width:30px;height:30px;font-size:19px}
-.header-actions{margin-left:auto}
-.search{order:3;flex-basis:100%}
-.hero-inner{padding:38px 18px;text-align:center}
-.hero h1{font-size:30px}
-.hero p{font-size:16px}
-.hero-buttons{justify-content:center}
-.hero-badge{display:none}
-.container{padding:25px 12px}
-.title h2{font-size:21px}
-.category-strip{padding:9px 12px;gap:8px}.category-strip .cat{padding:8px 13px;font-size:13px}.category-strip .cat .icon{font-size:18px}
-.filter-bar{align-items:flex-start;flex-direction:column}
-.sort-select{width:100%}
-.products{grid-template-columns:repeat(2,1fr);gap:10px}
-.card-img{height:210px}
-.card-body{padding:11px}
-.card h3{font-size:14px;min-height:60px}
-.card p{font-size:12px}
-.price{font-size:18px}
-.card-actions{grid-template-columns:1fr;gap:6px}
-.quick-btn,.buy{padding:9px 5px;font-size:12px}
-.slider-btn{width:30px;height:30px;font-size:19px}
-.wishlist-btn{width:34px;height:34px;font-size:18px}
-.recent-grid{grid-template-columns:1fr}
-.footer-inner{grid-template-columns:1fr;padding-bottom:85px}
-.whatsapp{right:15px;bottom:78px}
-.back-top{right:15px;bottom:135px}
-.mobile-bottom{position:fixed;left:0;right:0;bottom:0;height:62px;background:#fff;border-top:1px solid #ddd;display:grid;grid-template-columns:repeat(4,1fr);z-index:600;box-shadow:0 -3px 12px rgba(0,0,0,.08)}
-.mobile-bottom button{border:none;background:#fff;color:#555;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px}
-.mobile-bottom span{font-size:20px;line-height:20px}
-.modal-content{grid-template-columns:1fr}
-.modal-image{height:250px}
+
+    body{padding-bottom:65px}
+
+    .top{font-size:12px}
+
+    .nav{
+        flex-wrap:wrap;
+        padding:10px 12px;
+        gap:10px
+    }
+
+    .logo{font-size:21px}
+
+    .logo-mark{
+        width:30px;
+        height:30px;
+        font-size:19px
+    }
+
+    .header-actions{margin-left:auto}
+
+    .search{
+        order:3;
+        flex-basis:100%
+    }
+
+    .hero-inner{
+        padding:38px 18px;
+        text-align:center
+    }
+
+    .hero h1{font-size:30px}
+
+    .hero p{font-size:16px}
+
+    .hero-badge{display:none}
+
+    .container{padding:25px 12px}
+
+    .title h2{font-size:21px}
+
+    .category-strip{
+        padding:9px 12px;
+        gap:8px
+    }
+
+    .category-strip .cat{
+        padding:8px 13px;
+        font-size:13px
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px
+    }
+
+    .card-img{height:210px}
+
+    .card-body{padding:11px}
+
+    .card h3{
+        font-size:14px;
+        min-height:60px
+    }
+
+    .price{font-size:18px}
+
+    .card-actions{
+        grid-template-columns:1fr;
+        gap:6px
+    }
+
+    .quick-btn,.buy{
+        padding:9px 5px;
+        font-size:12px
+    }
+
+    .guides{
+        grid-template-columns:1fr
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+        padding-bottom:85px
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:78px
+    }
+
+    .back-top{
+        right:15px;
+        bottom:135px
+    }
+
+    .mobile-bottom{
+        position:fixed;
+        left:0;
+        right:0;
+        bottom:0;
+        height:62px;
+        background:#fff;
+        border-top:1px solid #ddd;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        z-index:600;
+        box-shadow:0 -3px 12px rgba(0,0,0,.08)
+    }
+
+    .mobile-bottom button{
+        border:none;
+        background:#fff;
+        color:#555;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        font-size:11px
+    }
+
+    .mobile-bottom span{
+        font-size:20px;
+        line-height:20px
+    }
+
+    .modal-content{
+        grid-template-columns:1fr
+    }
+
+    .modal-image{height:250px}
 }
 
 @media(max-width:420px){
-.products{grid-template-columns:1fr}
-.card-img{height:245px}
-.card h3{min-height:auto;font-size:16px}
-.card-actions{grid-template-columns:1fr 1fr}
-}
 
-@media(prefers-reduced-motion:reduce){
-*,*::before,*::after{scroll-behavior:auto !important;transition:none !important}
+    .products{
+        grid-template-columns:1fr
+    }
+
+    .card-img{height:245px}
+
+    .card h3{
+        min-height:auto;
+        font-size:16px
+    }
+
+    .card-actions{
+        grid-template-columns:1fr 1fr
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="top">🔥 आजचे निवडक Deals • योग्य किंमत • सोपी ऑनलाइन खरेदी</div>
+<div class="top">
+🔥 आजचे निवडक Deals • योग्य किंमत • सोपी ऑनलाइन खरेदी
+</div>
 
 <header>
+
 <div class="nav">
-<a href="#" class="logo" aria-label="KharediMitra">
-<span class="logo-mark" aria-hidden="true">K</span>
+
+<a href="index.html" class="logo" aria-label="KharediMitra">
+
+<span class="logo-mark">K</span>
+
 <span>KHAREDI<span>MITRA</span></span>
+
 </a>
 
 <div class="search">
-<input id="searchBox" type="search" placeholder="Product शोधा..." autocomplete="off">
-<button type="button" onclick="searchProducts()" aria-label="Search">🔍</button>
+
+<input
+id="searchBox"
+type="search"
+placeholder="Product शोधा..."
+autocomplete="off"
+>
+
+<button type="button" onclick="searchProducts()" aria-label="Search">
+🔍
+</button>
+
 </div>
 
 <div class="header-actions">
-<button class="header-icon" type="button" onclick="showWishlist()" aria-label="Wishlist">
-❤️<span class="count" id="wishlistCount">0</span>
+
+<button
+class="header-icon"
+type="button"
+onclick="showWishlist()"
+aria-label="Wishlist"
+>
+❤️
+<span class="count" id="wishlistCount">0</span>
 </button>
 
-<button class="header-icon" type="button" onclick="scrollToDeals()" aria-label="Products">🛒</button>
+<button
+class="header-icon"
+type="button"
+onclick="scrollToDeals()"
+aria-label="Products"
+>
+🛒
+</button>
+
 </div>
+
 </div>
+
 </header>
 
+
+<!-- HORIZONTAL CATEGORIES -->
+
 <section id="categories" class="category-strip-wrap">
+
 <div class="category-strip">
-<div class="cat active" data-category="" onclick="filterCategory('')"><div class="icon">🏠</div>सर्व Products</div>
-<div class="cat" data-category="शेती" onclick="filterCategory('शेती')"><div class="icon">🌾</div>शेती</div>
-<div class="cat" data-category="घरगुती" onclick="filterCategory('घरगुती')"><div class="icon">🏠</div>घरगुती</div>
-<div class="cat" data-category="Tools" onclick="filterCategory('Tools')"><div class="icon">🔧</div>Tools</div>
-<div class="cat" data-category="Electronics" onclick="filterCategory('Electronics')"><div class="icon">📱</div>Electronics</div>
-<div class="cat" data-category="Fashion" onclick="filterCategory('Fashion')"><div class="icon">👗</div>Fashion</div>
-<div class="cat" data-category="Daily Use" onclick="filterCategory('Daily Use')"><div class="icon">🛍️</div>Daily Use</div>
+
+<div class="cat active" data-category="" onclick="filterCategory('')">
+<span class="icon">🏠</span>
+सर्व Products
 </div>
+
+<div class="cat" data-category="शेती" onclick="filterCategory('शेती')">
+<span class="icon">🌾</span>
+शेती
+</div>
+
+<div class="cat" data-category="घरगुती" onclick="filterCategory('घरगुती')">
+<span class="icon">🏠</span>
+घरगुती
+</div>
+
+<div class="cat" data-category="Tools" onclick="filterCategory('Tools')">
+<span class="icon">🔧</span>
+Tools
+</div>
+
+<div class="cat" data-category="Electronics" onclick="filterCategory('Electronics')">
+<span class="icon">📱</span>
+Electronics
+</div>
+
+<div class="cat" data-category="Fashion" onclick="filterCategory('Fashion')">
+<span class="icon">👕</span>
+Fashion
+</div>
+
+<div class="cat" data-category="Daily Use" onclick="filterCategory('Daily Use')">
+<span class="icon">🛍️</span>
+Daily Use
+</div>
+
+</div>
+
 </section>
+
+
+<!-- HERO -->
 
 <section class="hero">
+
 <div class="hero-inner">
+
 <div class="hero-content">
+
 <h1>खरेदी आता झाली सोपी!</h1>
-<p>चांगली वस्तू • योग्य किंमत • सोपी खरेदी</p>
+
+<p>
+चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+</p>
+
 <div class="hero-buttons">
-<a class="hero-btn" href="#deals">🔥 Best Deals पहा</a>
+
+<a class="hero-btn" href="#deals">
+🔥 Best Deals पहा
+</a>
+
+<a class="hero-btn secondary" href="guides/index.html">
+📚 Buying Guides
+</a>
 
 </div>
+
 </div>
-<div class="hero-badge">🛒</div>
+
+<div class="hero-badge">
+🛒
 </div>
+
+</div>
+
 </section>
+
 
 <main class="container">
 
 
+<!-- PRODUCTS -->
 
-<section id="deals" style="margin-top:40px">
+<section id="deals">
+
 <div class="title">
+
 <h2>🔥 आजचे Best Deals</h2>
-<small id="resultCount">0 Products</small>
+
+<small id="resultCount">
+0 Products
+</small>
+
 </div>
 
 <div class="filter-bar">
-<div class="result-count">तुमच्यासाठी निवडक Products</div>
 
-<select id="sortSelect" class="sort-select" onchange="sortProducts()">
-<option value="default">Sort: Recommended</option>
-<option value="low">Price: Low → High</option>
-<option value="high">Price: High → Low</option>
-<option value="rating">Rating: High → Low</option>
-</select>
+<div class="result-count">
+तुमच्यासाठी निवडक Products
 </div>
+
+<select
+id="sortSelect"
+class="sort-select"
+onchange="sortProducts()"
+>
+
+<option value="default">
+Sort: Recommended
+</option>
+
+<option value="low">
+Price: Low → High
+</option>
+
+<option value="high">
+Price: High → Low
+</option>
+
+<option value="rating">
+Rating: High → Low
+</option>
+
+</select>
+
+</div>
+
 
 <div class="products" id="productGrid">
 
-<article class="card" data-category="Electronics" data-name="OnePlus N6 4GB 128GB Midnight Green" data-price="22998" data-rating="4.5" data-id="oneplus-n6">
+
+<!-- ONEPLUS -->
+
+<article
+class="card"
+data-category="Electronics"
+data-name="OnePlus N6 4GB 128GB Midnight Green"
+data-price="22998"
+data-rating="4.5"
+data-id="oneplus-n6"
+>
+
 <div class="card-img">
-<span class="product-badge">TRENDING</span>
-<button class="wishlist-btn" type="button" data-id="oneplus-n6" onclick="toggleWishlist(this)" aria-label="Wishlist">♡</button>
+
+<span class="product-badge">
+TRENDING
+</span>
+
+<button
+class="wishlist-btn"
+type="button"
+data-id="oneplus-n6"
+onclick="toggleWishlist(this)"
+>
+♡
+</button>
 
 <div class="product-images" id="slider-oneplus">
-<img src="images/oneplus-n6-1.jpg" alt="OnePlus N6 Front">
-<img src="images/oneplus-n6-2.jpg" alt="OnePlus N6 Battery">
-<img src="images/oneplus-n6-3.jpg" alt="OnePlus N6 Display">
 
-<button type="button" class="slider-btn slider-prev" onclick="moveSlider('slider-oneplus',-1)">‹</button>
-<button type="button" class="slider-btn slider-next" onclick="moveSlider('slider-oneplus',1)">›</button>
+<img
+src="images/oneplus-n6-1.jpg"
+alt="OnePlus N6 Front"
+loading="lazy"
+>
+
+<img
+src="images/oneplus-n6-2.jpg"
+alt="OnePlus N6 Battery"
+loading="lazy"
+>
+
+<img
+src="images/oneplus-n6-3.jpg"
+alt="OnePlus N6 Display"
+loading="lazy"
+>
+
+<button
+class="slider-btn slider-prev"
+onclick="moveSlider('slider-oneplus',-1)"
+>
+‹
+</button>
+
+<button
+class="slider-btn slider-next"
+onclick="moveSlider('slider-oneplus',1)"
+>
+›
+</button>
 
 <div class="slider-dots">
-<button class="slider-dot active" onclick="goSlide('slider-oneplus',0)" aria-label="Slide 1"></button>
-<button class="slider-dot" onclick="goSlide('slider-oneplus',1)" aria-label="Slide 2"></button>
-<button class="slider-dot" onclick="goSlide('slider-oneplus',2)" aria-label="Slide 3"></button>
+
+<button
+class="slider-dot active"
+onclick="goSlide('slider-oneplus',0)"
+>
+</button>
+
+<button
+class="slider-dot"
+onclick="goSlide('slider-oneplus',1)"
+>
+</button>
+
+<button
+class="slider-dot"
+onclick="goSlide('slider-oneplus',2)"
+>
+</button>
+
 </div>
+
 </div>
+
 </div>
 
 <div class="card-body">
-<span class="tag">ELECTRONICS</span>
-<h3>OnePlus N6 4GB+128GB Midnight Green</h3>
-<div class="rating">⭐ 4.5/5</div>
-<div class="price">₹22,998</div>
-<p>8000mAh Battery • 45W Charging • 120Hz Display • 50MP Camera</p>
+
+<span class="tag">
+ELECTRONICS
+</span>
+
+<h3>
+OnePlus N6 4GB+128GB Midnight Green
+</h3>
+
+<div class="rating">
+⭐ 4.5/5
+</div>
+
+<div class="price">
+₹22,998
+</div>
+
+<p>
+8000mAh Battery • 45W Charging • 120Hz Display • 50MP Camera
+</p>
 
 <div class="card-actions">
-<button class="quick-btn" type="button" onclick="quickView(this)">👀 Quick View</button>
-<a class="buy" href="https://link.amazon/B0fUerZGS" target="_blank" rel="nofollow sponsored noopener" onclick="saveRecentlyViewed(this)">🛒 खरेदी करा</a>
+
+<button
+class="quick-btn"
+onclick="quickView(this)"
+>
+👀 Quick View
+</button>
+
+<a
+class="buy"
+href="https://link.amazon/B0fUerZGS"
+target="_blank"
+rel="nofollow sponsored noopener"
+onclick="saveRecentlyViewed(this)"
+>
+🛒 खरेदी करा
+</a>
+
 </div>
+
 </div>
+
 </article>
 
-<article class="card" data-category="Fashion" data-name="PALMONAS 18k Gold Plated Small Letter Necklace" data-price="979" data-rating="4.3" data-id="palmonas">
+
+<!-- PALMONAS -->
+
+<article
+class="card"
+data-category="Fashion"
+data-name="PALMONAS 18k Gold Plated Small Letter Necklace"
+data-price="979"
+data-rating="4.3"
+data-id="palmonas"
+>
+
 <div class="card-img">
-<span class="product-badge">FASHION</span>
-<button class="wishlist-btn" type="button" data-id="palmonas" onclick="toggleWishlist(this)" aria-label="Wishlist">♡</button>
-<img src="images/palmonas.jpg" alt="PALMONAS 18k Gold Plated Small Letter Necklace" loading="lazy">
+
+<span class="product-badge">
+FASHION
+</span>
+
+<button
+class="wishlist-btn"
+data-id="palmonas"
+onclick="toggleWishlist(this)"
+>
+♡
+</button>
+
+<img
+src="images/palmonas.jpg"
+alt="PALMONAS 18k Gold Plated Small Letter Necklace"
+loading="lazy"
+>
+
 </div>
 
 <div class="card-body">
-<span class="tag">FASHION</span>
-<h3>PALMONAS 18k Gold Plated Small Letter Necklace</h3>
-<div class="rating">⭐ 4.3/5</div>
-<div class="price">₹979</div>
-<p>Stylish • Elegant • Daily Wear</p>
+
+<span class="tag">
+FASHION
+</span>
+
+<h3>
+PALMONAS 18k Gold Plated Small Letter Necklace
+</h3>
+
+<div class="rating">
+⭐ 4.3/5
+</div>
+
+<div class="price">
+₹979
+</div>
+
+<p>
+Stylish • Elegant • Daily Wear
+</p>
 
 <div class="card-actions">
-<button class="quick-btn" type="button" onclick="quickView(this)">👀 Quick View</button>
-<a class="buy" href="https://link.amazon/B0ffWKiCc" target="_blank" rel="nofollow sponsored noopener" onclick="saveRecentlyViewed(this)">🛒 खरेदी करा</a>
+
+<button
+class="quick-btn"
+onclick="quickView(this)"
+>
+👀 Quick View
+</button>
+
+<a
+class="buy"
+href="https://link.amazon/B0ffWKiCc"
+target="_blank"
+rel="nofollow sponsored noopener"
+onclick="saveRecentlyViewed(this)"
+>
+🛒 खरेदी करा
+</a>
+
 </div>
+
 </div>
+
 </article>
 
-<article class="card" data-category="Fashion" data-name="Personalized Gold Plated Name Mangalsutra" data-price="275" data-rating="4.2" data-id="mangalsutra">
+
+<!-- MANGALSUTRA -->
+
+<article
+class="card"
+data-category="Fashion"
+data-name="Personalized Gold Plated Name Mangalsutra"
+data-price="275"
+data-rating="4.2"
+data-id="mangalsutra"
+>
+
 <div class="card-img">
-<span class="product-badge">TRENDING</span>
-<button class="wishlist-btn" type="button" data-id="mangalsutra" onclick="toggleWishlist(this)" aria-label="Wishlist">♡</button>
+
+<span class="product-badge">
+TRENDING
+</span>
+
+<button
+class="wishlist-btn"
+data-id="mangalsutra"
+onclick="toggleWishlist(this)"
+>
+♡
+</button>
 
 <div class="product-images" id="slider-mangalsutra">
-<img src="images/mangalsutra.jpg" alt="Personalized Gold Plated Name Mangalsutra" loading="lazy">
-<img src="images/mangalsutra2.jpg" alt="Personalized Gold Plated Name Mangalsutra Photo 2" loading="lazy">
 
-<button type="button" class="slider-btn slider-prev" onclick="moveSlider('slider-mangalsutra',-1)">‹</button>
-<button type="button" class="slider-btn slider-next" onclick="moveSlider('slider-mangalsutra',1)">›</button>
+<img
+src="images/mangalsutra.jpg"
+alt="Personalized Gold Plated Name Mangalsutra"
+loading="lazy"
+>
+
+<img
+src="images/mangalsutra2.jpg"
+alt="Personalized Gold Plated Name Mangalsutra"
+loading="lazy"
+>
+
+<button
+class="slider-btn slider-prev"
+onclick="moveSlider('slider-mangalsutra',-1)"
+>
+‹
+</button>
+
+<button
+class="slider-btn slider-next"
+onclick="moveSlider('slider-mangalsutra',1)"
+>
+›
+</button>
 
 <div class="slider-dots">
-<button class="slider-dot active" onclick="goSlide('slider-mangalsutra',0)" aria-label="Slide 1"></button>
-<button class="slider-dot" onclick="goSlide('slider-mangalsutra',1)" aria-label="Slide 2"></button>
+
+<button
+class="slider-dot active"
+onclick="goSlide('slider-mangalsutra',0)"
+>
+</button>
+
+<button
+class="slider-dot"
+onclick="goSlide('slider-mangalsutra',1)"
+>
+</button>
+
 </div>
+
 </div>
+
 </div>
 
 <div class="card-body">
-<span class="tag">TRENDING</span>
-<h3>Personalized Gold Plated Name Mangalsutra</h3>
-<div class="rating">⭐ 4.2/5</div>
-<div class="price">₹275</div>
-<p>Stylish Design • Personalized Name • Gift Option</p>
+
+<span class="tag">
+TRENDING
+</span>
+
+<h3>
+Personalized Gold Plated Name Mangalsutra
+</h3>
+
+<div class="rating">
+⭐ 4.2/5
+</div>
+
+<div class="price">
+₹275
+</div>
+
+<p>
+Stylish Design • Personalized Name • Gift Option
+</p>
 
 <div class="card-actions">
-<button class="quick-btn" type="button" onclick="quickView(this)">👀 Quick View</button>
-<a class="buy" href="https://link.amazon/B0gmD6BP8" target="_blank" rel="nofollow sponsored noopener" onclick="saveRecentlyViewed(this)">🛒 खरेदी करा</a>
+
+<button
+class="quick-btn"
+onclick="quickView(this)"
+>
+👀 Quick View
+</button>
+
+<a
+class="buy"
+href="https://link.amazon/B0gmD6BP8"
+target="_blank"
+rel="nofollow sponsored noopener"
+onclick="saveRecentlyViewed(this)"
+>
+🛒 खरेदी करा
+</a>
+
 </div>
+
 </div>
+
 </article>
 
 
-<article class="card" data-category="शेती" data-name="Balwaan Krishi 20L Rechargeable Battery Sprayer Red 12V 12Ah BS-22D" data-price="3697" data-rating="4.5" data-id="balwaan-bs22d">
+<!-- BALWAAN SPRAYER -->
+
+<article
+class="card"
+data-category="शेती"
+data-name="Balwaan Krishi 20L Rechargeable Battery Sprayer BS-22D"
+data-price="3697"
+data-rating="4.2"
+data-id="balwaan-sprayer"
+>
+
 <div class="card-img">
-<span class="product-badge">शेती • NEW</span>
-<button class="wishlist-btn" type="button" data-id="balwaan-bs22d" onclick="toggleWishlist(this)" aria-label="Wishlist">♡</button>
 
-<div class="product-images" id="slider-balwaan-bs22d">
-<img src="images/balwaan-bs22d-1.jpg" alt="Balwaan Krishi 20L Rechargeable Battery Sprayer BS-22D" loading="lazy">
-<img src="images/balwaan-bs22d-2.jpg" alt="Balwaan Krishi BS-22D What is in the Box" loading="lazy">
+<span class="product-badge">
+शेती
+</span>
 
-<button type="button" class="slider-btn slider-prev" onclick="moveSlider('slider-balwaan-bs22d',-1)">‹</button>
-<button type="button" class="slider-btn slider-next" onclick="moveSlider('slider-balwaan-bs22d',1)">›</button>
+<button
+class="wishlist-btn"
+data-id="balwaan-sprayer"
+onclick="toggleWishlist(this)"
+>
+♡
+</button>
+
+<div class="product-images" id="slider-balwaan">
+
+<img
+src="images/balwaan-sprayer-1.jpg"
+alt="Balwaan Krishi 20L Rechargeable Battery Sprayer"
+loading="lazy"
+>
+
+<img
+src="images/balwaan-sprayer-2.jpg"
+alt="Balwaan Krishi Battery Sprayer"
+loading="lazy"
+>
+
+<button
+class="slider-btn slider-prev"
+onclick="moveSlider('slider-balwaan',-1)"
+>
+‹
+</button>
+
+<button
+class="slider-btn slider-next"
+onclick="moveSlider('slider-balwaan',1)"
+>
+›
+</button>
 
 <div class="slider-dots">
-<button class="slider-dot active" onclick="goSlide('slider-balwaan-bs22d',0)" aria-label="Slide 1"></button>
-<button class="slider-dot" onclick="goSlide('slider-balwaan-bs22d',1)" aria-label="Slide 2"></button>
+
+<button
+class="slider-dot active"
+onclick="goSlide('slider-balwaan',0)"
+>
+</button>
+
+<button
+class="slider-dot"
+onclick="goSlide('slider-balwaan',1)"
+>
+</button>
+
 </div>
+
 </div>
+
 </div>
 
 <div class="card-body">
-<span class="tag">शेती</span>
-<h3>Balwaan Krishi 20L Rechargeable Battery Sprayer (Red) | 12V 12Ah | BS-22D</h3>
-<div class="rating">⭐ 4.5/5</div>
-<div class="price">₹3,697</div>
-<p>20L Tank • 12V 12Ah Battery • Rechargeable • BS-22D • 6 Months Warranty</p>
+
+<span class="tag">
+शेती
+</span>
+
+<h3>
+Balwaan Krishi 20L Rechargeable Battery Sprayer
+</h3>
+
+<div class="rating">
+⭐ 4.2/5
+</div>
+
+<div class="price">
+₹3,697
+</div>
+
+<p>
+20L Tank • 12V 12Ah Battery • Rechargeable • BS-22D
+</p>
 
 <div class="card-actions">
-<button class="quick-btn" type="button" onclick="quickView(this)">👀 Quick View</button>
-<a class="buy" href="https://link.amazon/A07Ci590y" target="_blank" rel="nofollow sponsored noopener" onclick="saveRecentlyViewed(this)">🛒 खरेदी करा</a>
+
+<button
+class="quick-btn"
+onclick="quickView(this)"
+>
+👀 Quick View
+</button>
+
+<a
+class="buy"
+href="https://link.amazon/A07Ci590y"
+target="_blank"
+rel="nofollow sponsored noopener"
+onclick="saveRecentlyViewed(this)"
+>
+🛒 खरेदी करा
+</a>
+
 </div>
+
 </div>
+
 </article>
 
 
-<article class="card" data-category="Fashion" data-name="Allen Solly Men’s Polo T-Shirt Comfortable Rich Cotton Blend Band Collar Regular Fit Stylish Premium All Day Wear" data-price="699" data-rating="4.3" data-id="allen-solly-polo">
+<!-- ALLEN SOLLY -->
+
+<article
+class="card"
+data-category="Fashion"
+data-name="Allen Solly Men's Polo T Shirt Comfortable Rich Cotton Blend Band Collar Regular Fit"
+data-price="699"
+data-rating="4.2"
+data-id="allen-solly"
+>
+
 <div class="card-img">
-<span class="product-badge">FASHION • NEW</span>
-<button class="wishlist-btn" type="button" data-id="allen-solly-polo" onclick="toggleWishlist(this)" aria-label="Wishlist">♡</button>
-<div class="product-images" id="slider-allen-solly-polo">
-<img src="images/allen-solly-polo-1.jpg" alt="Allen Solly Men's Polo T-Shirt Front" loading="lazy">
-<img src="images/allen-solly-polo-2.jpg" alt="Allen Solly Men's Polo T-Shirt Back" loading="lazy">
-<button type="button" class="slider-btn slider-prev" onclick="moveSlider('slider-allen-solly-polo',-1)">‹</button>
-<button type="button" class="slider-btn slider-next" onclick="moveSlider('slider-allen-solly-polo',1)">›</button>
+
+<span class="product-badge">
+FASHION
+</span>
+
+<button
+class="wishlist-btn"
+data-id="allen-solly"
+onclick="toggleWishlist(this)"
+>
+♡
+</button>
+
+<div class="product-images" id="slider-allen">
+
+<img
+src="images/allen-solly-1.jpg"
+alt="Allen Solly Men's Polo T Shirt"
+loading="lazy"
+>
+
+<img
+src="images/allen-solly-2.jpg"
+alt="Allen Solly Men's Polo T Shirt"
+loading="lazy"
+>
+
+<button
+class="slider-btn slider-prev"
+onclick="moveSlider('slider-allen',-1)"
+>
+‹
+</button>
+
+<button
+class="slider-btn slider-next"
+onclick="moveSlider('slider-allen',1)"
+>
+›
+</button>
+
 <div class="slider-dots">
-<button class="slider-dot active" onclick="goSlide('slider-allen-solly-polo',0)" aria-label="Slide 1"></button>
-<button class="slider-dot" onclick="goSlide('slider-allen-solly-polo',1)" aria-label="Slide 2"></button>
+
+<button
+class="slider-dot active"
+onclick="goSlide('slider-allen',0)"
+>
+</button>
+
+<button
+class="slider-dot"
+onclick="goSlide('slider-allen',1)"
+>
+</button>
+
 </div>
+
 </div>
+
 </div>
+
 <div class="card-body">
-<span class="tag">FASHION</span>
-<h3>Allen Solly Men’s Polo T‑Shirt | Comfortable Rich Cotton Blend, Band Collar, Regular Fit | Stylish &amp; Premium All Day Wear</h3>
-<div class="rating">⭐ 4.3/5</div>
-<div class="price">₹699</div>
-<p>Comfortable Cotton Blend • Regular Fit • Stylish Design • Premium All Day Wear</p>
+
+<span class="tag">
+FASHION
+</span>
+
+<h3>
+Allen Solly Men's Polo T-Shirt
+</h3>
+
+<div class="rating">
+⭐ 4.2/5
+</div>
+
+<div class="price">
+₹699
+</div>
+
+<p>
+Comfortable Rich Cotton Blend • Regular Fit • Stylish All Day Wear
+</p>
+
 <div class="card-actions">
-<button class="quick-btn" type="button" onclick="quickView(this)">👀 Quick View</button>
-<a class="buy" href="https://link.amazon/B00AxGCCq" target="_blank" rel="nofollow sponsored noopener" onclick="saveRecentlyViewed(this)">🛒 खरेदी करा</a>
+
+<button
+class="quick-btn"
+onclick="quickView(this)"
+>
+👀 Quick View
+</button>
+
+<a
+class="buy"
+href="https://link.amazon/B00AxGCCq"
+target="_blank"
+rel="nofollow sponsored noopener"
+onclick="saveRecentlyViewed(this)"
+>
+🛒 खरेदी करा
+</a>
+
 </div>
+
 </div>
+
 </article>
+
 
 <div class="empty" id="noResults">
-<div class="empty-icon">😔</div>
-<h3>Product सापडला नाही</h3>
-<p>दुसरे नाव किंवा category try करा.</p>
+
+<div class="empty-icon">
+😔
 </div>
+
+<h3>
+Product सापडला नाही
+</h3>
+
+<p>
+दुसरे नाव किंवा category try करा.
+</p>
 
 </div>
 
-<section class="recent-section" id="recentSection" style="display:none">
-<div class="title"><h2>👀 Recently Viewed</h2></div>
-<div class="recent-grid" id="recentGrid"></div>
+</div>
+
 </section>
 
+
+<!-- USEFUL GUIDES -->
+
+<section class="info-section" id="guides">
+
+<div class="title">
+
+<h2>📚 Useful Guides</h2>
+
+<a
+href="guides/index.html"
+class="read-more"
+>
+सर्व Guides →
+</a>
+
+</div>
+
+<div class="guides">
+
+<article class="guide-card">
+
+<h3>
+🌾 Battery Sprayer घेताना कोणत्या गोष्टी तपासाव्यात?
+</h3>
+
+<p>
+Tank capacity, battery, pressure, charging आणि वापर याबद्दल महत्त्वाच्या गोष्टी जाणून घ्या.
+</p>
+
+<a
+href="guides/best-battery-sprayer-guide.html"
+class="read-more"
+>
+Guide वाचा →
+</a>
+
+</article>
+
+
+<article class="guide-card">
+
+<h3>
+🛍️ Online Shopping करताना 7 महत्त्वाच्या Tips
+</h3>
+
+<p>
+Product price, reviews, seller, delivery आणि return policy तपासण्याचे सोपे मार्ग.
+</p>
+
+<a
+href="guides/online-shopping-tips.html"
+class="read-more"
+>
+Guide वाचा →
+</a>
+
+</article>
+
+
+<article class="guide-card">
+
+<h3>
+👕 Polo T-Shirt घेताना Size कसा निवडावा?
+</h3>
+
+<p>
+Fit, material आणि size chart तपासून योग्य T-shirt निवडण्यासाठी उपयोगी माहिती.
+</p>
+
+<a
+href="guides/polo-tshirt-buying-guide.html"
+class="read-more"
+>
+Guide वाचा →
+</a>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCT REVIEWS -->
+
+<section class="info-section">
+
+<div class="title">
+
+<h2>⭐ Product Reviews</h2>
+
+<a
+href="reviews/index.html"
+class="read-more"
+>
+सर्व Reviews →
+</a>
+
+</div>
+
+<p>
+आम्ही विविध products बद्दल specifications, उपयोग, फायदे, मर्यादा आणि खरेदीपूर्वी लक्षात ठेवण्याच्या गोष्टी समजून घेण्यासाठी माहिती देतो.
+</p>
+
+<a
+href="reviews/index.html"
+class="hero-btn"
+style="margin-top:10px;display:inline-block"
+>
+Reviews पहा
+</a>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="info-section">
+
+<h2>
+ℹ️ KharediMitra बद्दल
+</h2>
+
+<p>
+KharediMitra हे online shopping आणि product information साठी तयार केलेले information platform आहे.
+</p>
+
+<p>
+आमचे उद्दिष्ट ग्राहकांना products शोधताना useful information, buying tips, comparisons आणि online deals एकाच ठिकाणी उपलब्ध करून देणे आहे.
+</p>
+
+<a
+href="about.html"
+class="read-more"
+>
+About Us वाचा →
+</a>
+
+</section>
+
+
+<!-- DISCLOSURE -->
+
 <div class="note">
+
 <strong>ℹ️ Affiliate Disclosure:</strong>
+
 या website वरील काही Buy Now links affiliate links असू शकतात.
 तुम्ही eligible purchase केल्यास आम्हाला commission मिळू शकते.
 तुमच्या खरेदीच्या किंमतीवर याचा अतिरिक्त खर्च होत नाही.
+
+<a
+href="affiliate-disclosure.html"
+style="color:#173f2b;font-weight:bold"
+>
+अधिक माहिती
+</a>
+
 </div>
 
-</section>
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
+
 <div class="footer-inner">
-<div>
-<h3>KHAREDI MITRA</h3>
-<p>चांगली वस्तू • योग्य किंमत • सोपी खरेदी</p>
-</div>
 
 <div>
-<h3>Quick Links</h3>
+
+<h3>
+KHAREDI MITRA
+</h3>
+
+<p>
+चांगली वस्तू • योग्य किंमत • सोपी खरेदी
+</p>
+
+<p style="margin-top:10px">
+Products, reviews आणि useful shopping guides.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
 <div class="footer-links">
-<a href="#categories">Categories</a>
-<a href="#deals">Best Deals</a>
-<a href="#">Home</a>
-</div>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About Us
+</a>
+
+<a href="contact.html">
+Contact Us
+</a>
+
+<a href="reviews/index.html">
+Product Reviews
+</a>
+
+<a href="guides/index.html">
+Useful Guides
+</a>
+
 </div>
 
-<div class="disclosure">
-<h3>महत्त्वाचे</h3>
-<p>Product price, availability, discount आणि delivery details बदलू शकतात. खरेदी करण्यापूर्वी संबंधित shopping website वर अंतिम किंमत तपासा.</p>
-<p style="margin-top:10px">© 2026 KharediMitra. All rights reserved.</p><div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:12px;font-size:13px">
-<a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="affiliate.html">Affiliate Disclosure</a></div>
 </div>
+
+
+<div>
+
+<h3>
+Legal
+</h3>
+
+<div class="footer-links">
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+<a href="terms.html">
+Terms & Conditions
+</a>
+
+<a href="affiliate-disclosure.html">
+Affiliate Disclosure
+</a>
+
+<a href="disclaimer.html">
+Disclaimer
+</a>
+
 </div>
+
+</div>
+
+</div>
+
+
+<div
+style="max-width:1200px;margin:auto;padding:0 18px 25px;color:#d7e3dc;font-size:13px"
+>
+
+Product price, availability, discount आणि delivery details बदलू शकतात.
+खरेदी करण्यापूर्वी संबंधित shopping website वर अंतिम माहिती तपासा.
+
+<br><br>
+
+© 2026 KharediMitra. All rights reserved.
+
+</div>
+
 </footer>
 
-<div class="modal" id="quickModal" onclick="closeModalOutside(event)">
-<div class="modal-box">
-<button class="modal-close" type="button" onclick="closeQuickView()" aria-label="Close">×</button>
 
-<div class="modal-content">
-<div class="modal-image">
-<img id="modalImage" src="" alt="">
-</div>
+<!-- WHATSAPP -->
 
-<div class="modal-info">
-<h2 id="modalTitle">Product</h2>
-<div class="rating" id="modalRating"></div>
-<div class="modal-price" id="modalPrice"></div>
-<p id="modalDescription"></p>
-<br>
-<a id="modalBuy" class="buy" href="#" target="_blank" rel="nofollow sponsored noopener">🛒 Amazon वर खरेदी करा</a>
-</div>
-</div>
-</div>
-</div>
+<a
+class="whatsapp"
+href="https://wa.me/918275325085?text=Hello%20KharediMitra"
+target="_blank"
+rel="noopener"
+aria-label="WhatsApp"
+>
 
-<a class="whatsapp" href="https://wa.me/918275325085" target="_blank" rel="noopener" aria-label="WhatsApp">
 <svg
 viewBox="0 0 32 32"
 aria-hidden="true"
-focusable="false"
 >
+
 <path
 fill="currentColor"
 d="M19.11 17.39c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.33.22-.62.07-.29-.14-1.21-.45-2.31-1.43-.85-.76-1.43-1.69-1.6-1.97-.17-.29-.02-.44.13-.58.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.13-.23-.56-.47-.49-.64-.5h-.55c-.19 0-.5.07-.76.36-.26.29-1 0.98-1 2.39s1.03 2.77 1.17 2.96c.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.62.69.22 1.32.19 1.82.12.56-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z"
  />
+
 <path
 fill="currentColor"
 d="M16.01 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.39 1.62 6.24L3.1 28.8l6.72-1.7a12.75 12.75 0 0 0 6.19 1.59c7.07 0 12.8-5.73 12.8-12.8S23.08 3.2 16.01 3.2zm0 23.17c-2.05 0-4.05-.55-5.8-1.6l-.42-.25-3.99 1.01 1.07-3.89-.27-.44a10.35 10.35 0 1 1 9.41 5.17z"
  />
+
 </svg>
+
 </a>
 
-<button class="back-top" id="backTop" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<button
+class="back-top"
+id="backTop"
+onclick="window.scrollTo({top:0,behavior:'smooth'})"
+>
+↑
+</button>
+
+
+<!-- MOBILE BOTTOM -->
 
 <nav class="mobile-bottom">
-<button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span>🏠</span>Home</button>
-<button type="button" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})"><span>📂</span>Categories</button>
-<button type="button" onclick="showWishlist()"><span>❤️</span>Wishlist</button>
-<button type="button" onclick="document.getElementById('searchBox').focus()"><span>🔍</span>Search</button>
+
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<span>🏠</span>
+Home
+</button>
+
+<button onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
+<span>📂</span>
+Categories
+</button>
+
+<button onclick="showWishlist()">
+<span>❤️</span>
+Wishlist
+</button>
+
+<button onclick="document.getElementById('searchBox').focus()">
+<span>🔍</span>
+Search
+</button>
+
 </nav>
 
+
+<!-- QUICK VIEW MODAL -->
+
+<div
+class="modal"
+id="quickModal"
+onclick="closeModalOutside(event)"
+>
+
+<div class="modal-box">
+
+<button
+class="modal-close"
+onclick="closeQuickView()"
+>
+×
+</button>
+
+<div class="modal-content">
+
+<div class="modal-image">
+
+<img
+id="modalImage"
+src=""
+alt=""
+>
+
+</div>
+
+<div class="modal-info">
+
+<h2 id="modalTitle">
+Product
+</h2>
+
+<div
+class="rating"
+id="modalRating"
+>
+</div>
+
+<div
+class="modal-price"
+id="modalPrice"
+>
+</div>
+
+<p id="modalDescription">
+</p>
+
+<br>
+
+<a
+id="modalBuy"
+class="buy"
+href="#"
+target="_blank"
+rel="nofollow sponsored noopener"
+>
+🛒 Amazon वर खरेदी करा
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
 <script>
+
 'use strict';
 
 let activeCategory = '';
-let wishlist = JSON.parse(localStorage.getItem('kharediWishlist') || '[]');
-let recentlyViewed = JSON.parse(localStorage.getItem('kharediRecent') || '[]');
+
+let wishlist =
+JSON.parse(
+localStorage.getItem('kharediWishlist') || '[]'
+);
+
+let recentlyViewed =
+JSON.parse(
+localStorage.getItem('kharediRecent') || '[]'
+);
+
 const sliderState = {};
 
+
 function getCards(){
-    return Array.from(document.querySelectorAll('#productGrid .card'));
+
+return Array.from(
+document.querySelectorAll('#productGrid .card')
+);
+
 }
+
 
 function applyFilters(){
-    const searchBox = document.getElementById('searchBox');
-    const q = (searchBox.value || '').toLowerCase().trim();
-    const cards = getCards();
-    let visible = 0;
 
-    cards.forEach(card => {
-        const name = (card.dataset.name || '').toLowerCase();
-        const category = card.dataset.category || '';
-        const matchesSearch = !q || name.includes(q);
-        const matchesCategory = !activeCategory || category === activeCategory;
-        const show = matchesSearch && matchesCategory;
+const searchBox =
+document.getElementById('searchBox');
 
-        card.style.display = show ? '' : 'none';
-        if(show) visible++;
-    });
+const q =
+(searchBox.value || '')
+.toLowerCase()
+.trim();
 
-    document.getElementById('resultCount').textContent = visible + ' Products';
-    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+const cards = getCards();
+
+let visible = 0;
+
+cards.forEach(card => {
+
+const name =
+(card.dataset.name || '').toLowerCase();
+
+const category =
+card.dataset.category || '';
+
+const matchesSearch =
+!q || name.includes(q);
+
+const matchesCategory =
+!activeCategory ||
+category === activeCategory;
+
+const show =
+matchesSearch && matchesCategory;
+
+card.style.display =
+show ? '' : 'none';
+
+if(show) visible++;
+
+});
+
+
+document.getElementById('resultCount')
+.textContent =
+visible + ' Products';
+
+document.getElementById('noResults')
+.style.display =
+visible === 0 ? 'block' : 'none';
+
 }
+
 
 function searchProducts(){
-    applyFilters();
-    document.getElementById('deals').scrollIntoView({behavior:'smooth'});
+
+applyFilters();
+
+document.getElementById('deals')
+.scrollIntoView({
+behavior:'smooth'
+});
+
 }
 
-document.getElementById('searchBox').addEventListener('input', applyFilters);
+
+document.getElementById('searchBox')
+.addEventListener(
+'input',
+applyFilters
+);
+
 
 function filterCategory(category){
-    activeCategory = category;
 
-    document.querySelectorAll('.cat').forEach(cat => {
-        cat.classList.toggle('active', cat.dataset.category === category);
-    });
+activeCategory = category;
 
-    applyFilters();
-    document.getElementById('deals').scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.category-strip .cat')
+.forEach(cat => {
+
+cat.classList.toggle(
+'active',
+cat.dataset.category === category
+);
+
+});
+
+applyFilters();
+
+document.getElementById('deals')
+.scrollIntoView({
+behavior:'smooth'
+});
+
 }
+
 
 function sortProducts(){
-    const value = document.getElementById('sortSelect').value;
-    const grid = document.getElementById('productGrid');
-    const cards = getCards();
 
-    cards.sort((a,b) => {
-        const priceA = Number(a.dataset.price || 0);
-        const priceB = Number(b.dataset.price || 0);
-        const ratingA = Number(a.dataset.rating || 0);
-        const ratingB = Number(b.dataset.rating || 0);
+const value =
+document.getElementById('sortSelect').value;
 
-        if(value === 'low') return priceA - priceB;
-        if(value === 'high') return priceB - priceA;
-        if(value === 'rating') return ratingB - ratingA;
-        return 0;
-    });
+const grid =
+document.getElementById('productGrid');
 
-    cards.forEach(card => grid.appendChild(card));
-    grid.appendChild(document.getElementById('noResults'));
-    applyFilters();
+const cards = getCards();
+
+cards.sort((a,b) => {
+
+const priceA =
+Number(a.dataset.price || 0);
+
+const priceB =
+Number(b.dataset.price || 0);
+
+const ratingA =
+Number(a.dataset.rating || 0);
+
+const ratingB =
+Number(b.dataset.rating || 0);
+
+if(value === 'low')
+return priceA - priceB;
+
+if(value === 'high')
+return priceB - priceA;
+
+if(value === 'rating')
+return ratingB - ratingA;
+
+return 0;
+
+});
+
+cards.forEach(card =>
+grid.appendChild(card)
+);
+
+grid.appendChild(
+document.getElementById('noResults')
+);
+
+applyFilters();
+
 }
+
 
 function scrollToDeals(){
-    document.getElementById('deals').scrollIntoView({behavior:'smooth'});
+
+document.getElementById('deals')
+.scrollIntoView({
+behavior:'smooth'
+});
+
 }
+
 
 function toggleWishlist(button){
-    const id = button.dataset.id;
 
-    if(wishlist.includes(id)){
-        wishlist = wishlist.filter(item => item !== id);
-    }else{
-        wishlist.push(id);
-    }
+const id =
+button.dataset.id;
 
-    localStorage.setItem('kharediWishlist', JSON.stringify(wishlist));
-    updateWishlistButtons();
-    updateWishlistCount();
+if(wishlist.includes(id)){
+
+wishlist =
+wishlist.filter(
+item => item !== id
+);
+
+}else{
+
+wishlist.push(id);
+
 }
+
+localStorage.setItem(
+'kharediWishlist',
+JSON.stringify(wishlist)
+);
+
+updateWishlistButtons();
+
+updateWishlistCount();
+
+}
+
 
 function updateWishlistButtons(){
-    document.querySelectorAll('.wishlist-btn').forEach(button => {
-        const id = button.dataset.id;
-        const active = wishlist.includes(id);
 
-        button.textContent = active ? '♥' : '♡';
-        button.classList.toggle('active', active);
-    });
+document.querySelectorAll('.wishlist-btn')
+.forEach(button => {
+
+const id =
+button.dataset.id;
+
+const active =
+wishlist.includes(id);
+
+button.textContent =
+active ? '♥' : '♡';
+
+button.classList.toggle(
+'active',
+active
+);
+
+});
+
 }
+
 
 function updateWishlistCount(){
-    document.getElementById('wishlistCount').textContent = wishlist.length;
+
+document.getElementById('wishlistCount')
+.textContent =
+wishlist.length;
+
 }
+
 
 function showWishlist(){
-    if(wishlist.length === 0){
-        alert('❤️ तुमच्या Wishlist मध्ये अजून कोणताही Product नाही.');
-        return;
-    }
 
-    document.querySelectorAll('.cat').forEach(cat => {
-        cat.classList.remove('active');
-    });
+if(wishlist.length === 0){
 
-    document.querySelector('.cat[data-category=""]').classList.add('active');
+alert(
+'❤️ तुमच्या Wishlist मध्ये अजून कोणताही Product नाही.'
+);
 
-    activeCategory = '';
+return;
 
-    getCards().forEach(card => {
-        card.style.display = wishlist.includes(card.dataset.id) ? '' : 'none';
-    });
-
-    document.getElementById('noResults').style.display = 'none';
-    document.getElementById('resultCount').textContent = wishlist.length + ' Wishlist Products';
-
-    document.getElementById('deals').scrollIntoView({behavior:'smooth'});
 }
+
+activeCategory = '';
+
+document.querySelectorAll('.category-strip .cat')
+.forEach(cat => {
+
+cat.classList.toggle(
+'active',
+cat.dataset.category === ''
+);
+
+});
+
+getCards().forEach(card => {
+
+card.style.display =
+wishlist.includes(card.dataset.id)
+? ''
+: 'none';
+
+});
+
+document.getElementById('noResults')
+.style.display = 'none';
+
+document.getElementById('resultCount')
+.textContent =
+wishlist.length +
+' Wishlist Products';
+
+document.getElementById('deals')
+.scrollIntoView({
+behavior:'smooth'
+});
+
+}
+
 
 function getSliderState(id){
-    if(!sliderState[id]){
-        sliderState[id] = {index:0, timer:null};
-    }
-    return sliderState[id];
+
+if(!sliderState[id]){
+
+sliderState[id] = {
+index:0,
+timer:null
+};
+
 }
+
+return sliderState[id];
+
+}
+
 
 function updateSliderDots(id){
-    const slider = document.getElementById(id);
-    if(!slider) return;
 
-    const state = getSliderState(id);
+const slider =
+document.getElementById(id);
 
-    slider.querySelectorAll('.slider-dot').forEach((dot,index) => {
-        dot.classList.toggle('active', index === state.index);
-    });
+if(!slider) return;
+
+const state =
+getSliderState(id);
+
+slider.querySelectorAll('.slider-dot')
+.forEach((dot,index) => {
+
+dot.classList.toggle(
+'active',
+index === state.index
+);
+
+});
+
 }
+
 
 function goSlide(id,index){
-    const slider = document.getElementById(id);
-    if(!slider) return;
 
-    const images = slider.querySelectorAll('img');
-    if(!images.length) return;
+const slider =
+document.getElementById(id);
 
-    const state = getSliderState(id);
+if(!slider) return;
 
-    if(index >= images.length) index = 0;
-    if(index < 0) index = images.length - 1;
+const images =
+slider.querySelectorAll('img');
 
-    state.index = index;
+if(!images.length) return;
 
-    slider.scrollTo({
-        left: slider.clientWidth * index,
-        behavior:'smooth'
-    });
+const state =
+getSliderState(id);
 
-    updateSliderDots(id);
+if(index >= images.length)
+index = 0;
+
+if(index < 0)
+index = images.length - 1;
+
+state.index = index;
+
+slider.scrollTo({
+
+left:
+slider.clientWidth * index,
+
+behavior:'smooth'
+
+});
+
+updateSliderDots(id);
+
 }
+
 
 function moveSlider(id,direction){
-    const state = getSliderState(id);
-    goSlide(id, state.index + direction);
+
+const state =
+getSliderState(id);
+
+goSlide(
+id,
+state.index + direction
+);
+
 }
+
 
 function startAutoSlider(id){
-    const slider = document.getElementById(id);
-    if(!slider) return;
 
-    const images = slider.querySelectorAll('img');
-    if(images.length <= 1) return;
+const slider =
+document.getElementById(id);
 
-    const state = getSliderState(id);
+if(!slider) return;
 
-    clearInterval(state.timer);
+const images =
+slider.querySelectorAll('img');
 
-    state.timer = setInterval(() => {
-        moveSlider(id,1);
-    },3500);
+if(images.length <= 1) return;
+
+const state =
+getSliderState(id);
+
+clearInterval(state.timer);
+
+state.timer =
+setInterval(() => {
+
+moveSlider(id,1);
+
+},3500);
+
 }
+
 
 function enableSwipe(id){
-    const slider = document.getElementById(id);
-    if(!slider) return;
 
-    let startX = 0;
+const slider =
+document.getElementById(id);
 
-    slider.addEventListener('touchstart', event => {
-        startX = event.changedTouches[0].screenX;
-    }, {passive:true});
+if(!slider) return;
 
-    slider.addEventListener('touchend', event => {
-        const endX = event.changedTouches[0].screenX;
+let startX = 0;
 
-        if(endX < startX - 50) moveSlider(id,1);
-        if(endX > startX + 50) moveSlider(id,-1);
-    }, {passive:true});
+slider.addEventListener(
+'touchstart',
+event => {
+
+startX =
+event.changedTouches[0].screenX;
+
+},
+{passive:true}
+);
+
+slider.addEventListener(
+'touchend',
+event => {
+
+const endX =
+event.changedTouches[0].screenX;
+
+if(endX < startX - 50)
+moveSlider(id,1);
+
+if(endX > startX + 50)
+moveSlider(id,-1);
+
+},
+{passive:true}
+);
+
 }
+
 
 function saveRecentlyViewed(element){
-    const card = element.closest('.card');
-    if(!card) return;
 
-    const id = card.dataset.id;
+const card =
+element.closest('.card');
 
-    recentlyViewed = recentlyViewed.filter(item => item !== id);
-    recentlyViewed.unshift(id);
-    recentlyViewed = recentlyViewed.slice(0,4);
+if(!card) return;
 
-    localStorage.setItem('kharediRecent', JSON.stringify(recentlyViewed));
-    renderRecentlyViewed();
+const id =
+card.dataset.id;
+
+recentlyViewed =
+recentlyViewed.filter(
+item => item !== id
+);
+
+recentlyViewed.unshift(id);
+
+recentlyViewed =
+recentlyViewed.slice(0,4);
+
+localStorage.setItem(
+'kharediRecent',
+JSON.stringify(recentlyViewed)
+);
+
 }
 
-function renderRecentlyViewed(){
-    const section = document.getElementById('recentSection');
-    const grid = document.getElementById('recentGrid');
-
-    if(!recentlyViewed.length){
-        section.style.display = 'none';
-        return;
-    }
-
-    grid.innerHTML = '';
-
-    recentlyViewed.forEach(id => {
-        const card = document.querySelector('.card[data-id="' + id + '"]');
-        if(!card) return;
-
-        const image = card.querySelector('.product-images img, .card-img > img');
-        if(!image) return;
-
-        const title = card.dataset.name || 'Product';
-
-        const item = document.createElement('div');
-        item.className = 'recent-card';
-
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = title;
-
-        const h4 = document.createElement('h4');
-        h4.textContent = title;
-
-        item.appendChild(img);
-        item.appendChild(h4);
-        grid.appendChild(item);
-    });
-
-    section.style.display = grid.children.length ? 'block' : 'none';
-}
 
 function quickView(button){
-    const card = button.closest('.card');
-    if(!card) return;
 
-    const image = card.querySelector('.product-images img, .card-img > img');
-    const title = card.dataset.name || 'Product';
-    const price = card.querySelector('.price')?.textContent.trim() || '';
-    const rating = card.querySelector('.rating')?.textContent.trim() || '';
-    const description = card.querySelector('p')?.textContent.trim() || '';
-    const buy = card.querySelector('.buy');
+const card =
+button.closest('.card');
 
-    if(!image || !buy) return;
+if(!card) return;
 
-    document.getElementById('modalImage').src = image.src;
-    document.getElementById('modalImage').alt = title;
-    document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalRating').textContent = rating;
-    document.getElementById('modalPrice').textContent = price;
-    document.getElementById('modalDescription').textContent = description;
-    document.getElementById('modalBuy').href = buy.href;
+const image =
+card.querySelector(
+'.product-images img, .card-img > img'
+);
 
-    document.getElementById('quickModal').classList.add('show');
-    document.body.classList.add('no-scroll');
+const title =
+card.dataset.name ||
+'Product';
 
-    saveRecentlyViewed(buy);
+const price =
+card.querySelector('.price')
+?.textContent.trim() || '';
+
+const rating =
+card.querySelector('.rating')
+?.textContent.trim() || '';
+
+const description =
+card.querySelector('p')
+?.textContent.trim() || '';
+
+const buy =
+card.querySelector('.buy');
+
+if(!image || !buy) return;
+
+document.getElementById('modalImage')
+.src =
+image.src;
+
+document.getElementById('modalImage')
+.alt =
+title;
+
+document.getElementById('modalTitle')
+.textContent =
+title;
+
+document.getElementById('modalRating')
+.textContent =
+rating;
+
+document.getElementById('modalPrice')
+.textContent =
+price;
+
+document.getElementById('modalDescription')
+.textContent =
+description;
+
+document.getElementById('modalBuy')
+.href =
+buy.href;
+
+document.getElementById('quickModal')
+.classList.add('show');
+
+document.body
+.classList.add('no-scroll');
+
+saveRecentlyViewed(buy);
+
 }
+
 
 function closeQuickView(){
-    document.getElementById('quickModal').classList.remove('show');
-    document.body.classList.remove('no-scroll');
+
+document.getElementById('quickModal')
+.classList.remove('show');
+
+document.body
+.classList.remove('no-scroll');
+
 }
+
 
 function closeModalOutside(event){
-    if(event.target.id === 'quickModal'){
-        closeQuickView();
-    }
+
+if(event.target.id === 'quickModal'){
+
+closeQuickView();
+
 }
 
-document.addEventListener('keydown', event => {
-    if(event.key === 'Escape'){
-        closeQuickView();
-    }
-});
+}
 
-window.addEventListener('scroll', () => {
-    const button = document.getElementById('backTop');
-    button.style.display = window.scrollY > 400 ? 'flex' : 'none';
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    updateWishlistButtons();
-    updateWishlistCount();
-    renderRecentlyViewed();
-    applyFilters();
+document.addEventListener(
+'keydown',
+event => {
 
-    startAutoSlider('slider-oneplus');
-    startAutoSlider('slider-mangalsutra');
-    startAutoSlider('slider-balwaan-bs22d');
-    startAutoSlider('slider-allen-solly-polo');
+if(event.key === 'Escape')
+closeQuickView();
 
-    enableSwipe('slider-oneplus');
-    enableSwipe('slider-mangalsutra');
-    enableSwipe('slider-balwaan-bs22d');
-    enableSwipe('slider-allen-solly-polo');
-});
+}
+);
+
+
+window.addEventListener(
+'scroll',
+() => {
+
+const button =
+document.getElementById('backTop');
+
+button.style.display =
+window.scrollY > 400
+? 'flex'
+: 'none';
+
+}
+);
+
+
+document.addEventListener(
+'DOMContentLoaded',
+() => {
+
+updateWishlistButtons();
+
+updateWishlistCount();
+
+applyFilters();
+
+startAutoSlider('slider-oneplus');
+
+startAutoSlider('slider-mangalsutra');
+
+startAutoSlider('slider-balwaan');
+
+startAutoSlider('slider-allen');
+
+enableSwipe('slider-oneplus');
+
+enableSwipe('slider-mangalsutra');
+
+enableSwipe('slider-balwaan');
+
+enableSwipe('slider-allen');
+
+}
+);
+
 </script>
 
 </body>
